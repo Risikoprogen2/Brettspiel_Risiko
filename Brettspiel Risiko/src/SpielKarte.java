@@ -41,6 +41,24 @@ public class SpielKarte extends JFrame {
 		setBounds(100, 100, 817, 518);
 		getContentPane().setLayout(null);
 		
+		//Schleife zum Felder generieren
+		/*
+		int kordx = 130;
+		int kordy = 40;
+		int zaehler = 0;
+		for(int i= 1; 1<=20; i++)
+		{
+			Button button_[i] = new Button("Feld " + [i];
+			button_[i].setBounds(130, 40, 80, 80);
+			getContentPane().add(button_[i]);
+			zaehler++;
+			
+			if(kordx <= 610)
+			{
+				kordx = 130;
+				kordy = kordy + 100;
+			}
+		}*/
 		
 		//Felder erstellen
 		Button button_1 = new Button("Feld 1");
