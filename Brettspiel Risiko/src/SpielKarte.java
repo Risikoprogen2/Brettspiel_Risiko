@@ -142,10 +142,11 @@ public class SpielKarte extends JFrame {
 		 
 		
 		JLabel lblNewLabel = new JLabel("");
-		Image img = new ImageIcon(this.getClass().getResource("/Risiko.png")).getImage();
-		lblNewLabel.setIcon(new ImageIcon(img));
-		lblNewLabel.setIcon(new ImageIcon("\\Workspace\\Brettspiel_Risiko\\Image\\Risiko.jpg"));
+		//Image img = new ImageIcon(this.getClass().getResource("/Risiko.png")).getImage();
+		lblNewLabel.setIcon(null);
+		//lblNewLabel.setIcon(new ImageIcon(""));
 		lblNewLabel.setBounds(0, 0, 800, 470);
 		getContentPane().add(lblNewLabel);
+	
 	}
 }
