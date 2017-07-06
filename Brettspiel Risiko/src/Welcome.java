@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 /**
  * In dieser Klasse wird der Startbildschierm erzeugt.
  * 
- * Aus Diesem Fenster heraus können Benutzer ein Neues Spiel Starten, Ein Spiel Laden, Denn Regel Text Anschauen und Einen Text über das Programm Lesen.
+ * Aus Diesem Fenster heraus k�nnen Benutzer ein Neues Spiel Starten, Ein Spiel Laden, Denn Regel Text Anschauen und Einen Text über das Programm Lesen.
  * 
  * @Autor Konrad 
  * 
@@ -118,4 +118,4 @@ public class Welcome extends JFrame {
 	}
 
 }
-// Github test
+// Github test hochladen
