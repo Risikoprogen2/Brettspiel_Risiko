@@ -37,7 +37,6 @@ public class SpielKarte extends JFrame {
 	 */
 	public SpielKarte() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Image background = Toolkit.getDefaultToolkit().createImage("Background.png");
 		setBounds(100, 100, 817, 518);
 		getContentPane().setLayout(null);
 		
@@ -140,9 +139,11 @@ public class SpielKarte extends JFrame {
 		Button button_20 = new Button("Feld 20");
 		button_20.setBounds(610, 340, 80, 80);
 		getContentPane().add(button_20);
+		 
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Risiko.jpg"));
+		Image img = new ImageIcon(this.getClass().getResource("/Risiko.png")).getImage();
+		lblNewLabel.setIcon(new ImageIcon(img));
 		lblNewLabel.setBounds(0, 0, 800, 470);
 		getContentPane().add(lblNewLabel);
 	}
