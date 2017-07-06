@@ -17,9 +17,9 @@ import javax.swing.ImageIcon;
 public class SpielKarte extends JFrame {
 
 	/**
-	 * Launch the application.
+	 * Methode zum starten des Spielbrett's
 	 */
-	public static void main(String[] args) {
+	public static void Start_SpielKarte() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
