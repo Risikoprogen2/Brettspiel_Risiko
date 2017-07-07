@@ -84,7 +84,7 @@ public class Spiel {
 			public void actionPerformed(ActionEvent e) {
 				this.karte = new SpielKarte();
 				karte.Start_SpielKarte();
-				
+				frame.dispose();
 			}
 		});
 		frame.getContentPane().setLayout(null);
