@@ -5,25 +5,57 @@ public class Wuerfel extends Controll {
 
 
 	/**
-	 * Diese Klasse ist fÃ¼r das wÃ¼rfeln zustÃ¤ndig;
+	 * Diese Klasse ist für das würfeln zuständig;
+	 * 
+	 * Die Methode "Rolls" ruft die Methode "Roll" auf
+	 * Der Angreifer würfelt höchstens 3 mal (Risiko Regeln) Wenn der Angreifer aber mehr Truppen hat wird durch die Schleife die zuständige Variable auf 3 gesetzt um 3 mal zu würfeln
 	 * 
 	 * 
+	 * ES Fehlt NOCH : -Überlegung ob man 2 Methoden macht : eine für denn Angreifer und eine für den Verteidiger ??? 
+	 * 				   -die Entsprechen Variable mit der Truppen anzahl vom Spielablauf
+	 * 				   - Testen
 	 */
 	
 	public Wuerfel(){
 		
 		int Wuerfel;
+		int Truppen;
+		int Anz_Wuerfel;
+
+	}
+	// Verteidiger würfelt 
+	public void RollsDefend(){
+		
+		int Truppen = 0;
+		int Anz_Wuerfel = 0;
+
+		if (Truppen > 2) {
+			
+			  Anz_Wuerfel = 2;
+		} else{
+			
+			 Anz_Wuerfel =  Truppen; 
+		}
+		
+		// For Schliefe für das Würfeln
+		
+		
+		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
+		{
+			 Roll();
+			
+		}
+		
 	}
 	
-	
-	public void Rolls(){
+	// Angreifer Würfelt
+	public void RollsFight(){
 		
 		// diese Klasse soll die Methode Roll() so oft aufrufen wie es Truppen gibt
 		
 		// Die Variable int i muss noch abgeÃ¤ndert werden damit das richtig funktioniert.
 		int Truppen = 0;
 		int Anz_Wuerfel = 0;
-
 
 		if (Truppen > 3) {
 			
@@ -33,7 +65,7 @@ public class Wuerfel extends Controll {
 			 Anz_Wuerfel =  Truppen; 
 		}
 		
-		
+		// For Schliefe für das Würfeln
 		
 		
 		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)

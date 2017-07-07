@@ -80,7 +80,11 @@ public class Spiel {
 		JButton btnStart = new JButton("Start");
 		btnStart.setBounds(667, 447, 117, 29);
 		btnStart.addActionListener(new ActionListener() {
+			public SpielKarte karte;
 			public void actionPerformed(ActionEvent e) {
+				this.karte = new SpielKarte();
+				karte.Start_SpielKarte();
+				
 			}
 		});
 		frame.getContentPane().setLayout(null);
