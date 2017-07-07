@@ -144,6 +144,14 @@ public class Spiel {
 		frame.getContentPane().add(textField_1);
 		frame.getContentPane().add(chckbxNewCheckBox);
 		
+		JButton btnLeft = new JButton("<<");
+		btnLeft.setBounds(34, 158, 53, 23);
+		frame.getContentPane().add(btnLeft);
+		
+		JButton btnRight = new JButton(">>");
+		btnRight.setBounds(110, 158, 53, 23);
+		frame.getContentPane().add(btnRight);
+		
 		
 		
 			
