@@ -30,12 +30,8 @@ public class Spiel {
 	 * 
 	 * @Autor Konrad
 	 *
-	 *
-	 *
 	 */
-	
-	
-	
+
 	
 	/**
 	 * Start der Anwendung
@@ -74,7 +70,7 @@ public class Spiel {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 790, 504);
+		frame.setBounds(100, 100, 812, 532);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JButton btnStart = new JButton("Start");
@@ -84,13 +80,13 @@ public class Spiel {
 			public void actionPerformed(ActionEvent e) {
 				this.karte = new SpielKarte();
 				karte.Start_SpielKarte();
-				
+				frame.dispose();
 			}
 		});
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(btnStart);
 		
-		JButton btnZurck = new JButton("Zurück");
+		JButton btnZurck = new JButton("Zur\u00FCck");
 		btnZurck.setBounds(538, 447, 117, 29);
 		btnZurck.addActionListener(new ActionListener() {
 			private Welcome welcome;

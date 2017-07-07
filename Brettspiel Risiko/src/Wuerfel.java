@@ -11,7 +11,7 @@ public class Wuerfel extends Controll {
 	 * Der Angreifer würfelt höchstens 3 mal (Risiko Regeln) Wenn der Angreifer aber mehr Truppen hat wird durch die Schleife die zuständige Variable auf 3 gesetzt um 3 mal zu würfeln
 	 * 
 	 * 
-	 * ES Fehlt NOCH : -Überlegung ob man 2 Methoden macht : eine für denn Angreifer und eine für den Verteidiger ??? 
+	 * ES Fehlt NOCH : 
 	 * 				   -die Entsprechen Variable mit der Truppen anzahl vom Spielablauf
 	 * 				   - Testen
 	 */
@@ -57,7 +57,7 @@ public class Wuerfel extends Controll {
 		int Truppen = 0;
 		int Anz_Wuerfel = 0;
 
-		if (Truppen > 3) {
+		if (Truppen >= 3) {
 			
 			  Anz_Wuerfel = 3;
 		} else{

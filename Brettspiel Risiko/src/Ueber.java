@@ -49,24 +49,24 @@ public class Ueber extends JFrame {
 	public Ueber() {
 		setTitle("Ueber");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 334);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		// Button zum Schlißen 
-		JButton btnSchlieen = new JButton("Schließen");
+		JButton btnSchlieen = new JButton("Schlie\u00DFen");
 		btnSchlieen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				
 			}
 		});
-		btnSchlieen.setBounds(164, 243, 117, 29);
+		btnSchlieen.setBounds(153, 244, 117, 29);
 		contentPane.add(btnSchlieen);
 		// Text Feld
 		JTextPane txtpnHierStehenSpter = new JTextPane();
-		txtpnHierStehenSpter.setText("Hier steht später irgendwas über uns usw. :)\n");
+		txtpnHierStehenSpter.setText("Hier steht sp�ter irgendwas �ber uns usw. :)\n");
 		txtpnHierStehenSpter.setEditable(false);
 		txtpnHierStehenSpter.setBounds(6, 6, 438, 225);
 		contentPane.add(txtpnHierStehenSpter);

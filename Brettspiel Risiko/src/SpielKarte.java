@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class SpielKarte extends JFrame {
 
@@ -58,6 +59,9 @@ public class SpielKarte extends JFrame {
 				kordy = kordy + 100;
 			}
 		}*/
+		
+		
+		//Vorläufig:
 		
 		//Felder erstellen
 		Button button_1 = new Button("Feld 1");
@@ -139,13 +143,17 @@ public class SpielKarte extends JFrame {
 		Button button_20 = new Button("Feld 20");
 		button_20.setBounds(610, 340, 80, 80);
 		getContentPane().add(button_20);
-		 
-		/*
+		
+		//Farben der Speier
+		button_1.setBackground(Color.GREEN);
+		button_10.setBackground(Color.BLUE);
+		button_18.setBackground(Color.BLUE);
+		button_7.setBackground(Color.GREEN);
+		
+		//Vorläufig
 		JLabel lblNewLabel = new JLabel("");
-		Image img = new ImageIcon(this.getClass().getResource("/Risiko.png")).getImage();
-		lblNewLabel.setIcon(new ImageIcon(img));
-		lblNewLabel.setIcon(new ImageIcon("\\Workspace\\Brettspiel_Risiko\\Image\\Risiko.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
 		lblNewLabel.setBounds(0, 0, 800, 470);
-		getContentPane().add(lblNewLabel);*/
-	}
+		getContentPane().add(lblNewLabel); 
+		}
 }
