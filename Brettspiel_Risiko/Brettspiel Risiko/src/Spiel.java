@@ -30,8 +30,12 @@ public class Spiel {
 	 * 
 	 * @Autor Konrad
 	 *
+	 *
+	 *
 	 */
-
+	
+	
+	
 	
 	/**
 	 * Start der Anwendung
@@ -70,23 +74,19 @@ public class Spiel {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 812, 532);
+		frame.setBounds(100, 100, 790, 504);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JButton btnStart = new JButton("Start");
 		btnStart.setBounds(667, 447, 117, 29);
 		btnStart.addActionListener(new ActionListener() {
-			public SpielKarte1 karte;
 			public void actionPerformed(ActionEvent e) {
-				this.karte = new SpielKarte1();
-				karte.Start_SpielKarte();
-				frame.dispose();
 			}
 		});
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(btnStart);
 		
-		JButton btnZurck = new JButton("Zur\u00FCck");
+		JButton btnZurck = new JButton("Zurück");
 		btnZurck.setBounds(538, 447, 117, 29);
 		btnZurck.addActionListener(new ActionListener() {
 			private Welcome welcome;
@@ -143,14 +143,6 @@ public class Spiel {
 		textField_1.setColumns(10);
 		frame.getContentPane().add(textField_1);
 		frame.getContentPane().add(chckbxNewCheckBox);
-		
-		JButton btnLeft = new JButton("<<");
-		btnLeft.setBounds(34, 158, 53, 23);
-		frame.getContentPane().add(btnLeft);
-		
-		JButton btnRight = new JButton(">>");
-		btnRight.setBounds(110, 158, 53, 23);
-		frame.getContentPane().add(btnRight);
 		
 		
 		

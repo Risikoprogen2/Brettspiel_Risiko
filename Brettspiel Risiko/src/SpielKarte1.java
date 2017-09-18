@@ -14,8 +14,14 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+import javax.swing.UIManager;
+import javax.swing.JSplitPane;
 
-public class SpielKarte extends JFrame {
+public class SpielKarte1 extends JFrame {
+	/**
+	 * @wbp.nonvisual location=-30,294
+	 */
+	private final JSplitPane splitPane = new JSplitPane();
 
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -24,7 +30,7 @@ public class SpielKarte extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SpielKarte frame = new SpielKarte();
+					SpielKarte1 frame = new SpielKarte1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,9 +42,9 @@ public class SpielKarte extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SpielKarte() {
+	public SpielKarte1() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 817, 518);
+		setBounds(100, 100, 811, 666);
 		getContentPane().setLayout(null);
 		
 		//Schleife zum Felder generieren
@@ -97,6 +103,7 @@ public class SpielKarte extends JFrame {
 		getContentPane().add(button_8);
 		
 		Button button_9 = new Button("Feld 9");
+		button_9.setBackground(UIManager.getColor("Button.background"));
 		button_9.setBounds(490, 140, 80, 80);
 		getContentPane().add(button_9);
 		
@@ -144,16 +151,16 @@ public class SpielKarte extends JFrame {
 		button_20.setBounds(610, 340, 80, 80);
 		getContentPane().add(button_20);
 		
-		//Farben der Speier
-		button_1.setBackground(Color.GREEN);
-		button_10.setBackground(Color.BLUE);
-		button_18.setBackground(Color.BLUE);
-		button_7.setBackground(Color.GREEN);
+		//Farben der Spieler - werden vom Spielablauf vergeben
+		button_1.setBackground(UIManager.getColor("Button.background"));
+		button_10.setBackground(UIManager.getColor("Button.background"));
+		button_18.setBackground(UIManager.getColor("Button.background"));
+		button_7.setBackground(UIManager.getColor("Button.background"));
 		
 		//Vorläufig
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
-		lblNewLabel.setBounds(0, 0, 800, 470);
+		lblNewLabel.setBounds(0, 0, 800, 537);
 		getContentPane().add(lblNewLabel); 
 		}
 }
