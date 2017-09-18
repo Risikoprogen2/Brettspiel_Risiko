@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Panel;
 import java.awt.Toolkit;
+import java.awt.Window;
 import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -16,12 +17,12 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.JSplitPane;
+import javax.swing.SwingConstants;
+
+
+//Autor: Jonas Behler
 
 public class SpielKarte1 extends JFrame {
-	/**
-	 * @wbp.nonvisual location=-30,294
-	 */
-	private final JSplitPane splitPane = new JSplitPane();
 
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -43,8 +44,10 @@ public class SpielKarte1 extends JFrame {
 	 * Create the frame.
 	 */
 	public SpielKarte1() {
+		getContentPane().setBackground(UIManager.getColor("Button.highlight"));
+		getContentPane().setForeground(UIManager.getColor("Button.focus"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 811, 666);
+		setBounds(100, 100, 802, 642);
 		getContentPane().setLayout(null);
 		
 		//Schleife zum Felder generieren
@@ -160,7 +163,42 @@ public class SpielKarte1 extends JFrame {
 		//Vorläufig
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
-		lblNewLabel.setBounds(0, 0, 800, 537);
-		getContentPane().add(lblNewLabel); 
-		}
+		lblNewLabel.setBounds(0, 0, 784, 532);
+		getContentPane().add(lblNewLabel);
+		
+		
+		//Statistik Felder
+		JLabel lblEinheiten = new JLabel("Einheiten");
+		lblEinheiten.setBackground(UIManager.getColor("Button.disabledShadow"));
+		lblEinheiten.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEinheiten.setBounds(0, 536, 105, 34);
+		getContentPane().add(lblEinheiten);
+		
+		JLabel lblKontinentBonus = new JLabel("Kontinent Bonus");
+		lblKontinentBonus.setHorizontalAlignment(SwingConstants.CENTER);
+		lblKontinentBonus.setBounds(210, 536, 105, 34);
+		getContentPane().add(lblKontinentBonus);
+		
+		JLabel lblLaender = new JLabel("L\u00E4nder");
+		lblLaender.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLaender.setBounds(105, 536, 105, 34);
+		getContentPane().add(lblLaender);
+		
+		
+		//Spiel Menü ---- IN BEARBEITUNG (KONRAD HILFE?)
+		JButton btnMenu = new JButton("Menu");
+		btnMenu.setBounds(664, 532, 120, 63);
+		getContentPane().add(btnMenu);
+		
+
+		btnMenu.addActionListener(new ActionListener() {
+			private SpielMenu menu;
+			public void actionPerformed(ActionEvent e) {
+				
+				this.menu = new SpielMenu();
+				menu.Start_menu();								
+			}
+		});
+				
+		
 }

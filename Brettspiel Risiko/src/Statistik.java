@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+//Autor: Jonas Behler
+
 public class Statistik extends JFrame {
 
 	private JPanel contentPane;
