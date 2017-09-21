@@ -40,6 +40,7 @@ public class SpielKarte1 extends JFrame {
 		});
 	}
 
+
 	/**
 	 * Create the frame.
 	 */
