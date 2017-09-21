@@ -56,7 +56,7 @@ public class Welcome extends JFrame {
 	 */
 	public Welcome() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 194, 206);
+		setBounds(100, 100, 214, 207);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -101,7 +101,7 @@ public class Spiel {
 		});
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("");
-		chckbxNewCheckBox.setBounds(189, 55, 28, 23);
+		chckbxNewCheckBox.setBounds(204, 55, 28, 23);
 		chckbxNewCheckBox.setSelected(false);
 		chckbxNewCheckBox.addActionListener(new ActionListener(){
 
@@ -129,7 +129,7 @@ public class Spiel {
 		frame.getContentPane().add(lblName);
 		
 		textField = new JTextField();
-		textField.setBounds(53, 25, 130, 26);
+		textField.setBounds(65, 25, 130, 26);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
@@ -138,7 +138,7 @@ public class Spiel {
 		frame.getContentPane().add(lblPlayer);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(53, 52, 130, 26);
+		textField_1.setBounds(65, 52, 130, 26);
 		textField_1.setEnabled(false);
 		textField_1.setColumns(10);
 		frame.getContentPane().add(textField_1);
