@@ -10,6 +10,5 @@ public class PVP {
 	    if (a=true){
 	    	SpielKarte1.button_5.setBackground(Color.red);
 	    }
-	    //WARUM????
 	  }
 }
