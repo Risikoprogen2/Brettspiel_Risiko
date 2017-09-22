@@ -70,11 +70,11 @@ public class Spiel {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 812, 532);
+		frame.setBounds(100, 100, 289, 193);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JButton btnStart = new JButton("Start");
-		btnStart.setBounds(667, 447, 117, 29);
+		btnStart.setBounds(137, 105, 117, 29);
 		btnStart.addActionListener(new ActionListener() {
 			public SpielKarte1 karte;
 			public void actionPerformed(ActionEvent e) {
@@ -87,7 +87,7 @@ public class Spiel {
 		frame.getContentPane().add(btnStart);
 		
 		JButton btnZurck = new JButton("Zur\u00FCck");
-		btnZurck.setBounds(538, 447, 117, 29);
+		btnZurck.setBounds(10, 105, 117, 29);
 		btnZurck.addActionListener(new ActionListener() {
 			private Welcome welcome;
 			public void actionPerformed(ActionEvent e) {
@@ -101,7 +101,7 @@ public class Spiel {
 		});
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("");
-		chckbxNewCheckBox.setBounds(456, 51, 28, 23);
+		chckbxNewCheckBox.setBounds(204, 55, 28, 23);
 		chckbxNewCheckBox.setSelected(false);
 		chckbxNewCheckBox.addActionListener(new ActionListener(){
 
@@ -125,32 +125,24 @@ public class Spiel {
 		frame.getContentPane().add(btnZurck);
 		
 		JLabel lblName = new JLabel("Player 1:");
-		lblName.setBounds(485, 30, 53, 16);
+		lblName.setBounds(10, 30, 53, 16);
 		frame.getContentPane().add(lblName);
 		
 		textField = new JTextField();
-		textField.setBounds(538, 25, 130, 26);
+		textField.setBounds(65, 25, 130, 26);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblPlayer = new JLabel("Player 2:");
-		lblPlayer.setBounds(485, 56, 53, 16);
+		lblPlayer.setBounds(10, 57, 53, 16);
 		frame.getContentPane().add(lblPlayer);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(538, 51, 130, 26);
+		textField_1.setBounds(65, 52, 130, 26);
 		textField_1.setEnabled(false);
 		textField_1.setColumns(10);
 		frame.getContentPane().add(textField_1);
 		frame.getContentPane().add(chckbxNewCheckBox);
-		
-		JButton btnLeft = new JButton("<<");
-		btnLeft.setBounds(34, 158, 53, 23);
-		frame.getContentPane().add(btnLeft);
-		
-		JButton btnRight = new JButton(">>");
-		btnRight.setBounds(110, 158, 53, 23);
-		frame.getContentPane().add(btnRight);
 		
 		
 		

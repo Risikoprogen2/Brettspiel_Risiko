@@ -56,7 +56,7 @@ public class Welcome extends JFrame {
 	 */
 	public Welcome() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 194, 206);
+		setBounds(100, 100, 214, 207);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -92,7 +92,7 @@ public class Welcome extends JFrame {
 				regeln.Regeln_Start();
 			}
 		});
-		btnNewButton_1.setBounds(50, 79, 89, 23);
+		btnNewButton_1.setBounds(50, 45, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		// Der Button öffnet das Frame von der Klasse Ueber.java
@@ -107,14 +107,8 @@ public class Welcome extends JFrame {
 				ueber.Ueber_Start();
 			}
 		});
-		btnNewButton_2.setBounds(50, 113, 89, 23);
+		btnNewButton_2.setBounds(50, 79, 89, 23);
 		contentPane.add(btnNewButton_2);
-		
-		// Der Button soll muss NOCH GEMACHT WERDEN !!!
-		
-		JButton btnSpielLaden = new JButton("Spiel Laden");
-		btnSpielLaden.setBounds(50, 45, 89, 23);
-		contentPane.add(btnSpielLaden);
 	}
 
 }
