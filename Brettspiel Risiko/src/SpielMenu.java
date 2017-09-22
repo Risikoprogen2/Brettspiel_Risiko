@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -8,17 +10,15 @@ import javax.swing.border.EmptyBorder;
 
 public class SpielMenu extends JFrame {
 
-	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
+	private JFrame menuframe;
+	
+	//Erstellen und öffnen des Fensters
 	public static void Menu() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SpielMenu frame = new SpielMenu();
-					frame.setVisible(true);
+					SpielMenu window = new SpielMenu();
+					window.menuframe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -26,47 +26,70 @@ public class SpielMenu extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+
+	//Menü Fenster
 	public SpielMenu() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 308);
-		contentPane = new JPanel();
-		contentPane.setBackground(Color.WHITE);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
+		menuframe = new JFrame();
+		menuframe.setBackground(SystemColor.menu);
+		menuframe.getContentPane().setLayout(null);
+		menuframe.setSize(450, 309);
 		
 		//Menü Übersicht
 		JLabel lblMenu = new JLabel("Risiko");
-		lblMenu.setBackground(SystemColor.activeCaption);
+		lblMenu.setBackground(SystemColor.controlShadow);
 		lblMenu.setFont(new Font("Tahoma", Font.BOLD, 34));
 		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMenu.setOpaque(true);
 		lblMenu.setBounds(0, 0, 432, 80);
-		contentPane.add(lblMenu);
+		menuframe.getContentPane().add(lblMenu);
 		
 		//Zurück zum Spiel
 		JButton btnBackToGame = new JButton("Zur\u00FCck zum Spiel");
 		btnBackToGame.setFont(new Font("Tahoma", Font.BOLD, 17));
-		btnBackToGame.setBackground(UIManager.getColor("Button.background"));
+		btnBackToGame.setBackground(SystemColor.menu);
 		btnBackToGame.setBounds(0, 80, 432, 60);
-		contentPane.add(btnBackToGame);
+		menuframe.getContentPane().add(btnBackToGame);
+		btnBackToGame.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				menuframe.dispose();
+				}
+		});
 		
+
 		//Zurück zum Hauptmenü
 		JButton btnHauptmenu = new JButton("Zur\u00FCck zum Hauptmen\u00FC");
 		btnHauptmenu.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnHauptmenu.setBackground(SystemColor.menu);
 		btnHauptmenu.setBounds(0, 140, 432, 60);
-		contentPane.add(btnHauptmenu);
+		menuframe.getContentPane().add(btnHauptmenu);
+		btnHauptmenu.addActionListener(new ActionListener() {
+			private Welcome welcome;
+			private SpielKarte1 karte1;
+			public void actionPerformed(ActionEvent e){
+				menuframe.dispose();
+				welcome = new Welcome();
+				welcome.Start_Welcome();
+				karte1 = new SpielKarte1();
+				karte1.SpielkarteSchließe();
+				}
+		});
+		
+		
 		
 		//Spiel beenden
 		JButton btnSpielBeenden = new JButton("Spiel beenden");
 		btnSpielBeenden.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnSpielBeenden.setBackground(SystemColor.menu);
 		btnSpielBeenden.setBounds(0, 200, 432, 60);
-		contentPane.add(btnSpielBeenden);
+		menuframe.getContentPane().add(btnSpielBeenden);
+		btnSpielBeenden.addActionListener(new ActionListener(){
+			private SpielKarte1 karte1;
+			public void actionPerformed(ActionEvent e){
+				menuframe.dispose();
+				karte1 = new SpielKarte1();
+				karte1.SpielkarteSchließe();
+			}
+		
+		});
 	}
 }
