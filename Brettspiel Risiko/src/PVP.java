@@ -8,7 +8,7 @@ public class PVP {
 	  }
 	  public void doSomething() {
 	    if (a=true){
-	    	SpielKarte1.button_5.setBackground(Color.red);
+	    //	SpielKarte1.button_5.setBackground(Color.red);
 	    }
 	  }
 }

@@ -12,7 +12,7 @@ public class SpielMenu extends JFrame {
 
 	private JFrame menuframe;
 	
-	//Erstellen und öffnen des Fensters
+	//Erstellen und Ã¶ffnen des Fensters
 	public static void Menu() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -27,14 +27,14 @@ public class SpielMenu extends JFrame {
 	}
 
 
-	//Menü Fenster
+	//Menï¿½ Fenster
 	public SpielMenu() {
 		menuframe = new JFrame();
 		menuframe.setBackground(SystemColor.menu);
 		menuframe.getContentPane().setLayout(null);
 		menuframe.setSize(450, 309);
 		
-		//Menü Übersicht
+		//Menï¿½ ï¿½bersicht
 		JLabel lblMenu = new JLabel("Risiko");
 		lblMenu.setBackground(SystemColor.controlShadow);
 		lblMenu.setFont(new Font("Tahoma", Font.BOLD, 34));
@@ -43,7 +43,7 @@ public class SpielMenu extends JFrame {
 		lblMenu.setBounds(0, 0, 432, 80);
 		menuframe.getContentPane().add(lblMenu);
 		
-		//Zurück zum Spiel
+		//Zurï¿½ck zum Spiel
 		JButton btnBackToGame = new JButton("Zur\u00FCck zum Spiel");
 		btnBackToGame.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnBackToGame.setBackground(SystemColor.menu);
@@ -56,7 +56,7 @@ public class SpielMenu extends JFrame {
 		});
 		
 
-		//Zurück zum Hauptmenü
+		//Zurï¿½ck zum Hauptmenï¿½
 		JButton btnHauptmenu = new JButton("Zur\u00FCck zum Hauptmen\u00FC");
 		btnHauptmenu.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnHauptmenu.setBackground(SystemColor.menu);
@@ -70,7 +70,7 @@ public class SpielMenu extends JFrame {
 				welcome = new Welcome();
 				welcome.Start_Welcome();
 				karte1 = new SpielKarte1();
-				karte1.SpielkarteSchließe();
+				karte1.SpielkarteSchliessen();
 				}
 		});
 		
@@ -87,7 +87,7 @@ public class SpielMenu extends JFrame {
 			public void actionPerformed(ActionEvent e){
 				menuframe.dispose();
 				karte1 = new SpielKarte1();
-				karte1.SpielkarteSchließe();
+				karte1.SpielkarteSchliessen();
 			}
 		
 		});

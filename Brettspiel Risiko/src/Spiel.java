@@ -19,9 +19,15 @@ import java.awt.Panel;
 public class Spiel {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-
+	private JTextField PName1;
+	private JTextField PName2;
+	private JTextField PName3;
+	private JTextField PName4;
+	
+	private String Name1;
+	private String Name2;
+	private String Name3;
+	private String Name4;
 	
 	/**
 	 * In dieser Klasse werden die Vorbereitungen für das Spiel Getroffen. Anzahl der Spieler und ob KI oder Mensch Spielt.
@@ -38,6 +44,7 @@ public class Spiel {
 	 */
 	public static void Spiel_Start() {
 		EventQueue.invokeLater(new Runnable() {
+			
 			public void run() {
 				try {
 					Spiel window = new Spiel();
@@ -49,6 +56,14 @@ public class Spiel {
 		});
 	}
 
+	
+	public void Setzen(){
+		
+		
+		
+		
+	}
+	
 	
 	
 	
@@ -70,11 +85,11 @@ public class Spiel {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 289, 193);
+		frame.setBounds(100, 100, 291, 282);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JButton btnStart = new JButton("Start");
-		btnStart.setBounds(137, 105, 117, 29);
+		btnStart.setBounds(168, 225, 117, 29);
 		btnStart.addActionListener(new ActionListener() {
 			public SpielKarte1 karte;
 			public void actionPerformed(ActionEvent e) {
@@ -87,7 +102,7 @@ public class Spiel {
 		frame.getContentPane().add(btnStart);
 		
 		JButton btnZurck = new JButton("Zur\u00FCck");
-		btnZurck.setBounds(10, 105, 117, 29);
+		btnZurck.setBounds(10, 225, 117, 29);
 		btnZurck.addActionListener(new ActionListener() {
 			private Welcome welcome;
 			public void actionPerformed(ActionEvent e) {
@@ -100,27 +115,6 @@ public class Spiel {
 			}
 		});
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("");
-		chckbxNewCheckBox.setBounds(204, 55, 28, 23);
-		chckbxNewCheckBox.setSelected(false);
-		chckbxNewCheckBox.addActionListener(new ActionListener(){
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				JCheckBox chckbxNewCheckBox = (JCheckBox) e.getSource();
-		        if (chckbxNewCheckBox.isSelected()) {
-		      
-		    		textField_1.setEnabled(true);
-		        } else {
-		        
-		    		textField_1.setEnabled(false);
-
-		        }	
-			}	
-		});
-		
-		
 		
 		frame.getContentPane().add(btnZurck);
 		
@@ -128,21 +122,39 @@ public class Spiel {
 		lblName.setBounds(10, 30, 53, 16);
 		frame.getContentPane().add(lblName);
 		
-		textField = new JTextField();
-		textField.setBounds(65, 25, 130, 26);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		PName1 = new JTextField();
+		PName1.setBounds(65, 25, 130, 26);
+		frame.getContentPane().add(PName1);
+		PName1.setColumns(10);
 		
 		JLabel lblPlayer = new JLabel("Player 2:");
 		lblPlayer.setBounds(10, 57, 53, 16);
 		frame.getContentPane().add(lblPlayer);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(65, 52, 130, 26);
-		textField_1.setEnabled(false);
-		textField_1.setColumns(10);
-		frame.getContentPane().add(textField_1);
-		frame.getContentPane().add(chckbxNewCheckBox);
+		PName2 = new JTextField();
+		PName2.setBounds(65, 52, 130, 26);
+		PName2.setEnabled(false);
+		PName2.setColumns(10);
+		frame.getContentPane().add(PName2);
+		
+		
+		PName3 = new JTextField();
+		PName3.setColumns(10);
+		PName3.setBounds(65, 78, 130, 26);
+		frame.getContentPane().add(PName3);
+		
+		PName4 = new JTextField();
+		PName4.setColumns(10);
+		PName4.setBounds(65, 106, 130, 26);
+		frame.getContentPane().add(PName4);
+		
+		JLabel lblPlayer_2 = new JLabel("Player 3:");
+		lblPlayer_2.setBounds(10, 85, 53, 16);
+		frame.getContentPane().add(lblPlayer_2);
+		
+		JLabel lblPlayer_1 = new JLabel("Player 4:");
+		lblPlayer_1.setBounds(10, 111, 53, 16);
+		frame.getContentPane().add(lblPlayer_1);
 		
 		
 		

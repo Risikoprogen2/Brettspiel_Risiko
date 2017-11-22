@@ -95,7 +95,7 @@ public class SpielKarte1 extends JFrame {
 		}
 		*/
 		
-		//Vorläufig:
+		//Vorlï¿½ufig:
 		
 		
 		//Felder erstellen
@@ -295,7 +295,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(btnAngriff);
 		
 		
-		//Spiel Menü - öffnen des Menüs
+		//Spiel Menï¿½ - ï¿½ffnen des Menï¿½s
 		JButton btnMenu = new JButton("Menu");
 		btnMenu.setBackground(SystemColor.menu);
 		btnMenu.setBounds(684, 537, 100, 80);
@@ -316,7 +316,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblAktuellePhase);
 		
 		
-		//Würfel Ergebnisfelder
+		//Wï¿½rfel Ergebnisfelder
 		JLabel lblDefenceWrflZahl = new JLabel("");
 		lblDefenceWrflZahl.setToolTipText("Beispiel: 3 5 (W\u00FCrfel 1 = 3 & W\u00FCrfel 2 = 5)");
 		lblDefenceWrflZahl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -350,7 +350,7 @@ public class SpielKarte1 extends JFrame {
 		
 	}
 	
-	public void SpielkarteSchließe() {
+	public void SpielkarteSchliessen() {
 		frame.dispose();
 	}
 }
