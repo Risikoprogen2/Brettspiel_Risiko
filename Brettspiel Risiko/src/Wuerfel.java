@@ -5,10 +5,10 @@ public class Wuerfel extends Controll {
 
 
 	/**
-	 * Diese Klasse ist für das würfeln zuständig;
+	 * Diese Klasse ist fï¿½r das wï¿½rfeln zustï¿½ndig;
 	 * 
 	 * Die Methode "Rolls" ruft die Methode "Roll" auf
-	 * Der Angreifer würfelt höchstens 3 mal (Risiko Regeln) Wenn der Angreifer aber mehr Truppen hat wird durch die Schleife die zuständige Variable auf 3 gesetzt um 3 mal zu würfeln
+	 * Der Angreifer wï¿½rfelt hï¿½chstens 3 mal (Risiko Regeln) Wenn der Angreifer aber mehr Truppen hat wird durch die Schleife die zustï¿½ndige Variable auf 3 gesetzt um 3 mal zu wï¿½rfeln
 	 * 
 	 * 
 	 * ES Fehlt NOCH : 
@@ -23,7 +23,7 @@ public class Wuerfel extends Controll {
 		int Anz_Wuerfel;
 
 	}
-	// Verteidiger würfelt 
+	// Verteidiger wï¿½rfelt 
 	public void RollsDefend(){
 		
 		int Truppen = 0;
@@ -37,7 +37,7 @@ public class Wuerfel extends Controll {
 			 Anz_Wuerfel =  Truppen; 
 		}
 		
-		// For Schliefe für das Würfeln
+		// For Schliefe fï¿½r das Wï¿½rfeln
 		
 		
 		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
@@ -46,9 +46,10 @@ public class Wuerfel extends Controll {
 			
 		}
 		
+		System.out.println(Roll());
 	}
 	
-	// Angreifer Würfelt
+	// Angreifer Wï¿½rfelt
 	public void RollsFight(){
 		
 		// diese Klasse soll die Methode Roll() so oft aufrufen wie es Truppen gibt
@@ -65,7 +66,7 @@ public class Wuerfel extends Controll {
 			 Anz_Wuerfel =  Truppen; 
 		}
 		
-		// For Schliefe für das Würfeln
+		// For Schliefe fï¿½r das Wï¿½rfeln
 		
 		
 		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
@@ -74,7 +75,8 @@ public class Wuerfel extends Controll {
 			
 		}
 		
-		
+		System.out.println(Roll());
+
 	}
 	
 	
