@@ -93,9 +93,12 @@ public class Spiel {
 		btnStart.addActionListener(new ActionListener() {
 			public SpielKarte1 karte;
 			public void actionPerformed(ActionEvent e) {
+				
+				
 				this.karte = new SpielKarte1();
 				karte.Start_SpielKarte();
 				frame.dispose();
+			
 			}
 		});
 		frame.getContentPane().setLayout(null);
@@ -126,6 +129,7 @@ public class Spiel {
 		PName1.setBounds(65, 25, 130, 26);
 		frame.getContentPane().add(PName1);
 		PName1.setColumns(10);
+		String Name1 = PName1.getText();
 		
 		JLabel lblPlayer = new JLabel("Player 2:");
 		lblPlayer.setBounds(10, 57, 53, 16);
@@ -136,17 +140,21 @@ public class Spiel {
 		PName2.setEnabled(false);
 		PName2.setColumns(10);
 		frame.getContentPane().add(PName2);
-		
+		String Name2 = PName2.getText();
 		
 		PName3 = new JTextField();
 		PName3.setColumns(10);
 		PName3.setBounds(65, 78, 130, 26);
 		frame.getContentPane().add(PName3);
+		String Name3 = PName3.getText();
+		
 		
 		PName4 = new JTextField();
 		PName4.setColumns(10);
 		PName4.setBounds(65, 106, 130, 26);
 		frame.getContentPane().add(PName4);
+		String Name4 = PName4.getText();
+		
 		
 		JLabel lblPlayer_2 = new JLabel("Player 3:");
 		lblPlayer_2.setBounds(10, 85, 53, 16);

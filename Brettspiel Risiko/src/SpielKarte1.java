@@ -50,7 +50,6 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().setForeground(UIManager.getColor("Button.focus"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 802, 665);
-		getContentPane().setLayout(null);
 		
 		
 		
@@ -94,129 +93,130 @@ public class SpielKarte1 extends JFrame {
 			}
 		}
 		*/
+		getContentPane().setLayout(null);
 		
 		//Vorl�ufig:
 		
 		
 		//Felder erstellen
 		Button button_1 = new Button("Feld 1");
-		button_1.setForeground(new Color(0, 0, 0));
 		button_1.setBounds(154, 68, 70, 70);
+		button_1.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_1);
 		
 		Button button_2 = new Button("Feld 2");
-		button_2.setForeground(new Color(0, 0, 0));
 		button_2.setBounds(244, 68, 70, 70);
+		button_2.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_2);
 		
 		Button button_3 = new Button("Feld 3");
-		button_3.setForeground(new Color(0, 0, 0));
 		button_3.setBounds(334, 68, 70, 70);
+		button_3.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_3);
 		
 		Button button_4 = new Button("Feld 4");
-		button_4.setForeground(new Color(0, 0, 0));
 		button_4.setBounds(424, 68, 70, 70);
+		button_4.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_4);
 		
 		Button button_5 = new Button("Feld 5");
-		button_5.setForeground(new Color(0, 0, 0));
 		button_5.setBounds(514, 68, 70, 70);
+		button_5.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_5);
 		
 		Button button_6 = new Button("Feld 6");
-		button_6.setForeground(new Color(0, 0, 0));
 		button_6.setBounds(604, 68, 70, 70);
+		button_6.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_6);
 		
 		Button button_7 = new Button("Feld 7");
-		button_7.setForeground(new Color(0, 0, 0));
 		button_7.setBounds(154, 158, 70, 70);
+		button_7.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_7);
 		
 		Button button_8 = new Button("Feld 8");
-		button_8.setForeground(new Color(0, 0, 0));
 		button_8.setBounds(244, 158, 70, 70);
+		button_8.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_8);
 		
 		Button button_9 = new Button("Feld 9");
-		button_9.setForeground(new Color(0, 0, 0));
 		button_9.setBounds(334, 158, 70, 70);
+		button_9.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_9);
 		
 		Button button_10 = new Button("Feld 10");
-		button_10.setForeground(new Color(0, 0, 0));
 		button_10.setBounds(424, 158, 70, 70);
+		button_10.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_10);
 		
 		Button button_11 = new Button("Feld 11");
-		button_11.setForeground(new Color(0, 0, 0));
 		button_11.setBounds(514, 158, 70, 70);
+		button_11.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_11);
 		
 		Button button_12 = new Button("Feld 12");
-		button_12.setForeground(new Color(0, 0, 0));
 		button_12.setBounds(604, 158, 70, 70);
+		button_12.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_12);
 		
 		Button button_13 = new Button("Feld 13");
-		button_13.setForeground(new Color(0, 0, 0));
 		button_13.setBounds(154, 248, 70, 70);
+		button_13.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_13);
 		
 		Button button_14 = new Button("Feld 14");
-		button_14.setForeground(new Color(0, 0, 0));
 		button_14.setBounds(244, 248, 70, 70);
+		button_14.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_14);
 		
 		Button button_15 = new Button("Feld 15");
-		button_15.setForeground(new Color(0, 0, 0));
 		button_15.setBounds(334, 248, 70, 70);
+		button_15.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_15);
 		
 		Button button_16 = new Button("Feld 16");
-		button_16.setForeground(new Color(0, 0, 0));
 		button_16.setBounds(424, 248, 70, 70);
+		button_16.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_16);
 		
 		Button button_17 = new Button("Feld 17");
-		button_17.setForeground(new Color(0, 0, 0));
 		button_17.setBounds(514, 248, 70, 70);
+		button_17.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_17);
 		
 		Button button_18 = new Button("Feld 18");
-		button_18.setForeground(new Color(0, 0, 0));
 		button_18.setBounds(604, 248, 70, 70);
+		button_18.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_18);
 		
 		Button button_19 = new Button("Feld 19");
-		button_19.setForeground(new Color(0, 0, 0));
 		button_19.setBounds(154, 338, 70, 70);
+		button_19.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_19);
 		
 		Button button_20 = new Button("Feld 20");
-		button_20.setForeground(new Color(0, 0, 0));
 		button_20.setBounds(244, 338, 70, 70);
+		button_20.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_20);
 		
 		Button button_21 = new Button("Feld 21");
-		button_21.setForeground(new Color(0, 0, 0));
 		button_21.setBounds(334, 338, 70, 70);
+		button_21.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_21);
 		
 		Button button_22 = new Button("Feld 22");
-		button_22.setForeground(new Color(0, 0, 0));
 		button_22.setBounds(424, 338, 70, 70);
+		button_22.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_22);
 		
 		Button button_23 = new Button("Feld 23");
-		button_23.setForeground(new Color(0, 0, 0));
 		button_23.setBounds(514, 338, 70, 70);
+		button_23.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_23);
 		
 		Button button_24 = new Button("Feld 24");
-		button_24.setForeground(new Color(0, 0, 0));
 		button_24.setBounds(604, 338, 70, 70);
+		button_24.setForeground(new Color(0, 0, 0));
 		getContentPane().add(button_24);
 		
 		//Farben der Felder auf Spieler anpassen
@@ -225,80 +225,80 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		//Hintergrund
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
-		lblNewLabel.setBounds(0, 0, 784, 474);
-		getContentPane().add(lblNewLabel);
+		JLabel P1 = new JLabel("");
+		P1.setBounds(6, 6, 57, 16);
+		P1.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
+		getContentPane().add(P1);
 		
 		
 		//Statistik Felder
 		JLabel lblEinheiten = new JLabel("Einheiten");
+		lblEinheiten.setBounds(0, 545, 90, 35);
 		lblEinheiten.setBackground(SystemColor.controlHighlight);
 		lblEinheiten.setOpaque(true); //Label Standard Transparenz aufheben
 		lblEinheiten.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEinheiten.setBounds(0, 545, 90, 35);
 		getContentPane().add(lblEinheiten);
 		
 		JLabel lblEinheitenZahl = new JLabel("0");
+		lblEinheitenZahl.setBounds(0, 580, 90, 35);
 		lblEinheitenZahl.setOpaque(true);
 		lblEinheitenZahl.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEinheitenZahl.setBackground(SystemColor.menu);
-		lblEinheitenZahl.setBounds(0, 580, 90, 35);
 		getContentPane().add(lblEinheitenZahl);
 		
 		
 		JLabel lblKontinentBonus = new JLabel("Kontinent Bonus");
+		lblKontinentBonus.setBounds(180, 545, 120, 35);
 		lblKontinentBonus.setBackground(SystemColor.controlHighlight);
 		lblKontinentBonus.setOpaque(true);
 		lblKontinentBonus.setHorizontalAlignment(SwingConstants.CENTER);
-		lblKontinentBonus.setBounds(180, 545, 120, 35);
 		getContentPane().add(lblKontinentBonus);
 		
 		JLabel lblKontinentBonusZahl = new JLabel("0");
+		lblKontinentBonusZahl.setBounds(180, 580, 120, 35);
 		lblKontinentBonusZahl.setOpaque(true);
 		lblKontinentBonusZahl.setHorizontalAlignment(SwingConstants.CENTER);
 		lblKontinentBonusZahl.setBackground(SystemColor.menu);
-		lblKontinentBonusZahl.setBounds(180, 580, 120, 35);
 		getContentPane().add(lblKontinentBonusZahl);
 		
 		
 		JLabel lblLaender = new JLabel("L\u00E4nder");
+		lblLaender.setBounds(90, 545, 90, 35);
 		lblLaender.setBackground(SystemColor.controlHighlight);
 		lblLaender.setOpaque(true);
 		lblLaender.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLaender.setBounds(90, 545, 90, 35);
 		getContentPane().add(lblLaender);
 		
 		JLabel lblLaenderZahl = new JLabel("0");
+		lblLaenderZahl.setBounds(90, 580, 90, 35);
 		lblLaenderZahl.setOpaque(true);
 		lblLaenderZahl.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLaenderZahl.setBackground(SystemColor.menu);
-		lblLaenderZahl.setBounds(90, 580, 90, 35);
 		getContentPane().add(lblLaenderZahl);
 		
 
 		
 		//Spielphasenwechsel Button
 		JButton btnTruppenBewegen = new JButton("Truppenbewegen");
-		btnTruppenBewegen.setBackground(SystemColor.menu);
 		btnTruppenBewegen.setBounds(544, 537, 140, 40);
+		btnTruppenBewegen.setBackground(SystemColor.menu);
 		getContentPane().add(btnTruppenBewegen);
 		
 		JButton btnZugBeenden = new JButton("Zug beenden");
-		btnZugBeenden.setBackground(SystemColor.menu);
 		btnZugBeenden.setBounds(404, 577, 140, 40);
+		btnZugBeenden.setBackground(SystemColor.menu);
 		getContentPane().add(btnZugBeenden);
 		
 		JButton btnAngriff = new JButton("Angriffsphase");
-		btnAngriff.setBackground(SystemColor.menu);
 		btnAngriff.setBounds(404, 537, 140, 40);
+		btnAngriff.setBackground(SystemColor.menu);
 		getContentPane().add(btnAngriff);
 		
 		
 		//Spiel Men� - �ffnen des Men�s
 		JButton btnMenu = new JButton("Menu");
-		btnMenu.setBackground(SystemColor.menu);
 		btnMenu.setBounds(684, 537, 100, 80);
+		btnMenu.setBackground(SystemColor.menu);
 		getContentPane().add(btnMenu);
 		btnMenu.addActionListener(new ActionListener() {
 			private SpielMenu menu;
@@ -309,42 +309,54 @@ public class SpielKarte1 extends JFrame {
 		});
 		
 		JLabel lblAktuellePhase = new JLabel("Aktuelle Phase");
+		lblAktuellePhase.setBounds(544, 577, 140, 40);
 		lblAktuellePhase.setBackground(UIManager.getColor("Button.light"));
 		lblAktuellePhase.setOpaque(true);
 		lblAktuellePhase.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAktuellePhase.setBounds(544, 577, 140, 40);
 		getContentPane().add(lblAktuellePhase);
 		
 		
 		//W�rfel Ergebnisfelder
 		JLabel lblDefenceWrflZahl = new JLabel("");
+		lblDefenceWrflZahl.setBounds(180, 510, 120, 35);
 		lblDefenceWrflZahl.setToolTipText("Beispiel: 3 5 (W\u00FCrfel 1 = 3 & W\u00FCrfel 2 = 5)");
 		lblDefenceWrflZahl.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDefenceWrflZahl.setBackground(SystemColor.menu);
-		lblDefenceWrflZahl.setBounds(180, 510, 120, 35);
 		lblDefenceWrflZahl.setOpaque(true);
 		getContentPane().add(lblDefenceWrflZahl);
 		
 		JLabel lblAttackWrfelZahl = new JLabel("");
+		lblAttackWrfelZahl.setBounds(180, 475, 120, 35);
 		lblAttackWrfelZahl.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAttackWrfelZahl.setBackground(SystemColor.controlHighlight);
-		lblAttackWrfelZahl.setBounds(180, 475, 120, 35);
 		lblAttackWrfelZahl.setOpaque(true);
 		getContentPane().add(lblAttackWrfelZahl);
 		
 		JLabel lblWrfelErgebnissDefensive = new JLabel("W\u00FCrfel Ergebnis Defensive:");
+		lblWrfelErgebnissDefensive.setBounds(0, 510, 180, 35);
 		lblWrfelErgebnissDefensive.setOpaque(true);
 		lblWrfelErgebnissDefensive.setHorizontalAlignment(SwingConstants.CENTER);
 		lblWrfelErgebnissDefensive.setBackground(SystemColor.control);
-		lblWrfelErgebnissDefensive.setBounds(0, 510, 180, 35);
 		getContentPane().add(lblWrfelErgebnissDefensive);
 		
 		JLabel lblWrfelErgebnissOffensive = new JLabel("W\u00FCrfel Ergebnis Offensive:");
+		lblWrfelErgebnissOffensive.setBounds(0, 475, 180, 35);
 		lblWrfelErgebnissOffensive.setOpaque(true);
 		lblWrfelErgebnissOffensive.setHorizontalAlignment(SwingConstants.CENTER);
 		lblWrfelErgebnissOffensive.setBackground(SystemColor.controlHighlight);
-		lblWrfelErgebnissOffensive.setBounds(0, 475, 180, 35);
 		getContentPane().add(lblWrfelErgebnissOffensive);
+		
+		JLabel P2 = new JLabel("");
+		P2.setBounds(6, 34, 57, 16);
+		getContentPane().add(P2);
+		
+		JLabel P3 = new JLabel("");
+		P3.setBounds(6, 62, 57, 16);
+		getContentPane().add(P3);
+		
+		JLabel P4 = new JLabel("");
+		P4.setBounds(6, 90, 57, 16);
+		getContentPane().add(P4);
 		
 
 		
