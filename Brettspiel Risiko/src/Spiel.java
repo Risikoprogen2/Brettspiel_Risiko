@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import java.awt.Panel;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import java.awt.SystemColor;
 
 public class Spiel {
 
@@ -26,10 +27,10 @@ public class Spiel {
 	private JTextField PName3;
 	private JTextField PName4;
 	
-	private String Name1;
-	private String Name2;
-	private String Name3;
-	private String Name4;
+	static String Name1;
+	static String Name2;
+	static String Name3;
+	static String Name4;
 	private static int i = 0;
 	
 	
@@ -75,26 +76,31 @@ public class Spiel {
 	private void initialize() {
 		// Frame Generieren
 		frame = new JFrame();
-		frame.setBounds(100, 100, 298, 419);
+		frame.getContentPane().setBackground(Color.GRAY);
+		frame.setBounds(100, 100, 317, 416);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
 		// Button Start
 		JButton btnStart = new JButton("Start");
-		btnStart.setBounds(175, 341, 117, 29);
+		btnStart.setBackground(SystemColor.menu);
+		btnStart.setBounds(178, 341, 117, 29);
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(btnStart);
 		// Button Zurück
 		JButton btnZurck = new JButton("Zur\u00FCck");
+		btnZurck.setBackground(SystemColor.menu);
 		btnZurck.setBounds(0, 341, 117, 29);
 		frame.getContentPane().add(btnZurck);
 		// Button um Spieler Zahl zu erhöhen
 		JButton button_minus = new JButton("-");
-		button_minus.setBounds(204, 78, 53, 29);
+		button_minus.setBackground(SystemColor.menu);
+		button_minus.setBounds(209, 78, 44, 29);
 		frame.getContentPane().add(button_minus);
 		// Button um Spieler Zahl zu verkleinern
 		JButton button_plus = new JButton("+");
-		button_plus.setBounds(245, 78, 53, 29);
+		button_plus.setBackground(SystemColor.menu);
+		button_plus.setBounds(251, 78, 44, 29);
 		frame.getContentPane().add(button_plus);
 		
 		
@@ -147,7 +153,7 @@ public class Spiel {
 		
 		// Bild
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("/Users/konradmusiol/Documents/GitHub/Brettspiel_Risiko/Brettspiel Risiko/Image/Risiko-Logo-2016.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Konrad-Gamer\\git\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
 		lblNewLabel.setBounds(0, 0, 295, 60);
 		frame.getContentPane().add(lblNewLabel);
 		
@@ -183,18 +189,20 @@ public class Spiel {
 
 					
 				}
-				
 				*/
 				
-				
-				String Name1 = PName1.getText();
-				String Name2 = PName2.getText();
-				String Name3 = PName3.getText();
-				String Name4 = PName4.getText();
-
-				//Test ob im STring gespeichert wird
-				System.out.println(Name1 + Name2 + Name3 + Name4);
+				// Speicher von Namen im String
+			Name1 = PName1.getText();
+			Name2 = PName2.getText();
+			Name3 = PName3.getText();
+			Name4 = PName4.getText();
 		
+
+
+				// test ob String gespeichert wird
+			System.out.println(Name1 + Name2 + Name3 + Name4);
+
+			// Starten von Spielkarte 1
 				this.karte = new SpielKarte1();
 				karte.Start_SpielKarte();
 				frame.dispose();	

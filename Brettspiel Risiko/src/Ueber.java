@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import java.awt.SystemColor;
 
 public class Ueber extends JFrame {
 
@@ -51,24 +52,26 @@ public class Ueber extends JFrame {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 334);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.text);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		// Button zum SchliÃŸen 
 		JButton btnSchlieen = new JButton("Schlie\u00DFen");
+		btnSchlieen.setBackground(SystemColor.text);
 		btnSchlieen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				
 			}
 		});
-		btnSchlieen.setBounds(153, 244, 117, 29);
+		btnSchlieen.setBounds(153, 255, 117, 29);
 		contentPane.add(btnSchlieen);
 		// Text Feld
 		JTextPane txtpnHierStehenSpter = new JTextPane();
 		txtpnHierStehenSpter.setText("Hier steht später irgendwas über uns usw. :)\n");
 		txtpnHierStehenSpter.setEditable(false);
-		txtpnHierStehenSpter.setBounds(6, 6, 438, 225);
+		txtpnHierStehenSpter.setBounds(0, 0, 438, 295);
 		contentPane.add(txtpnHierStehenSpter);
 	}
 }

@@ -24,10 +24,11 @@ import java.awt.SystemColor;
 //Autor: Jonas Behler
 
 
-
 public class SpielKarte1 extends JFrame {
 	static SpielKarte1 frame = new SpielKarte1();
 	
+
+
 	/**
 	 * Methode zum starten des Spielbrett's
 	 */
@@ -41,6 +42,9 @@ public class SpielKarte1 extends JFrame {
 				}
 			}
 		});
+		
+		
+		
 	}
 
 
@@ -54,7 +58,6 @@ public class SpielKarte1 extends JFrame {
 		setBounds(100, 100, 802, 665);
 		
 		
-	
 		
 		
 		//Schleife zum Felder generieren
@@ -230,7 +233,7 @@ public class SpielKarte1 extends JFrame {
 		
 		//Hintergrund
 		JLabel lbl_background = new JLabel("");
-		lbl_background.setIcon(new ImageIcon("/Users/konradmusiol/Documents/GitHub/Brettspiel_Risiko/Brettspiel Risiko/Image/Risiko.jpg"));
+		lbl_background.setIcon(new ImageIcon("C:\\Users\\Konrad-Gamer\\git\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
 		lbl_background.setBounds(2, 0, 800, 474);
 		getContentPane().add(lbl_background);
 		
@@ -355,24 +358,27 @@ public class SpielKarte1 extends JFrame {
 		
 		// Von Klasse Spiel die Spieler Namen hier ausgeben
 		
-		JLabel P1 = new JLabel("");
-		P1.setBounds(6, 6, 57, 16);
-		P1.setIcon(null);
-		getContentPane().add(P1);
+		JLabel lbl_P1 = new JLabel("");
+		lbl_P1.setBounds(6, 6, 57, 16);
+		lbl_P1.setIcon(null);
+		getContentPane().add(lbl_P1);
+		lbl_P1.setText(Spiel.Name1);
 		
-		JLabel P2 = new JLabel();
-		P2.setBounds(6, 34, 57, 16);
-		getContentPane().add(P2);
+		JLabel lbl_P2 = new JLabel("");
+		lbl_P2.setBounds(6, 34, 57, 16);
+		getContentPane().add(lbl_P2);
+		lbl_P2.setText(Spiel.Name2);
 		
-		JLabel P3 = new JLabel("");
-		P3.setBounds(6, 62, 57, 16);
-		getContentPane().add(P3);
+		JLabel lbl_P3 = new JLabel("");
+		lbl_P3.setBounds(6, 62, 57, 16);
+		getContentPane().add(lbl_P3);
+		lbl_P3.setText(Spiel.Name3);
 		
-		JLabel P4 = new JLabel("");
-		P4.setBounds(6, 90, 57, 16);
-		getContentPane().add(P4);
-		
-		
+		JLabel lbl_P4 = new JLabel("");
+		lbl_P4.setBounds(6, 90, 57, 16);
+		getContentPane().add(lbl_P4);
+		lbl_P4.setText(Spiel.Name4);
+
 		
 
 		

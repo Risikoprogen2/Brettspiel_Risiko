@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
+import java.awt.SystemColor;
 
 public class Regeln extends JFrame {
 
@@ -45,24 +46,26 @@ public class Regeln extends JFrame {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 332);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.text);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		// Button zum Schließen
 		JButton btnSchlieen = new JButton("Schlie\u00DFen");
+		btnSchlieen.setBackground(SystemColor.text);
 		btnSchlieen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
-		btnSchlieen.setBounds(161, 243, 117, 29);
+		btnSchlieen.setBounds(158, 253, 117, 29);
 		contentPane.add(btnSchlieen);
 		// Das ist das nicht editirbares Textfeld für den Regel Text.
 		JTextPane txtpnHierStehenSpter = new JTextPane();
 		txtpnHierStehenSpter.setText("Hier Stehen Später die Regeln von Risiko\n\n\n");
 		txtpnHierStehenSpter.setEditable(false);
-		txtpnHierStehenSpter.setBounds(6, 6, 438, 236);
+		txtpnHierStehenSpter.setBounds(0, 0, 434, 263);
 		contentPane.add(txtpnHierStehenSpter);
 	}
 }
