@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 public class GameStartSettings {
 
 	private SpielKarte1 karte1;
+	private Spiel spiel;
+	
 
 
 }

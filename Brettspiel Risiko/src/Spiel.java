@@ -15,6 +15,8 @@ import javax.swing.JComboBox;
 import javax.swing.JSeparator;
 import javax.swing.JPanel;
 import java.awt.Panel;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class Spiel {
 
@@ -28,20 +30,17 @@ public class Spiel {
 	private String Name2;
 	private String Name3;
 	private String Name4;
+	private static int i = 0;
+	
 	
 	/**
-	 * In dieser Klasse werden die Vorbereitungen für das Spiel Getroffen. Anzahl der Spieler und ob KI oder Mensch Spielt.
-	 * Außerdem Map auswahl.
-	 * REST WIRD NOCH GEPLANT!!!
-	 * 
+	 * Klasse ist da um die Menge der Spieler zu waehlen und um die Namen der in das Spiel zu uebergeben 
 	 * @Autor Konrad
 	 *
 	 */
 
 	
-	/**
-	 * Start der Anwendung
-	 */
+	 // Start der Anwendung 
 	public static void Spiel_Start() {
 		EventQueue.invokeLater(new Runnable() {
 			
@@ -59,21 +58,12 @@ public class Spiel {
 	
 	public void Setzen(){
 		
-		
-		
-		
+	
 	}
-	
-	
-	
-	
 	
 	/**
 	 * Erstellen der Anwendung.
 	 * Konstruktor.
-	 * 
-	 * 
-	 * 
 	 */
 	public Spiel() {
 		initialize();
@@ -81,31 +71,137 @@ public class Spiel {
 
 	/**
 	 * Inizialiesieren des Inhalts.
-	 * 
 	 */
 	private void initialize() {
+		// Frame Generieren
 		frame = new JFrame();
-		frame.setBounds(100, 100, 291, 282);
+		frame.setBounds(100, 100, 298, 419);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		
+		// Button Start
 		JButton btnStart = new JButton("Start");
-		btnStart.setBounds(168, 225, 117, 29);
+		btnStart.setBounds(175, 341, 117, 29);
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(btnStart);
+		// Button Zurück
+		JButton btnZurck = new JButton("Zur\u00FCck");
+		btnZurck.setBounds(0, 341, 117, 29);
+		frame.getContentPane().add(btnZurck);
+		// Button um Spieler Zahl zu erhöhen
+		JButton button_minus = new JButton("-");
+		button_minus.setBounds(204, 78, 53, 29);
+		frame.getContentPane().add(button_minus);
+		// Button um Spieler Zahl zu verkleinern
+		JButton button_plus = new JButton("+");
+		button_plus.setBounds(245, 78, 53, 29);
+		frame.getContentPane().add(button_plus);
+		
+		
+		// Die Label fuer die Namen
+		JLabel lblName1 = new JLabel("Player 1:");
+		lblName1.setBounds(10, 160, 53, 16);
+		frame.getContentPane().add(lblName1);
+		
+		JLabel lblPlayer2 = new JLabel("Player 2:");
+		lblPlayer2.setVisible(false);
+		lblPlayer2.setBounds(10, 188, 53, 16);
+		frame.getContentPane().add(lblPlayer2);
+		
+		JLabel lblPlayer3 = new JLabel("Player 3:");
+		lblPlayer3.setVisible(false);
+		lblPlayer3.setBounds(10, 216, 53, 16);
+		frame.getContentPane().add(lblPlayer3);
+		
+		JLabel lblPlayer4 = new JLabel("Player 4:");
+		lblPlayer4.setVisible(false);
+		lblPlayer4.setBounds(10, 244, 53, 16);
+		frame.getContentPane().add(lblPlayer4);
+		
+		
+		// Textfelder zum Eingeben der Namen
+		PName1 = new JTextField();
+		PName1.setBounds(65, 155, 130, 26);
+		PName1.setBackground(Color.WHITE);
+		frame.getContentPane().add(PName1);
+		PName1.setColumns(10);
+		
+		PName2 = new JTextField();
+		PName2.setVisible(false);
+		PName2.setBounds(65, 183, 130, 26);
+		PName2.setColumns(10);
+		frame.getContentPane().add(PName2);
+		
+		PName3 = new JTextField();
+		PName3.setVisible(false);
+		PName3.setBounds(65, 211, 130, 26);
+		PName3.setColumns(10);
+		frame.getContentPane().add(PName3);
+		
+		PName4 = new JTextField();
+		PName4.setVisible(false);
+		PName4.setBounds(65, 239, 130, 26);
+		PName4.setColumns(10);
+		frame.getContentPane().add(PName4);
+		
+		
+		// Bild
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("/Users/konradmusiol/Documents/GitHub/Brettspiel_Risiko/Brettspiel Risiko/Image/Risiko-Logo-2016.png"));
+		lblNewLabel.setBounds(0, 0, 295, 60);
+		frame.getContentPane().add(lblNewLabel);
+		
+		
+		// Aktionlistener vom Button Start
 		btnStart.addActionListener(new ActionListener() {
 			public SpielKarte1 karte;
 			public void actionPerformed(ActionEvent e) {
 				
 				
+				/*
+				switch(i){
+				
+				case 0:
+					String Name1 = PName1.getText();
+					break;
+				case 1:
+					String Name1 = PName1.getText();
+					String Name2 = PName2.getText();
+					break;
+				case 2:
+					String Name1 = PName1.getText();
+					String Name2 = PName2.getText();
+					String Name3 = PName3.getText();
+					break;
+				
+				case 3: 
+					
+					String Name1 = PName1.getText();
+					String Name2 = PName2.getText();
+					String Name3 = PName3.getText();
+					String Name4 = PName4.getText();
+
+					
+				}
+				
+				*/
+				
+				
+				String Name1 = PName1.getText();
+				String Name2 = PName2.getText();
+				String Name3 = PName3.getText();
+				String Name4 = PName4.getText();
+
+				//Test ob im STring gespeichert wird
+				System.out.println(Name1 + Name2 + Name3 + Name4);
+		
 				this.karte = new SpielKarte1();
 				karte.Start_SpielKarte();
-				frame.dispose();
-			
+				frame.dispose();	
 			}
 		});
-		frame.getContentPane().setLayout(null);
-		frame.getContentPane().add(btnStart);
-		
-		JButton btnZurck = new JButton("Zur\u00FCck");
-		btnZurck.setBounds(10, 225, 117, 29);
+	
+		// Aktionlistener vom Button Zurueck
 		btnZurck.addActionListener(new ActionListener() {
 			private Welcome welcome;
 			public void actionPerformed(ActionEvent e) {
@@ -114,59 +210,69 @@ public class Spiel {
 				welcome.Start_Welcome();
 				
 				frame.dispose();
-								
+						
+				
 			}
 		});
 		
-		
-		frame.getContentPane().add(btnZurck);
-		
-		JLabel lblName = new JLabel("Player 1:");
-		lblName.setBounds(10, 30, 53, 16);
-		frame.getContentPane().add(lblName);
-		
-		PName1 = new JTextField();
-		PName1.setBounds(65, 25, 130, 26);
-		frame.getContentPane().add(PName1);
-		PName1.setColumns(10);
-		String Name1 = PName1.getText();
-		
-		JLabel lblPlayer = new JLabel("Player 2:");
-		lblPlayer.setBounds(10, 57, 53, 16);
-		frame.getContentPane().add(lblPlayer);
-		
-		PName2 = new JTextField();
-		PName2.setBounds(65, 52, 130, 26);
-		PName2.setEnabled(false);
-		PName2.setColumns(10);
-		frame.getContentPane().add(PName2);
-		String Name2 = PName2.getText();
-		
-		PName3 = new JTextField();
-		PName3.setColumns(10);
-		PName3.setBounds(65, 78, 130, 26);
-		frame.getContentPane().add(PName3);
-		String Name3 = PName3.getText();
-		
-		
-		PName4 = new JTextField();
-		PName4.setColumns(10);
-		PName4.setBounds(65, 106, 130, 26);
-		frame.getContentPane().add(PName4);
-		String Name4 = PName4.getText();
-		
-		
-		JLabel lblPlayer_2 = new JLabel("Player 3:");
-		lblPlayer_2.setBounds(10, 85, 53, 16);
-		frame.getContentPane().add(lblPlayer_2);
-		
-		JLabel lblPlayer_1 = new JLabel("Player 4:");
-		lblPlayer_1.setBounds(10, 111, 53, 16);
-		frame.getContentPane().add(lblPlayer_1);
-		
-		
-		
+		// Aktionlistener von + Button
+		button_plus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			// Switch Case Anweisung 
+			switch(i++){
 			
+			case 0:
+				PName2.setVisible(true);
+				lblPlayer2.setVisible(true);
+				break;
+			case 1:
+				PName3.setVisible(true);
+				lblPlayer3.setVisible(true);
+				break;
+			case 2:
+				PName4.setVisible(true);
+				lblPlayer4.setVisible(true);
+				break;
+			
+			case 3: // Case damit i nicht höher wird als 3 
+				i = 3;
+				}
+			
+			}
+		});
+		
+		// Aktionlistener vom - Button 
+		button_minus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// Switch case Anweisung
+				switch(i--){
+					
+				case 3: 
+					PName4.setVisible(false);
+					lblPlayer4.setVisible(false);
+					break;
+				case 2:
+					PName3.setVisible(false);		
+					lblPlayer3.setVisible(false);
+					break;
+				case 1:
+					PName2.setVisible(false);
+					lblPlayer2.setVisible(false);
+					break;
+				case 0:// Case damit i nicht kleiner 0 wird
+					i = 0;
+				
+					
+				}
+				
+			}
+		});
+		
+				
+			
+	
+	
+	
 		}
 	}
 

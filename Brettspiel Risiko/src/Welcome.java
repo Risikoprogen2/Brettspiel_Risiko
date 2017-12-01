@@ -8,11 +8,14 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.Font;
 
 /**
  * In dieser Klasse wird der Startbildschierm erzeugt.
  * 
- * Aus Diesem Fenster heraus k�nnen Benutzer ein Neues Spiel Starten, Ein Spiel Laden, Denn Regel Text Anschauen und Einen Text über das Programm Lesen.
+ * Aus Diesem Fenster heraus k�nnen Benutzer ein Neues Spiel Starten, Ein Spiel Laden, Denn Regel Text Anschauen und Einen Text über das Programm Lesen.
  * 
  * @Autor Konrad 
  * 
@@ -56,7 +59,7 @@ public class Welcome extends JFrame {
 	 */
 	public Welcome() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 214, 207);
+		setBounds(100, 100, 301, 247);
 		contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -66,6 +69,7 @@ public class Welcome extends JFrame {
 		// Der Button öffnet das Frame von der Klasse Spiel.java
 		
 		JButton btnNewButton = new JButton("Neues Spiel");
+		btnNewButton.setFont(new Font("Krungthep", Font.PLAIN, 16));
 		btnNewButton.addActionListener(new ActionListener() {
 			private Spiel spiel;
 			public void actionPerformed(ActionEvent e) {
@@ -77,12 +81,13 @@ public class Welcome extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(50, 11, 89, 23);
+		btnNewButton.setBounds(6, 67, 292, 43);
 		contentPane.add(btnNewButton);
 		
 		// Der Button öffnet das Frame von der Klasse Regeln.java
 		
 		JButton btnNewButton_1 = new JButton("Regeln");
+		btnNewButton_1.setFont(new Font("Krungthep", Font.PLAIN, 16));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			
 			private Regeln regeln;
@@ -92,12 +97,13 @@ public class Welcome extends JFrame {
 				regeln.Regeln_Start();
 			}
 		});
-		btnNewButton_1.setBounds(50, 45, 89, 23);
+		btnNewButton_1.setBounds(6, 122, 292, 43);
 		contentPane.add(btnNewButton_1);
 		
 		// Der Button öffnet das Frame von der Klasse Ueber.java
 		
 		JButton btnNewButton_2 = new JButton("\u00DCber");
+		btnNewButton_2.setFont(new Font("Krungthep", Font.PLAIN, 16));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			private Ueber ueber;
 
@@ -107,9 +113,12 @@ public class Welcome extends JFrame {
 				ueber.Ueber_Start();
 			}
 		});
-		btnNewButton_2.setBounds(50, 79, 89, 23);
+		btnNewButton_2.setBounds(6, 174, 292, 43);
 		contentPane.add(btnNewButton_2);
+		
+		JLabel pic_risiko = new JLabel("");
+		pic_risiko.setIcon(new ImageIcon("/Users/konradmusiol/Documents/GitHub/Brettspiel_Risiko/Brettspiel Risiko/Image/Risiko-Logo-2016.png"));
+		pic_risiko.setBounds(6, 0, 300, 66);
+		contentPane.add(pic_risiko);
 	}
-
 }
-// Github test hochladen

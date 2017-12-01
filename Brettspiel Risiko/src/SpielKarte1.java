@@ -23,6 +23,8 @@ import java.awt.SystemColor;
 
 //Autor: Jonas Behler
 
+
+
 public class SpielKarte1 extends JFrame {
 	static SpielKarte1 frame = new SpielKarte1();
 	
@@ -51,6 +53,8 @@ public class SpielKarte1 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 802, 665);
 		
+		
+	
 		
 		
 		//Schleife zum Felder generieren
@@ -225,10 +229,11 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		//Hintergrund
-		JLabel P1 = new JLabel("");
-		P1.setBounds(6, 6, 57, 16);
-		P1.setIcon(new ImageIcon("C:\\Users\\Jonas\\OneDrive\\Hochschule Ostwestfalen-Lippe\\2. Programmieren II\\Projekt\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko.jpg"));
-		getContentPane().add(P1);
+		JLabel lbl_background = new JLabel("");
+		lbl_background.setIcon(new ImageIcon("/Users/konradmusiol/Documents/GitHub/Brettspiel_Risiko/Brettspiel Risiko/Image/Risiko.jpg"));
+		lbl_background.setBounds(2, 0, 800, 474);
+		getContentPane().add(lbl_background);
+		
 		
 		
 		//Statistik Felder
@@ -316,7 +321,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblAktuellePhase);
 		
 		
-		//W�rfel Ergebnisfelder
+		//Wuerfel Ergebnisfelder
 		JLabel lblDefenceWrflZahl = new JLabel("");
 		lblDefenceWrflZahl.setBounds(180, 510, 120, 35);
 		lblDefenceWrflZahl.setToolTipText("Beispiel: 3 5 (W\u00FCrfel 1 = 3 & W\u00FCrfel 2 = 5)");
@@ -346,7 +351,16 @@ public class SpielKarte1 extends JFrame {
 		lblWrfelErgebnissOffensive.setBackground(SystemColor.controlHighlight);
 		getContentPane().add(lblWrfelErgebnissOffensive);
 		
-		JLabel P2 = new JLabel("");
+		
+		
+		// Von Klasse Spiel die Spieler Namen hier ausgeben
+		
+		JLabel P1 = new JLabel("");
+		P1.setBounds(6, 6, 57, 16);
+		P1.setIcon(null);
+		getContentPane().add(P1);
+		
+		JLabel P2 = new JLabel();
 		P2.setBounds(6, 34, 57, 16);
 		getContentPane().add(P2);
 		
@@ -357,6 +371,8 @@ public class SpielKarte1 extends JFrame {
 		JLabel P4 = new JLabel("");
 		P4.setBounds(6, 90, 57, 16);
 		getContentPane().add(P4);
+		
+		
 		
 
 		
