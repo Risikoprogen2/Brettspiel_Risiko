@@ -153,7 +153,7 @@ public class Spiel {
 		
 		// Bild
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Konrad-Gamer\\git\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
+		lblNewLabel.setIcon(new ImageIcon(".\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
 		lblNewLabel.setBounds(0, 0, 295, 60);
 		frame.getContentPane().add(lblNewLabel);
 		

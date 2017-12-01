@@ -109,7 +109,7 @@ public class Welcome extends JFrame {
 		//Hintergrund Bild
 		JLabel pic_risiko = new JLabel("");
 		pic_risiko.setBounds(0, 0, 300, 66);
-		pic_risiko.setIcon(new ImageIcon("C:\\Users\\Konrad-Gamer\\git\\Brettspiel_Risiko\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
+		pic_risiko.setIcon(new ImageIcon(".\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
 		contentPane.add(pic_risiko);
 	}
 }
