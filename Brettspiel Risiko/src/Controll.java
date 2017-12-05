@@ -1,8 +1,0 @@
-
-public class Controll {
-	
-	
-	//dsfdsfd
-	
-
-}
