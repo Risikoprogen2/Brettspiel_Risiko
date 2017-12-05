@@ -233,7 +233,7 @@ public class SpielKarte1 extends JFrame {
 		
 		//Hintergrund
 		JLabel lbl_background = new JLabel("");
-		lbl_background.setIcon(new ImageIcon(".\\Brettspiel Risiko\\Image\\Risiko.jpg"));
+		lbl_background.setIcon(new ImageIcon(getClass().getResource("Risiko.jpg")));
 		lbl_background.setBounds(2, 0, 800, 474);
 		getContentPane().add(lbl_background);
 		

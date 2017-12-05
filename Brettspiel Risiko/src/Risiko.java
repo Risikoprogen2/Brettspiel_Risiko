@@ -1,3 +1,10 @@
+// Autor: Konrad Musiol
+
+/*
+ * Main Klasse dess Programms
+ * 
+ * Ruft Klasse Welcome() auf
+*/
 
 public class Risiko {
 	

@@ -17,7 +17,7 @@ import java.awt.SystemColor;
 /**
  * In dieser Klasse wird der Startbildschierm erzeugt.
  * Aus Diesem Fenster heraus koennen Benutzer ein Neues Spiel Starten, Ein Spiel Laden, Denn Regel Text Anschauen und Einen Text Ueber das Programm Lesen.
- * @Autor Konrad 
+ * @Autor Konrad Musiol
  */
 public class Welcome extends JFrame {
 	
@@ -109,7 +109,7 @@ public class Welcome extends JFrame {
 		//Hintergrund Bild
 		JLabel pic_risiko = new JLabel("");
 		pic_risiko.setBounds(0, 0, 300, 66);
-		pic_risiko.setIcon(new ImageIcon(".\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
+		pic_risiko.setIcon(new ImageIcon(getClass().getResource("Risiko-Logo-2016.png")));
 		contentPane.add(pic_risiko);
 	}
 }

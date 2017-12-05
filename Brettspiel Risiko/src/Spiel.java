@@ -36,7 +36,7 @@ public class Spiel {
 	
 	/**
 	 * Klasse ist da um die Menge der Spieler zu waehlen und um die Namen der in das Spiel zu uebergeben 
-	 * @Autor Konrad
+	 * @Autor Konrad Musiol
 	 *
 	 */
 
@@ -153,7 +153,7 @@ public class Spiel {
 		
 		// Bild
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(".\\Brettspiel Risiko\\Image\\Risiko-Logo-2016.png"));
+		lblNewLabel.setIcon(new ImageIcon(getClass().getResource("Risiko-Logo-2016.png")));
 		lblNewLabel.setBounds(0, 0, 295, 60);
 		frame.getContentPane().add(lblNewLabel);
 		
@@ -164,32 +164,6 @@ public class Spiel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				/*
-				switch(i){
-				
-				case 0:
-					String Name1 = PName1.getText();
-					break;
-				case 1:
-					String Name1 = PName1.getText();
-					String Name2 = PName2.getText();
-					break;
-				case 2:
-					String Name1 = PName1.getText();
-					String Name2 = PName2.getText();
-					String Name3 = PName3.getText();
-					break;
-				
-				case 3: 
-					
-					String Name1 = PName1.getText();
-					String Name2 = PName2.getText();
-					String Name3 = PName3.getText();
-					String Name4 = PName4.getText();
-
-					
-				}
-				*/
 				
 				// Speicher von Namen im String
 			Name1 = PName1.getText();
@@ -197,7 +171,26 @@ public class Spiel {
 			Name3 = PName3.getText();
 			Name4 = PName4.getText();
 		
-
+			
+			/*
+			if(Name1 != null){
+				Name1 = "Player1"; 	
+			};
+			
+			if (Name2 != null){
+				Name2 = "Player2";	
+			};
+			
+			if (Name3 != null){
+				Name3 = "Player3";
+			};
+			
+			if (Name4 != null){
+				Name4 = "Player4";
+			};
+			
+			*/
+			
 
 				// test ob String gespeichert wird
 			System.out.println(Name1 + Name2 + Name3 + Name4);
