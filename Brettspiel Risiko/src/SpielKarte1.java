@@ -1,13 +1,5 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Image;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.Panel;
-import java.awt.Toolkit;
-import java.awt.Window;
 import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -16,7 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.UIManager;
-import javax.swing.JSplitPane;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 
@@ -27,6 +18,7 @@ import java.awt.SystemColor;
 public class SpielKarte1 extends JFrame {
 	static SpielKarte1 frame = new SpielKarte1();
 	
+	public static Button button_1 = new Button("Feld 1");
 
 
 	/**
@@ -57,7 +49,7 @@ public class SpielKarte1 extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 802, 698);
 		
-		
+		getContentPane().setLayout(null);
 		
 		
 		//Schleife zum Felder generieren
@@ -100,14 +92,14 @@ public class SpielKarte1 extends JFrame {
 			}
 		}
 		*/
-		getContentPane().setLayout(null);
 		
-		//Vorlï¿½ufig:
+		
+		//Vorläufig:
+		
+		
 		
 		
 		//Felder erstellen
-		
-		
 		/*
 		 * Jedes Feld/Button braucht noch eine Liste mit Nachbarn (arraylist)
 		 * */
@@ -240,7 +232,7 @@ public class SpielKarte1 extends JFrame {
 		//Hintergrund
 		JLabel lbl_background = new JLabel("");
 
-		lbl_background.setIcon(new ImageIcon(getClass().getResource("Risiko.jpg")));
+		lbl_background.setIcon(new ImageIcon(getClass().getResource("Risiko.jpg")));  //Einbinden des Hintergrundbildes
 		lbl_background.setBounds(2, 0, 800, 474);
 		lbl_background.setBounds(-10, 0, 794, 470);
 		getContentPane().add(lbl_background);
@@ -409,7 +401,9 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblVerstaerkungZahl);
 
 		
-
+		//Aufruf der StartSettings - Felder zuweisen/einteilen
+		GameStartSettings startSettings = new GameStartSettings();
+		startSettings.Start();	
 		
 	}
 	
