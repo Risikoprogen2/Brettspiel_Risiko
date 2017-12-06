@@ -106,6 +106,12 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		//Felder erstellen
+		
+		
+		/*
+		 * Jedes Feld/Button braucht noch eine Liste mit Nachbarn (arraylist)
+		 * */
+		
 		Button button_1 = new Button("Feld 1");
 		button_1.setBounds(152, 53, 70, 70);
 		button_1.setForeground(new Color(0, 0, 0));
