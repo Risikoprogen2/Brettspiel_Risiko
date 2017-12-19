@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 
@@ -104,134 +105,181 @@ public class SpielKarte1 extends JFrame {
 		 * Jedes Feld/Button braucht noch eine Liste mit Nachbarn (arraylist)
 		 * */
 		
-		Button button_1 = new Button("Feld 1");
+		JButton button_1 = new JButton("Feld 1");
+		button_1.setBackground(SystemColor.controlHighlight);
 		button_1.setBounds(152, 53, 70, 70);
 		button_1.setForeground(new Color(0, 0, 0));
+		button_1.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_1);
 		
-		Button button_2 = new Button("Feld 2");
+		JButton button_2 = new JButton("Feld 2");
+		button_2.setBackground(SystemColor.controlHighlight);
 		button_2.setBounds(242, 53, 70, 70);
 		button_2.setForeground(new Color(0, 0, 0));
+		button_2.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_2);
 		
-		Button button_3 = new Button("Feld 3");
+		JButton button_3 = new JButton("Feld 3");
+		button_3.setBackground(SystemColor.controlHighlight);
 		button_3.setBounds(332, 53, 70, 70);
 		button_3.setForeground(new Color(0, 0, 0));
+		button_3.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_3);
 		
-		Button button_4 = new Button("Feld 4");
+		JButton button_4 = new JButton("Feld 4");
+		button_4.setBackground(SystemColor.controlHighlight);
 		button_4.setBounds(422, 53, 70, 70);
 		button_4.setForeground(new Color(0, 0, 0));
+		button_4.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_4);
 		
-		Button button_5 = new Button("Feld 5");
+		JButton button_5 = new JButton("Feld 5");
+		button_5.setBackground(SystemColor.controlHighlight);
 		button_5.setBounds(512, 53, 70, 70);
 		button_5.setForeground(new Color(0, 0, 0));
+		button_5.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_5);
 		
-		Button button_6 = new Button("Feld 6");
+		JButton button_6 = new JButton("Feld 6");
+		button_6.setBackground(SystemColor.controlHighlight);
 		button_6.setBounds(602, 53, 70, 70);
 		button_6.setForeground(new Color(0, 0, 0));
+		button_6.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_6);
 		
-		Button button_7 = new Button("Feld 7");
+		JButton button_7 = new JButton("Feld 7");
+		button_7.setBackground(SystemColor.controlHighlight);
 		button_7.setBounds(152, 143, 70, 70);
 		button_7.setForeground(new Color(0, 0, 0));
+		button_7.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_7);
 		
-		Button button_8 = new Button("Feld 8");
+		JButton button_8 = new JButton("Feld 8");
+		button_8.setBackground(SystemColor.controlHighlight);
 		button_8.setBounds(242, 143, 70, 70);
 		button_8.setForeground(new Color(0, 0, 0));
+		button_8.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_8);
 		
-		Button button_9 = new Button("Feld 9");
+		JButton button_9 = new JButton("Feld 9");
+		button_9.setBackground(SystemColor.controlHighlight);
 		button_9.setBounds(332, 143, 70, 70);
 		button_9.setForeground(new Color(0, 0, 0));
+		button_9.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_9);
 		
-		Button button_10 = new Button("Feld 10");
+		JButton button_10 = new JButton("Feld 10");
+		button_10.setBackground(SystemColor.controlHighlight);
 		button_10.setBounds(422, 143, 70, 70);
 		button_10.setForeground(new Color(0, 0, 0));
+		button_10.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_10);
 		
-		Button button_11 = new Button("Feld 11");
+		JButton button_11 = new JButton("Feld 11");
+		button_11.setBackground(SystemColor.controlHighlight);
 		button_11.setBounds(512, 143, 70, 70);
 		button_11.setForeground(new Color(0, 0, 0));
+		button_11.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_11);
 		
-		Button button_12 = new Button("Feld 12");
+		JButton button_12 = new JButton("Feld 12");
+		button_12.setBackground(SystemColor.controlHighlight);
 		button_12.setBounds(602, 143, 70, 70);
 		button_12.setForeground(new Color(0, 0, 0));
+		button_12.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_12);
 		
-		Button button_13 = new Button("Feld 13");
+		JButton button_13 = new JButton("Feld 13");
+		button_13.setBackground(SystemColor.controlHighlight);
 		button_13.setBounds(152, 233, 70, 70);
 		button_13.setForeground(new Color(0, 0, 0));
+		button_13.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_13);
 		
-		Button button_14 = new Button("Feld 14");
+		JButton button_14 = new JButton("Feld 14");
+		button_14.setBackground(SystemColor.controlHighlight);
 		button_14.setBounds(242, 233, 70, 70);
 		button_14.setForeground(new Color(0, 0, 0));
+		button_14.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_14);
 		
-		Button button_15 = new Button("Feld 15");
+		JButton button_15 = new JButton("Feld 15");
+		button_15.setBackground(SystemColor.controlHighlight);
 		button_15.setBounds(332, 233, 70, 70);
 		button_15.setForeground(new Color(0, 0, 0));
+		button_15.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_15);
 		
-		Button button_16 = new Button("Feld 16");
+		JButton button_16 = new JButton("Feld 16");
+		button_16.setBackground(SystemColor.controlHighlight);
 		button_16.setBounds(422, 233, 70, 70);
 		button_16.setForeground(new Color(0, 0, 0));
+		button_16.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_16);
 		
-		Button button_17 = new Button("Feld 17");
+		JButton button_17 = new JButton("Feld 17");
+		button_17.setBackground(SystemColor.controlHighlight);
 		button_17.setBounds(512, 233, 70, 70);
 		button_17.setForeground(new Color(0, 0, 0));
+		button_17.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_17);
 		
-		Button button_18 = new Button("Feld 18");
+		JButton button_18 = new JButton("Feld 18");
+		button_18.setBackground(SystemColor.controlHighlight);
 		button_18.setBounds(602, 233, 70, 70);
 		button_18.setForeground(new Color(0, 0, 0));
+		button_18.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_18);
 		
-		Button button_19 = new Button("Feld 19");
+		JButton button_19 = new JButton("Feld 19");
+		button_19.setBackground(SystemColor.controlHighlight);
 		button_19.setBounds(152, 323, 70, 70);
 		button_19.setForeground(new Color(0, 0, 0));
+		button_19.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_19);
 		
-		Button button_20 = new Button("Feld 20");
+		JButton button_20 = new JButton("Feld 20");
+		button_20.setBackground(SystemColor.controlHighlight);
 		button_20.setBounds(242, 323, 70, 70);
 		button_20.setForeground(new Color(0, 0, 0));
+		button_20.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_20);
 		
-		Button button_21 = new Button("Feld 21");
+		JButton button_21 = new JButton("Feld 21");
+		button_21.setBackground(SystemColor.controlHighlight);
 		button_21.setBounds(332, 323, 70, 70);
 		button_21.setForeground(new Color(0, 0, 0));
+		button_21.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_21);
 		
-		Button button_22 = new Button("Feld 22");
+		JButton button_22 = new JButton("Feld 22");
+		button_22.setBackground(SystemColor.controlHighlight);
 		button_22.setBounds(422, 323, 70, 70);
 		button_22.setForeground(new Color(0, 0, 0));
+		button_22.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_22);
 		
-		Button button_23 = new Button("Feld 23");
+		JButton button_23 = new JButton("Feld 23");
+		button_23.setBackground(SystemColor.controlHighlight);
 		button_23.setBounds(512, 323, 70, 70);
 		button_23.setForeground(new Color(0, 0, 0));
+		button_23.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_23);
 		
-		Button button_24 = new Button("Feld 24");
+		JButton button_24 = new JButton("Feld 24");
+		button_24.setBackground(SystemColor.controlHighlight);
 		button_24.setBounds(602, 323, 70, 70);
 		button_24.setForeground(new Color(0, 0, 0));
+		button_24.setBorder(new LineBorder(new Color(255, 255, 0), 2));
 		getContentPane().add(button_24);
 		
 		//Farben der Felder auf Spieler anpassen
-			//button_10.setBackground(UIManager.getColor("Button.background"));
+		//button_10.setBackground(UIManager.getColor("Button.background"));
 
 		
 		
 		//Hintergrund
 		JLabel lbl_background = new JLabel("");
-
 		lbl_background.setIcon(new ImageIcon(getClass().getResource("Risiko.jpg")));  //Einbinden des Hintergrundbildes
 		lbl_background.setBounds(2, 0, 800, 474);
 		lbl_background.setBounds(-10, 0, 794, 470);
