@@ -95,7 +95,7 @@ public class SpielKarte1 extends JFrame {
 		*/
 		
 		
-		//Vorläufig:
+		//Vorlï¿½ufig:
 		
 		
 		
@@ -448,11 +448,11 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
 
-		
+		/* VERSCHOBEN IN CONTROLL!
 		//Aufruf der StartSettings - Felder zuweisen/einteilen
 		GameStartSettings startSettings = new GameStartSettings();
 		startSettings.Start();	
-		
+		*/
 	}
 	
 	public void SpielkarteSchliessen() {

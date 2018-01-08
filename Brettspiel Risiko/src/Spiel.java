@@ -161,19 +161,20 @@ public class Spiel {
 		// Aktionlistener vom Button Start
 		btnStart.addActionListener(new ActionListener() {
 			public SpielKarte1 karte;
+			public Controll controll;
 			public void actionPerformed(ActionEvent e) {
 				
 				
 				
-				// Speicher von Namen im String
+			// Speicher von Namen im String
 			Name1 = PName1.getText();
 			Name2 = PName2.getText();
 			Name3 = PName3.getText();
 			Name4 = PName4.getText();
 		
-			
 			/*
-			if(Name1 != null){
+			
+			if (Name1 != null){
 				Name1 = "Player1"; 	
 			};
 			
@@ -190,14 +191,21 @@ public class Spiel {
 			};
 			
 			*/
-			
 
-				// test ob String gespeichert wird
-			System.out.println(Name1 + Name2 + Name3 + Name4);
+			// test ob String gespeichert wird
+			//System.out.println(Name1 + Name2 + Name3 + Name4);
 
 			// Starten von Spielkarte 1
-				this.karte = new SpielKarte1();
+				
+			
+			this.karte = new SpielKarte1();
 				karte.Start_SpielKarte();
+				
+
+			//this.controll = new Controll();
+			//controll.test();
+				
+				
 				frame.dispose();	
 			}
 		});
@@ -207,9 +215,9 @@ public class Spiel {
 			private Welcome welcome;
 			public void actionPerformed(ActionEvent e) {
 				
-				this.welcome = new Welcome();
+			this.welcome = new Welcome();
 				welcome.Start_Welcome();
-				
+			
 				frame.dispose();
 						
 				
