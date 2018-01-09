@@ -2,25 +2,31 @@
 // Hier steht der Spiel ablauf drin
 public class Controll {
 	
-SpielKarte1 karte = new SpielKarte1();
+
 Kontienet_Bonus kBonus =new Kontienet_Bonus();
-Wuerfel wuerfel = new Wuerfel();
+// Wuerfel wuerfel = new Wuerfel(); -> Erstmal Rauskommentieren, weil fehler
+SpielKarte1 karte = new SpielKarte1();
 GameStartSettings gss = new GameStartSettings();
-	
 
 	
-	/*
+	 // Klasse Start Startet die Karte und Die Start einstellungen
 	void Start(){
-		// Spiel Ablauf
+		// Spielkarte öffnen
 		karte.Start_SpielKarte();
-		gss.Start();
 		
+		// Starteinstellungen Laden
+		gss.Start(); 
+	
 	}
-	*/
+	
+
 	
 	
 	void PhaseW(){
 		// Der Phasen Wechsel
+		
+		
+		
 		
 	}
 	
@@ -37,7 +43,7 @@ GameStartSettings gss = new GameStartSettings();
 		
 	}
 	
-
+// Konstruktor
 	public Controll(){
 		
 		

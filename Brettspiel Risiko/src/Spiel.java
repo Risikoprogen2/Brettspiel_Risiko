@@ -160,7 +160,6 @@ public class Spiel {
 		
 		// Aktionlistener vom Button Start
 		btnStart.addActionListener(new ActionListener() {
-			public SpielKarte1 karte;
 			public Controll controll;
 			public void actionPerformed(ActionEvent e) {
 				
@@ -172,8 +171,8 @@ public class Spiel {
 			Name3 = PName3.getText();
 			Name4 = PName4.getText();
 		
-			/*
 			
+			/*
 			if (Name1 != null){
 				Name1 = "Player1"; 	
 			};
@@ -193,17 +192,13 @@ public class Spiel {
 			*/
 
 			// test ob String gespeichert wird
-			//System.out.println(Name1 + Name2 + Name3 + Name4);
+			System.out.println(Name1 + Name2 + Name3 + Name4);
 
-			// Starten von Spielkarte 1
-				
-			
-			this.karte = new SpielKarte1();
-				karte.Start_SpielKarte();
-				
 
-			//this.controll = new Controll();
-			//controll.test();
+				
+// Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen
+			this.controll = new Controll();
+			controll.Start();
 				
 				
 				frame.dispose();	
