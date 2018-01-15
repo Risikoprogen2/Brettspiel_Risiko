@@ -18,6 +18,7 @@ import java.awt.Panel;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
+import javax.swing.JRadioButton;
 
 public class Spiel {
 
@@ -128,23 +129,26 @@ public class Spiel {
 		// Textfelder zum Eingeben der Namen
 		PName1 = new JTextField();
 		PName1.setBounds(65, 155, 130, 26);
-		PName1.setBackground(Color.WHITE);
+		PName1.setBackground(Color.RED);
 		frame.getContentPane().add(PName1);
 		PName1.setColumns(10);
 		
 		PName2 = new JTextField();
+		PName2.setBackground(Color.BLUE);
 		PName2.setVisible(false);
 		PName2.setBounds(65, 183, 130, 26);
 		PName2.setColumns(10);
 		frame.getContentPane().add(PName2);
 		
 		PName3 = new JTextField();
+		PName3.setBackground(Color.GREEN);
 		PName3.setVisible(false);
 		PName3.setBounds(65, 211, 130, 26);
 		PName3.setColumns(10);
 		frame.getContentPane().add(PName3);
 		
 		PName4 = new JTextField();
+		PName4.setBackground(Color.YELLOW);
 		PName4.setVisible(false);
 		PName4.setBounds(65, 239, 130, 26);
 		PName4.setColumns(10);
@@ -156,6 +160,19 @@ public class Spiel {
 		lblNewLabel.setIcon(new ImageIcon(getClass().getResource("Risiko-Logo-2016.png")));
 		lblNewLabel.setBounds(0, 0, 295, 60);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblBitteTragenSie = new JLabel("Bitte Tragen sie hier ihren Namen ein");
+		lblBitteTragenSie.setBounds(2, 132, 251, 16);
+		frame.getContentPane().add(lblBitteTragenSie);
+		
+		JRadioButton rdbtnFelderSelberWhlen = new JRadioButton("Felder Selber Wählen");
+		rdbtnFelderSelberWhlen.setSelected(true);
+		rdbtnFelderSelberWhlen.setBounds(10, 291, 185, 23);
+		frame.getContentPane().add(rdbtnFelderSelberWhlen);
+		
+		JRadioButton rdbtnFelderGenerierenLassen = new JRadioButton("Felder Generieren lassen");
+		rdbtnFelderGenerierenLassen.setBounds(10, 311, 185, 23);
+		frame.getContentPane().add(rdbtnFelderGenerierenLassen);
 		
 		
 		// Aktionlistener vom Button Start

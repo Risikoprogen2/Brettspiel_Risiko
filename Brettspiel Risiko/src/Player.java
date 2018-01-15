@@ -8,7 +8,7 @@ public class Player {
 		int Anz_Truppen;
 		int Anz_Kontienent;
 		int PlayerID;
-		 int PorH;			// PC OR HUMAN
+		// int PorH;			// PC OR HUMAN
 		
 	}
 

@@ -41,10 +41,16 @@ public class SpielKarte1 extends JFrame {
 	}
 
 
+	// Frame aufrufen
+	public SpielKarte1() {
+		initialize();
+	}
+		
 	/**
 	 * Create the frame.
 	 */
-	public SpielKarte1() {
+	void initialize() {
+			
 		getContentPane().setBackground(UIManager.getColor("Button.highlight"));
 		getContentPane().setForeground(UIManager.getColor("Button.focus"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -436,7 +442,7 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBackground(SystemColor.menu);
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
-
+		
 		
 	}
 	
