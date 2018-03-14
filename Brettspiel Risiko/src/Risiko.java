@@ -10,12 +10,12 @@ public class Risiko {
 	
 	public Risiko(){}
 	
-	private static Welcome test;
+	private static Welcome go;
 
 	public static void main(String[] args) {
 		
-		test= new Welcome();
-		test.Start_Welcome();
+		go= new Welcome();
+		go.Start_Welcome();
 		
 	}
 

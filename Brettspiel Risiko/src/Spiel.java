@@ -23,6 +23,7 @@ import javax.swing.JRadioButton;
 public class Spiel {
 
 	private JFrame frame;
+	
 	private JTextField PName1;
 	private JTextField PName2;
 	private JTextField PName3;
@@ -32,9 +33,15 @@ public class Spiel {
 	static String Name2;
 	static String Name3;
 	static String Name4;
-	private int i = 0;
-	
-	
+	public int i = 0;
+	// Die Instanzen in Controll verschieben 
+	Player player1 = new Player();
+	Player player2 = new Player();
+	Player player3 = new Player();
+	Player player4 = new Player();
+ 	
+ 	
+ 		
 	/**
 	 * Klasse ist da um die Menge der Spieler zu waehlen und um die Namen der in das Spiel zu uebergeben 
 	 * @Autor Konrad Musiol
@@ -58,9 +65,38 @@ public class Spiel {
 	}
 
 	
-	public void Setzen(){
+
+	// Die Folgenden 4 Fuktionen sind für das Switchcase weiter untem im Actionlistener vom Startbutton. Diese Klassen sind dazu da um, Namen einzutragen fals die Spieler es nicht tun
+	void ZweiP(){
+		Name1 = PName1.getText();
+		Name2 = PName2.getText();
 		
+		if (Name1 != null){
+			Name1 = "Player1";
+		}else{}
+		
+		if (Name2 != null){
+			Name2 = "Player2";
+		}else{}
+	Name1 = player1.Name;
+	Name2 = player2.Name;
 	
+	}
+	void DreiP(){
+		Name3 = PName3.getText();
+		
+		if (Name3 != null){
+		Name3 = "Player3";
+		}else{}
+		Name3 = player3.Name;
+	}
+	void VierP(){
+		Name4 = PName4.getText();
+		
+		if (Name4 != null){
+			Name4 = "Player4";
+		}else{}	
+		Name4 = player4.Name;
 	}
 	
 	/**
@@ -175,36 +211,38 @@ public class Spiel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				
+			
 			// Speicher von Namen im String
 			Name1 = PName1.getText();
 			Name2 = PName2.getText();
 			Name3 = PName3.getText();
 			Name4 = PName4.getText();
 		
-			
-			/*
-			if (Name1 != null){
-				Name1 = "Player1"; 	
-			};
-			
-			if (Name2 != null){
-				Name2 = "Player2";	
-			};
-			
-			if (Name3 != null){
-				Name3 = "Player3";
-			};
-			
-			if (Name4 != null){
-				Name4 = "Player4";
-			};
-			
+			/*Das Folgende Switchcase ruft die Funktionen von weiter oben auf um nicht eingetragene Namen einzutagen. 
+			 *Um Code verdoplung zu vermeiden wurden die Einzelnen IF Schleifen in Funktionen gepackt um diese dann hier mehrfach aufzurufen
+			 *
 			*/
+			switch(i){
+			
+			case 0:
+			ZweiP(); 
+			break;
+			
+			case 1:
+			ZweiP();
+			DreiP();
+			break;
+			
+			case 2:
+			ZweiP();
+			DreiP();
+			VierP();	
+			break;
+			}
+			
 
 			// test ob String gespeichert wird
-			System.out.println(Name1 + Name2 + Name3 + Name4);
-
+		//	System.out.println(i + Name1 + Name2 + Name3 + Name4);
 
 				
 // Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen
@@ -222,6 +260,8 @@ public class Spiel {
 				frame.dispose();	
 			}
 		});
+		
+		
 	
 		// Aktionlistener vom Button Zurueck
 		btnZurck.addActionListener(new ActionListener() {

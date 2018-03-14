@@ -12,16 +12,16 @@ import javax.swing.border.LineBorder;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 
-
 //Autor: Jonas Behler
 
-
 public class SpielKarte1 extends JFrame {
-	public static  JButton button_2 = new JButton("Feld 2");
+	
+	public static Button button_1 = new Button("Feld 1");
+	public JButton button_2 = new JButton("Feld 2");
 
 	static SpielKarte1 frame = new SpielKarte1();
 	
-	public static Button button_1 = new Button("Feld 1");
+	
 
 
 	/**

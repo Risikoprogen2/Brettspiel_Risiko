@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 // Autor Konrad Musiol
 // Hier steht der Spiel ablauf drin
 public class Controll {
@@ -19,11 +21,12 @@ Player player = new Player();
 		// Spielkarte öffnen
 		karte.Start_SpielKarte();
 		
+		
 		// Starteinstellungen Laden
 		gss.Start(); 
 		
 		// Den Spielablauf starten
-		Run();
+		//Run();
 	}
 	
 	
@@ -52,12 +55,18 @@ Player player = new Player();
 	
 	void P_Verstärken(){ // Zum Anfang der Runde bekommt man Einheiten. AnzTruppen = Gebiete/3 oder mindestens 3 Einheiten! 
 		
+		// vorläufige berechnung wie man Truppen bekommt 
 		
 		int Gebite = 0;
-	
-		
-		 if(Gebite > 3){
+		int Truppen =0;
+		double erg = 0;
+		 if(Gebite <= 3){
 			 
+			 Truppen = Truppen +3;
+			 
+		 }else{
+			 erg = Gebite / 3;
+			 Truppen = (int) (Truppen + erg);
 		 }
 	}
 	
