@@ -41,10 +41,16 @@ public class SpielKarte1 extends JFrame {
 	}
 
 
+	// Frame aufrufen
+	public SpielKarte1() {
+		initialize();
+	}
+		
 	/**
 	 * Create the frame.
 	 */
-	public SpielKarte1() {
+	void initialize() {
+			
 		getContentPane().setBackground(UIManager.getColor("Button.highlight"));
 		getContentPane().setForeground(UIManager.getColor("Button.focus"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -95,7 +101,7 @@ public class SpielKarte1 extends JFrame {
 		*/
 		
 		
-		//Vorläufig:
+		//Vorlï¿½ufig:
 		
 		
 		
@@ -346,6 +352,10 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(btnZugBeenden);
 		
 		JButton btnAngriff = new JButton("Angriffsphase");
+		btnAngriff.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnAngriff.setBounds(425, 570, 125, 40);
 		btnAngriff.setBackground(SystemColor.menu);
 		getContentPane().add(btnAngriff);
@@ -406,28 +416,13 @@ public class SpielKarte1 extends JFrame {
 		
 		// Von Klasse Spiel die Spieler Namen hier ausgeben
 		
-		JLabel lbl_P1 = new JLabel("");
-		lbl_P1.setBounds(6, 6, 57, 16);
-		lbl_P1.setIcon(null);
-		getContentPane().add(lbl_P1);
-		lbl_P1.setText(Spiel.Name1);
+		JLabel lbl_PName = new JLabel("");
+		lbl_PName.setBounds(121, 482, 135, 22);
+		lbl_PName.setIcon(null);
+		getContentPane().add(lbl_PName);
+		lbl_PName.setText(Spiel.Name1);
 		
-		JLabel lbl_P2 = new JLabel("");
-		lbl_P2.setBounds(6, 34, 57, 16);
-		getContentPane().add(lbl_P2);
-		lbl_P2.setText(Spiel.Name2);
-		
-		JLabel lbl_P3 = new JLabel("");
-		lbl_P3.setBounds(6, 62, 57, 16);
-		getContentPane().add(lbl_P3);
-		lbl_P3.setText(Spiel.Name3);
-		
-		JLabel lbl_P4 = new JLabel("");
-		lbl_P4.setBounds(6, 90, 57, 16);
-		getContentPane().add(lbl_P4);
-		lbl_P4.setText(Spiel.Name4);
-		
-		JLabel lblAktuellerSpieler = new JLabel("Aktueller Spieler");
+		JLabel lblAktuellerSpieler = new JLabel("Aktueller Spieler :");
 		lblAktuellerSpieler.setBackground(SystemColor.menu);
 		lblAktuellerSpieler.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAktuellerSpieler.setBounds(0, 475, 125, 35);
@@ -447,11 +442,7 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBackground(SystemColor.menu);
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
-
 		
-		//Aufruf der StartSettings - Felder zuweisen/einteilen
-		GameStartSettings startSettings = new GameStartSettings();
-		startSettings.Start();	
 		
 	}
 	

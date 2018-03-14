@@ -18,6 +18,7 @@ import java.awt.Panel;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
+import javax.swing.JRadioButton;
 
 public class Spiel {
 
@@ -128,23 +129,26 @@ public class Spiel {
 		// Textfelder zum Eingeben der Namen
 		PName1 = new JTextField();
 		PName1.setBounds(65, 155, 130, 26);
-		PName1.setBackground(Color.WHITE);
+		PName1.setBackground(Color.RED);
 		frame.getContentPane().add(PName1);
 		PName1.setColumns(10);
 		
 		PName2 = new JTextField();
+		PName2.setBackground(Color.BLUE);
 		PName2.setVisible(false);
 		PName2.setBounds(65, 183, 130, 26);
 		PName2.setColumns(10);
 		frame.getContentPane().add(PName2);
 		
 		PName3 = new JTextField();
+		PName3.setBackground(Color.GREEN);
 		PName3.setVisible(false);
 		PName3.setBounds(65, 211, 130, 26);
 		PName3.setColumns(10);
 		frame.getContentPane().add(PName3);
 		
 		PName4 = new JTextField();
+		PName4.setBackground(Color.YELLOW);
 		PName4.setVisible(false);
 		PName4.setBounds(65, 239, 130, 26);
 		PName4.setColumns(10);
@@ -157,15 +161,28 @@ public class Spiel {
 		lblNewLabel.setBounds(0, 0, 295, 60);
 		frame.getContentPane().add(lblNewLabel);
 		
+		JLabel lblBitteTragenSie = new JLabel("Bitte Tragen sie hier ihren Namen ein");
+		lblBitteTragenSie.setBounds(2, 132, 251, 16);
+		frame.getContentPane().add(lblBitteTragenSie);
+		
+		JRadioButton rdbtnFelderSelberWhlen = new JRadioButton("Felder Selber Wählen");
+		rdbtnFelderSelberWhlen.setSelected(true);
+		rdbtnFelderSelberWhlen.setBounds(10, 291, 185, 23);
+		frame.getContentPane().add(rdbtnFelderSelberWhlen);
+		
+		JRadioButton rdbtnFelderGenerierenLassen = new JRadioButton("Felder Generieren lassen");
+		rdbtnFelderGenerierenLassen.setBounds(10, 311, 185, 23);
+		frame.getContentPane().add(rdbtnFelderGenerierenLassen);
+		
 		
 		// Aktionlistener vom Button Start
 		btnStart.addActionListener(new ActionListener() {
-			public SpielKarte1 karte;
+			public Controll controll;
 			public void actionPerformed(ActionEvent e) {
 				
 				
 				
-				// Speicher von Namen im String
+			// Speicher von Namen im String
 			Name1 = PName1.getText();
 			Name2 = PName2.getText();
 			Name3 = PName3.getText();
@@ -173,7 +190,7 @@ public class Spiel {
 		
 			
 			/*
-			if(Name1 != null){
+			if (Name1 != null){
 				Name1 = "Player1"; 	
 			};
 			
@@ -190,14 +207,17 @@ public class Spiel {
 			};
 			
 			*/
-			
 
-				// test ob String gespeichert wird
+			// test ob String gespeichert wird
 			System.out.println(Name1 + Name2 + Name3 + Name4);
 
-			// Starten von Spielkarte 1
-				this.karte = new SpielKarte1();
-				karte.Start_SpielKarte();
+
+				
+// Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen
+			this.controll = new Controll();
+			controll.Start();
+				
+				
 				frame.dispose();	
 			}
 		});
@@ -207,9 +227,9 @@ public class Spiel {
 			private Welcome welcome;
 			public void actionPerformed(ActionEvent e) {
 				
-				this.welcome = new Welcome();
+			this.welcome = new Welcome();
 				welcome.Start_Welcome();
-				
+			
 				frame.dispose();
 						
 				

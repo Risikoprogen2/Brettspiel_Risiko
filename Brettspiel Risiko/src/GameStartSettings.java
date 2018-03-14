@@ -16,7 +16,7 @@ public class GameStartSettings {
 	public void Start() {
 	
 		//SpielKarte1 Karte = new SpielKarte1(); ////Initialisieren und Instanz erzeugen
-		JOptionPane.showMessageDialog(null, "I am happy."); //Funktioniert , komme bis hier aber das Färben muss noch irgendwie gehen
+		JOptionPane.showMessageDialog(null, "Lets Play ;)"); //Funktioniert , komme bis hier aber das Fï¿½rben muss noch irgendwie gehen
 		
 		//SpielKarte1.button_1.setForeground(Color(2, 63, 150));
 	
