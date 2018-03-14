@@ -24,11 +24,12 @@ public class Wuerfel extends Controll {
 
 	}
 	// Verteidiger w�rfelt 
-	public void RollsDefend(){
+	public int RollsDefend(){
 		
 		int Truppen = 0;
 		int Anz_Wuerfel = 0;
-
+		int ergD = 0;
+		
 		if (Truppen > 2) {
 			
 			  Anz_Wuerfel = 2;
@@ -42,21 +43,23 @@ public class Wuerfel extends Controll {
 		
 		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
 		{
-			 Roll();
+			ergD = ergD + Roll();
 			
 		}
 		
-		System.out.println(Roll());
+		//System.out.println(Roll());
+		return ergD;
 	}
 	
 	// Angreifer W�rfelt
-	public void RollsFight(){
+	public int RollsFight(){
 		
 		// diese Klasse soll die Methode Roll() so oft aufrufen wie es Truppen gibt
 		
 		// Die Variable int i muss noch abgeändert werden damit das richtig funktioniert.
 		int Truppen = 0;
 		int Anz_Wuerfel = 0;
+		int ergF = 0;
 
 		if (Truppen >= 3) {
 			
@@ -71,12 +74,12 @@ public class Wuerfel extends Controll {
 		
 		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
 		{
-			 Roll();
+			ergF = ergF + Roll();
 			
 		}
 		
-		System.out.println(Roll());
-
+		//System.out.println(Roll());
+		return ergF;
 	}
 	
 	

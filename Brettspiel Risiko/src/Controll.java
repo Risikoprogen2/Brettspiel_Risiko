@@ -6,11 +6,11 @@ public class Controll {
 	
 
 Kontienet_Bonus kBonus =new Kontienet_Bonus();
-//Wuerfel wuerfel = new Wuerfel();
+Wuerfel wuerfel = new Wuerfel();
 SpielKarte1 karte = new SpielKarte1();
 GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
-
+Spiel spiel = new Spiel();
 
 
 
@@ -26,6 +26,8 @@ Player player = new Player();
 		gss.Start(); 
 		
 		// Den Spielablauf starten
+		
+		
 		//Run();
 	}
 	
@@ -44,6 +46,13 @@ Player player = new Player();
 	
 	// Die Methode führt den Spieler wechsel durch und danach führt sie wieder die Methode Run() aus.
 	void Playerswitch(){
+		int k = spiel.i;
+		
+		if(player.PlayerID == k){
+			player.PlayerID = 1;
+		}else{
+			player.PlayerID++;
+		}
 		
 		Run();
 	}
@@ -72,6 +81,19 @@ Player player = new Player();
 	
 	
 	void P_Angrifen(){ // Angreifen. Angreifer braucht mindestens 3 Einheit. 1 muss mindestens stehen bleiben.(Optionaler Schritt)
+		
+	int a;
+	int d;
+	
+	d = wuerfel.RollsDefend();
+	a = wuerfel.RollsDefend();
+	
+	if (a>d){
+		System.out.println("Win");
+	}else{
+		System.out.println("Lose");
+	}
+		
 		
 	}
 	
