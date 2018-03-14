@@ -1,8 +1,11 @@
+//Autor Jonas Behler
+
 import java.awt.Color;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-//Autor Jonas Behler
+import javax.swing.border.LineBorder;
 
 public class GameStartSettings {
 	
@@ -15,12 +18,10 @@ public class GameStartSettings {
 	
 	public void Start() {
 	
-		//SpielKarte1 Karte = new SpielKarte1(); ////Initialisieren und Instanz erzeugen
-		JOptionPane.showMessageDialog(null, "Lets Play ;)"); //Funktioniert , komme bis hier aber das F�rben muss noch irgendwie gehen
+		SpielKarte1 Karte = new SpielKarte1(); //Initialisieren und Instanz erzeugen
 		
-		//SpielKarte1.button_1.setForeground(Color(2, 63, 150));
-	
-
+		SpielKarte1.button_1.setBackground(new Color(255, 255, 255));
+		Karte.button_2.setBackground(new Color(255, 5, 67));
 	}
 
 
