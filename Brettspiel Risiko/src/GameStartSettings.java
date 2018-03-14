@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-//Auto Jonas Behler
+//Autor Jonas Behler
 
 public class GameStartSettings {
 	
