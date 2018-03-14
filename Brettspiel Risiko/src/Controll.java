@@ -7,6 +7,9 @@ Kontienet_Bonus kBonus =new Kontienet_Bonus();
 //Wuerfel wuerfel = new Wuerfel();
 SpielKarte1 karte = new SpielKarte1();
 GameStartSettings gss = new GameStartSettings();
+Player player = new Player();
+
+
 
 
 	
@@ -24,64 +27,69 @@ GameStartSettings gss = new GameStartSettings();
 	}
 	
 	
-	// Der Eintlicher Spielablauf ruft die Einzelnen Methoden auf 
-	
-	/*
-	 * Alls erstest werden hier die Einzelnen Methoden drin stehen sowie das spiel ablaufen soll 
-	 * 
-	 */
+	// Methode Run() ist der Spielablauf und ruft die Einzelnen Phasen auf 
 	void Run(){
 		
 		
+	P_Verstärken();
+	P_Angrifen();
+	P_Bewegen();
+	
+	Playerswitch();
+	
+	}
+	
+	// Die Methode führt den Spieler wechsel durch und danach führt sie wieder die Methode Run() aus.
+	void Playerswitch(){
+		
+		Run();
+	}
+	
+/*
+ *Phasen aus Risiko 
+ *
+ */
+	
+	void P_Verstärken(){ // Zum Anfang der Runde bekommt man Einheiten. AnzTruppen = Gebiete/3 oder mindestens 3 Einheiten! 
 		
 		
+		int Gebite = 0;
+	
 		
-		
-		
-		
+		 if(Gebite > 3){
+			 
+		 }
+	}
+	
+	
+	void P_Angrifen(){ // Angreifen. Angreifer braucht mindestens 3 Einheit. 1 muss mindestens stehen bleiben.(Optionaler Schritt)
 		
 	}
+	
+	
+	void P_Bewegen(){ // Truppen bewegen oder verschieben. Einmal möglich. (Optionaler Schritt)
+		
+	}
+	
+	
+	
+	
+	
+		
+		
+	
+	
+	
+	
 	
 
-	
-	
-	// Risiko nochmal spielen..... Danach nochmal die klassen erstellen....
-	
-	void AtackOrMove(){
-		// Zum Anfang kann man wählen ob man erst Truppen verschieben möchte oder sofort angreine will
-	}
-	
-	
-	void PhaseW(){
-		// Der Phasen Wechsel
-		
-		
-		
-		
-	}
-	
-	
 	void Win(){
 		// Gewinner Festlegen
 		
 		
 	}
 	
-	void lose(){
+	void Lose(){
 		// Verlierer Rausschmeisen
-		
-		
 	}
-	
-	void Playerswitch(){
-		
-		
-		
-		
-	}
-	
-	
-
-		
-
 }
