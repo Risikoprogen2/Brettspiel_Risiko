@@ -22,9 +22,10 @@ public class SpielKarte1 extends JFrame {
 	
 	public static JButton button_1 = new JButton("Feld 1");
 	public  JButton button_2 = new JButton("Feld 2");
+	public JButton btnSwitch_P;
 
 	static SpielKarte1 frame = new SpielKarte1();
-	
+	public int phase = 0;
 	
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -58,8 +59,8 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		
-		/*Schleife zum Felder/Länder generieren, funktioniert Leider nicht.
-		 *Problem: Button können nicht über die Schleife erstellt werden.
+		/*Schleife zum Felder/Lï¿½nder generieren, funktioniert Leider nicht.
+		 *Problem: Button kï¿½nnen nicht ï¿½ber die Schleife erstellt werden.
 		 *
 		int kordx = 130;
 		int kordy = 70;
@@ -323,7 +324,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblKontinentBonusZahl);
 		
 		
-		//Gesamtanzahl der eigenen Länder
+		//Gesamtanzahl der eigenen Lï¿½nder
 		JLabel lblLaender = new JLabel("L\u00E4nder");
 		lblLaender.setBounds(90, 580, 90, 35);
 		lblLaender.setBackground(SystemColor.controlHighlight);
@@ -350,10 +351,17 @@ public class SpielKarte1 extends JFrame {
 		btnTruppenBewegen.setBackground(SystemColor.menu);
 		getContentPane().add(btnTruppenBewegen);
 		
-		JButton btnZugBeenden = new JButton("Zug beenden");
-		btnZugBeenden.setBounds(425, 610, 125, 40);
-		btnZugBeenden.setBackground(SystemColor.menu);
-		getContentPane().add(btnZugBeenden);
+		JButton btnSwitch_P = new JButton("Phase Wechseln");
+		btnSwitch_P.setBounds(425, 610, 125, 40);
+		btnSwitch_P.setBackground(SystemColor.menu);
+		getContentPane().add(btnSwitch_P);
+		btnSwitch_P.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				phase++; // Variable Phase hochzaehlen um das case zu switchen -> nÃ¤chste Spielphase
+				System.out.println("In Spielkarte ist phase= "+ phase);
+			}
+		});
+		
 		
 		JButton btnAngriff = new JButton("Angriffsphase");
 		btnAngriff.addActionListener(new ActionListener() {
@@ -388,7 +396,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblAktuellePhase);
 		
 		//Wuerfel Ergebnisfelder
-		//Ergebnis der Verteidigungswürfel
+		//Ergebnis der Verteidigungswï¿½rfel
 		JLabel lblDefenceWrflZahl = new JLabel("");
 		lblDefenceWrflZahl.setBounds(180, 545, 120, 35);
 		lblDefenceWrflZahl.setToolTipText("Beispiel: 3 5 (W\u00FCrfel 1 = 3 & W\u00FCrfel 2 = 5)");
@@ -397,7 +405,7 @@ public class SpielKarte1 extends JFrame {
 		lblDefenceWrflZahl.setOpaque(true);
 		getContentPane().add(lblDefenceWrflZahl);
 		
-		//Ergebnis der Angriffswürfel
+		//Ergebnis der Angriffswï¿½rfel
 		JLabel lblAttackWrfelZahl = new JLabel("");
 		lblAttackWrfelZahl.setBounds(180, 510, 120, 35);
 		lblAttackWrfelZahl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -405,7 +413,7 @@ public class SpielKarte1 extends JFrame {
 		lblAttackWrfelZahl.setOpaque(true);
 		getContentPane().add(lblAttackWrfelZahl);
 		
-		//Ergebnis der Verteidigungswürfel Label als Beschriftung zu dem ErgebnisLabel
+		//Ergebnis der Verteidigungswï¿½rfel Label als Beschriftung zu dem ErgebnisLabel
 		JLabel lblWrfelErgebnissDefensive = new JLabel("W\u00FCrfel Ergebnis Defensive:");
 		lblWrfelErgebnissDefensive.setBounds(0, 545, 180, 35);
 		lblWrfelErgebnissDefensive.setOpaque(true);
@@ -413,7 +421,7 @@ public class SpielKarte1 extends JFrame {
 		lblWrfelErgebnissDefensive.setBackground(SystemColor.control);
 		getContentPane().add(lblWrfelErgebnissDefensive);
 		
-		//Ergebnis der Angriffswürfel Label als Beschriftung zu dem ErgebnisLabel
+		//Ergebnis der Angriffswï¿½rfel Label als Beschriftung zu dem ErgebnisLabel
 		JLabel lblWrfelErgebnissOffensive = new JLabel("W\u00FCrfel Ergebnis Offensive:");
 		lblWrfelErgebnissOffensive.setBounds(0, 510, 180, 35);
 		lblWrfelErgebnissOffensive.setOpaque(true);

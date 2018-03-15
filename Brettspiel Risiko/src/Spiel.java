@@ -35,7 +35,7 @@ public class Spiel {
 	static String Name4;
 	
 	public int i = 0;	// Variable um die anzahl der Spieler zu bestimmen
-	public int anz_Player = 0;	// Gibt die Genau anzahl der Spieler an
+	public int anz_Player = 0;	// Gibt die Genau Anzahl der Spieler an
 	public boolean selected; // Gibt an ob der Haken bei der checkbox angeklickt ist oder nicht.
 	
  	
