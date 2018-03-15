@@ -18,10 +18,16 @@ SpielKarte1 karte = new SpielKarte1();
 GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
 Spiel spiel = new Spiel();
+<<<<<<< HEAD
 //public int phase = 0;
 //int phase = 0;
   
 
+=======
+
+ public int phase = 0;
+ 
+>>>>>>> branch 'master' of https://github.com/Risikoprogen2/Brettspiel_Risiko
 //Instanz für jeden Spieler
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -36,6 +42,7 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 
 	
 	// Variablen Initialisieren
+
 /*
 	public void test(){
 		karte.btnSwitch_P.addActionListener(new ActionListener(){
@@ -43,12 +50,9 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
 				System.out.println("In Spielkarte ist phase= "+ phase);
 			}
-		});
-		
-		
+		});	
 	}
 */
-
 
 
 public Controll(){ // Konstruktor 

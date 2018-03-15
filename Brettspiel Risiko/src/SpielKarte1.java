@@ -22,7 +22,6 @@ public class SpielKarte1 extends JFrame {
 	/**
 	 * 
 	 */
-	Controll controll = new Controll();
 	Nachbarn nachbarn = new Nachbarn();
 	public JButton btnSwitch_P;
 	static SpielKarte1 frame = new SpielKarte1();
