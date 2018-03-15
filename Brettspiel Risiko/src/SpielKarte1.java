@@ -1,3 +1,5 @@
+//Autor: Jonas Behler
+
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.Button;
@@ -13,7 +15,7 @@ import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 
 
-//Autor: Jonas Behler
+
 
 
 public class SpielKarte1 extends JFrame {
@@ -61,8 +63,10 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().setLayout(null);
 		
 		
-		//Schleife zum Felder generieren
-		/*
+		
+		/*Schleife zum Felder generieren, funktioniert Leider nicht.
+		 *Problem: Button können nicht über die Schleife erstellt werden.
+		 *
 		int kordx = 130;
 		int kordy = 70;
 		int zaehler = 0;
@@ -103,11 +107,8 @@ public class SpielKarte1 extends JFrame {
 		*/
 		
 		
-		//Vorlï¿½ufig:
 		
-		
-		
-		
+		//Umsetzung ohne Schleife als Loesung:		
 		//Felder erstellen
 		/*
 		 * Jedes Feld/Button braucht noch eine Liste mit Nachbarn (arraylist)
@@ -115,8 +116,8 @@ public class SpielKarte1 extends JFrame {
 		
 		JButton button_1 = new JButton("Feld 1");
 		button_1.setBackground(SystemColor.controlHighlight);  //Verwendet als: Spieler Farbe
-		button_1.setBounds(152, 53, 70, 70);
-		button_1.setForeground(Color.BLACK);
+		button_1.setBounds(152, 53, 70, 70);  //Platzierung des Button auf dem Spielfeld
+		button_1.setForeground(Color.BLACK);  //Beschriftungsfarbe
 		button_1.setBorder(new LineBorder(new Color(255, 255, 0), 10));  //Verwendet als: Kontienent Farbe 
 		getContentPane().add(button_1);
 		
@@ -296,6 +297,7 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		//Statistik Felder
+		//Anzeige der gesammt vorhandenen Einheiten des Spielers
 		JLabel lblEinheiten = new JLabel("Einheiten");
 		lblEinheiten.setBounds(0, 580, 90, 35);
 		lblEinheiten.setBackground(SystemColor.controlHighlight);
@@ -311,6 +313,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblEinheitenZahl);
 		
 		
+		//Gesamt KontinentBonus des Spielers
 		JLabel lblKontinentBonus = new JLabel("Kontinent Bonus");
 		lblKontinentBonus.setBounds(180, 580, 120, 35);
 		lblKontinentBonus.setBackground(SystemColor.controlHighlight);
@@ -326,6 +329,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblKontinentBonusZahl);
 		
 		
+		//Gesamtanzahl der eigenen Länder
 		JLabel lblLaender = new JLabel("L\u00E4nder");
 		lblLaender.setBounds(90, 580, 90, 35);
 		lblLaender.setBackground(SystemColor.controlHighlight);
@@ -343,6 +347,10 @@ public class SpielKarte1 extends JFrame {
 
 		
 		//Spielphasenwechsel Button
+		//Phase1 Truppenplatzieren
+		//Phase2 Angriff
+		//Phase3 TruppenBewegen
+		//Zugbeenden
 		JButton btnTruppenBewegen = new JButton("Truppenbewegen");
 		btnTruppenBewegen.setBounds(549, 570, 135, 40);
 		btnTruppenBewegen.setBackground(SystemColor.menu);
@@ -363,7 +371,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(btnAngriff);
 		
 		
-		//Spiel Menï¿½ - ï¿½ffnen des Menï¿½s
+		//Spiel Menue- oeffnen des Menues
 		JButton btnMenu = new JButton("Menu");
 		btnMenu.setBounds(684, 570, 100, 80);
 		btnMenu.setBackground(SystemColor.menu);
@@ -376,6 +384,8 @@ public class SpielKarte1 extends JFrame {
 			}
 		});
 		
+		
+		//Soll die Aktive Phase anzeigen
 		JLabel lblAktuellePhase = new JLabel("Aktuelle Phase");
 		lblAktuellePhase.setBounds(549, 610, 135, 40);
 		lblAktuellePhase.setBackground(UIManager.getColor("Button.light"));
@@ -383,8 +393,8 @@ public class SpielKarte1 extends JFrame {
 		lblAktuellePhase.setHorizontalAlignment(SwingConstants.CENTER);
 		getContentPane().add(lblAktuellePhase);
 		
-		
 		//Wuerfel Ergebnisfelder
+		//Ergebnis der Verteidigungswürfel
 		JLabel lblDefenceWrflZahl = new JLabel("");
 		lblDefenceWrflZahl.setBounds(180, 545, 120, 35);
 		lblDefenceWrflZahl.setToolTipText("Beispiel: 3 5 (W\u00FCrfel 1 = 3 & W\u00FCrfel 2 = 5)");
@@ -393,6 +403,7 @@ public class SpielKarte1 extends JFrame {
 		lblDefenceWrflZahl.setOpaque(true);
 		getContentPane().add(lblDefenceWrflZahl);
 		
+		//Ergebnis der Angriffswürfel
 		JLabel lblAttackWrfelZahl = new JLabel("");
 		lblAttackWrfelZahl.setBounds(180, 510, 120, 35);
 		lblAttackWrfelZahl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -400,6 +411,7 @@ public class SpielKarte1 extends JFrame {
 		lblAttackWrfelZahl.setOpaque(true);
 		getContentPane().add(lblAttackWrfelZahl);
 		
+		//Ergebnis der Verteidigungswürfel Label als Beschriftung zu dem ErgebnisLabel
 		JLabel lblWrfelErgebnissDefensive = new JLabel("W\u00FCrfel Ergebnis Defensive:");
 		lblWrfelErgebnissDefensive.setBounds(0, 545, 180, 35);
 		lblWrfelErgebnissDefensive.setOpaque(true);
@@ -407,6 +419,7 @@ public class SpielKarte1 extends JFrame {
 		lblWrfelErgebnissDefensive.setBackground(SystemColor.control);
 		getContentPane().add(lblWrfelErgebnissDefensive);
 		
+		//Ergebnis der Angriffswürfel Label als Beschriftung zu dem ErgebnisLabel
 		JLabel lblWrfelErgebnissOffensive = new JLabel("W\u00FCrfel Ergebnis Offensive:");
 		lblWrfelErgebnissOffensive.setBounds(0, 510, 180, 35);
 		lblWrfelErgebnissOffensive.setOpaque(true);
@@ -416,14 +429,15 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		
-		// Von Klasse Spiel die Spieler Namen hier ausgeben
-		
+		//Von Klasse Spiel die Spieler Namen hier ausgeben
+		//Angabe des Namen des Spielers der aktuell am Zug ist
 		JLabel lbl_PName = new JLabel("");
 		lbl_PName.setBounds(121, 482, 135, 22);
 		lbl_PName.setIcon(null);
 		getContentPane().add(lbl_PName);
 		lbl_PName.setText(Spiel.Name1);
 		
+		//Label als Beschriftung des Spilernamens
 		JLabel lblAktuellerSpieler = new JLabel("Aktueller Spieler :");
 		lblAktuellerSpieler.setBackground(SystemColor.menu);
 		lblAktuellerSpieler.setHorizontalAlignment(SwingConstants.CENTER);
@@ -431,6 +445,7 @@ public class SpielKarte1 extends JFrame {
 		lblAktuellerSpieler.setOpaque(true);
 		getContentPane().add(lblAktuellerSpieler);
 		
+		//Label als Beschriftung der Verstaerkung
 		JLabel lblVerstaerkung = new JLabel("Verst\u00E4rkung");
 		lblVerstaerkung.setOpaque(true);
 		lblVerstaerkung.setHorizontalAlignment(SwingConstants.CENTER);
@@ -438,6 +453,7 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkung.setBounds(300, 580, 125, 35);
 		getContentPane().add(lblVerstaerkung);
 		
+		//Angabe der Verstaerkungszahl des aktuellen Spielers
 		JLabel lblVerstaerkungZahl = new JLabel("0");
 		lblVerstaerkungZahl.setOpaque(true);
 		lblVerstaerkungZahl.setHorizontalAlignment(SwingConstants.CENTER);

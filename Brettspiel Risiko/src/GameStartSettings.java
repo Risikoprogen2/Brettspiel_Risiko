@@ -18,7 +18,9 @@ public class GameStartSettings {
 	
 	public void Start() {
 	
-		SpielKarte1 Karte = new SpielKarte1(); //Initialisieren und Instanz erzeugen
+		SpielKarte1 Karte;
+		Karte = new SpielKarte1();
+			//SpielKarte1 Karte = new SpielKarte1(); //Initialisieren und Instanz erzeugen
 		
 		SpielKarte1.button_1.setBackground(new Color(255, 255, 255));
 		Karte.button_2.setBackground(new Color(255, 5, 67));
