@@ -22,17 +22,15 @@ public class SpielKarte1 extends JFrame {
 	/**
 	 * 
 	 */
-	Nachbarn nachbarn = new Nachbarn();
-	static SpielKarte1 frame = new SpielKarte1();
-	public static Controll controll = new Controll();
+	
 
 
-	//public JButton btnSwitch_P;
+
 	static SpielKarte1 frame = new SpielKarte1();
 	public int phase = 0;
 	public boolean wechsel;
 	
-	public static Controll controll = new Controll(); //Produziert Fehler
+	public static Controll controll; 
 	Laender laender = new Laender();
 	Player player = new Player();
 
@@ -390,16 +388,7 @@ public class SpielKarte1 extends JFrame {
 				controll.Playerswitch();
 			}
 
-		//JButton btnSwitch_P = new JButton("Phase Wechseln");
-		btnSwitch_P.setBounds(425, 610, 125, 40);
-		btnSwitch_P.setBackground(SystemColor.menu);
-		getContentPane().add(btnSwitch_P);
-		btnSwitch_P.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
-				wechsel = true; //Variable Wechsel f�r While Schleife im Zuteilen der Truppen
-				System.out.println("In Spielkarte ist phase= "+ phase);
-			}
+		
 
 		});
 		btnZugBeenden.setBounds(425, 610, 125, 40);
@@ -483,7 +472,7 @@ public class SpielKarte1 extends JFrame {
 		lbl_PName.setBounds(126, 475, 135, 35);
 		lbl_PName.setIcon(null);
 		getContentPane().add(lbl_PName);
-		lbl_PName.setText(Spiel.Name1);
+//		lbl_PName.setText(controll.player.Name);
 		
 		//Label als Beschriftung des Spilernamens
 		JLabel lblAktuellerSpieler = new JLabel("Aktueller Spieler :");
