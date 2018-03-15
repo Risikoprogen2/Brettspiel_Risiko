@@ -7,6 +7,11 @@ import java.util.List;
 //Soll Listen von Feldern und deren Nachbarn enthalten 
 public class Nachbarn {
 
+	public ArrayList<Integer> FelderP1 = new ArrayList<Integer>();
+	public ArrayList<Integer> FelderP2 = new ArrayList<Integer>();
+	public ArrayList<Integer> FelderP3 = new ArrayList<Integer>();
+	public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
+	
 	Nachbarn(){
 		
 		//Arrayliste mit den Nachbern jedes Felds 
@@ -110,6 +115,8 @@ public class Nachbarn {
 		ArrayList<Integer> NachbarnFeld24 = new ArrayList<Integer>();
 		NachbarnFeld24.add(18);
 		NachbarnFeld24.add(23);
+		
+		
 	}
 	
 }

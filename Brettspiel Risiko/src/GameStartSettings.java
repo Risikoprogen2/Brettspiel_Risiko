@@ -19,7 +19,10 @@ public class GameStartSettings {
 	
 	void ZuteilenSelber() {
 		
+
 		//Probieren Felder zu färben
+		//Probieren Felder zu fï¿½rben
+		SpielKarte1 Karte = new SpielKarte1();
 		//Karte = new SpielKarte1();
 			//SpielKarte1 Karte = new SpielKarte1(); //Initialisieren und Instanz erzeugen
 		
@@ -29,7 +32,7 @@ public class GameStartSettings {
 		//Felder selber zuteilen
 		/* So Funktioniert es in der Klasse Spielkarte
 		 * wie kann man diese Funktion in dieser Klasse nun anwenden??
-		 * Komme ich überhaupt in diese Klasse damit ich ich den button färben kann ?
+		 * Komme ich ï¿½berhaupt in diese Klasse damit ich ich den button fï¿½rben kann ?
 		 * muss ich vllt aus Spielkarte1 hierhin kommen ?
 		 * vllt alles von hier noch Spielkarte verlagen wenn es anders nicht geht ?
 		 * 
@@ -40,14 +43,15 @@ public class GameStartSettings {
 		});
 		
 		*/
-		karte.button_2.addActionListener(new ActionListener() {
+
+		
+		Karte.button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
-				karte.button_2.setBackground(Color.RED);
-				}
+				karte.button_2.setBackground(Color.RED);	
+			}
 		});
-		
-		
-	}
+	}	
 
-
+	void Autozuteilen(){}
 }
+	

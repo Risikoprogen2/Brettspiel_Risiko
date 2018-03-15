@@ -21,7 +21,7 @@ import java.awt.SystemColor;
 import javax.swing.JRadioButton;
 
 public class Spiel {
-
+	
 	private JFrame frame;
 	
 	private JTextField PName1;
@@ -33,12 +33,11 @@ public class Spiel {
 	static String Name2;
 	static String Name3;
 	static String Name4;
-	public int i = 0;
-	// Die Instanzen in Controll verschieben 
-	Player player1 = new Player();
-	Player player2 = new Player();
-	Player player3 = new Player();
-	Player player4 = new Player();
+	
+	public int i = 0;	// Variable um die anzahl der Spieler zu bestimmen
+	public int anz_Player = 0;	// Gibt die Genau Anzahl der Spieler an
+	public boolean selected; // Gibt an ob der Haken bei der checkbox angeklickt ist oder nicht.
+	
  	
  	
  		
@@ -47,8 +46,6 @@ public class Spiel {
 	 * @Autor Konrad Musiol
 	 *
 	 */
-
-	
 	 // Start der Anwendung 
 	public static void Spiel_Start() {
 		EventQueue.invokeLater(new Runnable() {
@@ -64,40 +61,31 @@ public class Spiel {
 		});
 	}
 
-	
 
 	// Die Folgenden 4 Fuktionen sind für das Switchcase weiter untem im Actionlistener vom Startbutton. Diese Klassen sind dazu da um, Namen einzutragen fals die Spieler es nicht tun
 	void ZweiP(){
-		Name1 = PName1.getText();
-		Name2 = PName2.getText();
-		
-		if (Name1 != null){
-			Name1 = "Player1";
-		}else{}
-		
-		if (Name2 != null){
+		if (PName1.getText().equals("")){ // Pruefen ob das Jtextfeld leer ist.
+			Name1 = "Player1";			 // Wenn es leer ist wird "Player1" eingetragen.
+		}else{Name1 = PName1.getText();} // Wenn nicht wird der Inhalt vom JTextFeld in denn String Geschrieben.
+											
+		if (PName2.getText().equals("")){
 			Name2 = "Player2";
-		}else{}
-	Name1 = player1.Name;
-	Name2 = player2.Name;
+		}else{Name2 = PName2.getText();}
+	}
 	
-	}
 	void DreiP(){
-		Name3 = PName3.getText();
-		
-		if (Name3 != null){
+		if (PName3.getText().equals("")){
 		Name3 = "Player3";
-		}else{}
-		Name3 = player3.Name;
+		}else{Name3 = PName3.getText();}	
 	}
+	
 	void VierP(){
-		Name4 = PName4.getText();
-		
-		if (Name4 != null){
+		if (PName4.getText().equals("")){
 			Name4 = "Player4";
-		}else{}	
-		Name4 = player4.Name;
+		}else{Name4 = PName4.getText();}	
 	}
+	
+	
 	
 	/**
 	 * Erstellen der Anwendung.
@@ -201,6 +189,7 @@ public class Spiel {
 		
 		// Checkbox um auszusuchen ob man Felder generieren lassen will oder selber zu teilen will
 		JCheckBox chckbx_Feldzuteilung = new JCheckBox("Felder selber zuteilen");
+		chckbx_Feldzuteilung.setSelected(true);
 		chckbx_Feldzuteilung.setBounds(10, 300, 166, 23);
 		frame.getContentPane().add(chckbx_Feldzuteilung);
 		
@@ -210,54 +199,52 @@ public class Spiel {
 			public Controll controll;
 			public void actionPerformed(ActionEvent e) {
 				
-				
-			
-			// Speicher von Namen im String
-			Name1 = PName1.getText();
-			Name2 = PName2.getText();
-			Name3 = PName3.getText();
-			Name4 = PName4.getText();
-		
 			/*Das Folgende Switchcase ruft die Funktionen von weiter oben auf um nicht eingetragene Namen einzutagen. 
 			 *Um Code verdoplung zu vermeiden wurden die Einzelnen IF Schleifen in Funktionen gepackt um diese dann hier mehrfach aufzurufen
 			 *
 			*/
+				
 			switch(i){
 			
-			case 0:
-			ZweiP(); 
+			case 0: // Zwei Spieler Modus 
+			ZweiP();// Führt die Methode für 2 Spieler aus
+			anz_Player = 2; // Variable wir auf 2 Gesetzt weil, 2 Spieler spielen.
 			break;
 			
-			case 1:
+			case 1: // Drei Spieler
 			ZweiP();
 			DreiP();
+			anz_Player = 3;
 			break;
 			
-			case 2:
+			case 2: // Vier Spieler
 			ZweiP();
 			DreiP();
-			VierP();	
+			VierP();
+			anz_Player = 4;
 			break;
 			}
 			
-
+				 
 			// test ob String gespeichert wird
-		System.out.println(i + Name1 + Name2 + Name3 + Name4);
-
-				
-// Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen
-			this.controll = new Controll();
-			controll.Start();
+		System.out.println("i = "+i+"also Spielen grade" + anz_Player+"Spieler mit den Namen: " + Name1 +", " + Name2 +", " + Name3 +", " + Name4);
 			
 			// Wahl der Methode um die Felder zu zuteilen
 						if(chckbx_Feldzuteilung.isSelected()){
-							System.out.println("Selected"); 			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							System.out.println("Selected"); //!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							boolean selected = true;
 						}else{
 							System.out.println("not Selected");			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							boolean selected = false;
 							};
+							
+							
+		// Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen
+		this.controll = new Controll();
+		controll.Start();
 				
 				
-				frame.dispose();	
+				frame.dispose();//Fenster abbauen bzw Schließen
 			}
 		});
 		
@@ -294,7 +281,6 @@ public class Spiel {
 			case 2: // Case damit i nicht höher wird als 2
 				i = 2;
 				}
-			
 			}
 		});
 		
@@ -313,18 +299,11 @@ public class Spiel {
 					lblPlayer3.setVisible(false);
 					break;
 				case 0:// Case damit i nicht kleiner 0 wird
-					i = 0;
-				
-					
-				}
-				
+					i = 0;	
+				}	
 			}
 		});
 		
-				
-			
-	
-	
 	
 		}
 	}
