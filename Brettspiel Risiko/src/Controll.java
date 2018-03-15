@@ -37,7 +37,7 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 	// Variablen Initialisieren
 	
 
-/*
+
 	public void test(){
 		karte.btnSwitch_P.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -49,7 +49,7 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 		
 	}
 	
-	*/
+	
 
 
 
@@ -82,7 +82,7 @@ public Controll(){ // Konstruktor
 	void Run(){
 		System.out.println("Bin in run");
 		
-		
+		 
 	switch(phase){
 	
 	case 0: // Phase Verstärken
