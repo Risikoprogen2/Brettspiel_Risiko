@@ -15,10 +15,12 @@ public class GameStartSettings {
 	public ArrayList<Integer> FelderP2 = new ArrayList<Integer>();
 	public ArrayList<Integer> FelderP3 = new ArrayList<Integer>();
 	public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
+	SpielKarte1 karte = new SpielKarte1();
 	
-	
-	public void ZuteilenSelber() {
+	void ZuteilenSelber() {
 		
+
+		//Probieren Felder zu färben
 		//Probieren Felder zu fï¿½rben
 		SpielKarte1 Karte = new SpielKarte1();
 		//Karte = new SpielKarte1();
@@ -41,16 +43,15 @@ public class GameStartSettings {
 		});
 		
 		*/
-		
+
 		
 		Karte.button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
-				Karte.button_2.setBackground(Color.RED);
-				}
+				karte.button_2.setBackground(Color.RED);	
+			}
 		});
-		
-		
-	}
-public void Autozuteilen(){}
+	}	
 
+	void Autozuteilen(){}
 }
+	

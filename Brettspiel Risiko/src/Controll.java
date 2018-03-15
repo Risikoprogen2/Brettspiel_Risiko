@@ -1,12 +1,15 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 
 import javax.swing.JButton;
 
 // Autor Konrad Musiol
 // Hier steht der Spiel ablauf drin
 public class Controll {
+	
 	
 // Klassen Instanzen
 Kontienet_Bonus kBonus =new Kontienet_Bonus();
@@ -15,16 +18,28 @@ SpielKarte1 karte = new SpielKarte1();
 GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
 Spiel spiel = new Spiel();
+<<<<<<< HEAD
  public int phase = 0;
+=======
+int phase = 0;
+  
+>>>>>>> 4d5dc7113c9471c553a37040f6054bd59e37860e
 //Instanz für jeden Spieler
 	Player player1 = new Player();
 	Player player2 = new Player();
 	Player player3 = new Player();
 	Player player4 = new Player();
 
+
+public ArrayList<Integer> FelderP1 = new ArrayList<Integer>();
+public ArrayList<Integer> FelderP2 = new ArrayList<Integer>();
+public ArrayList<Integer> FelderP3 = new ArrayList<Integer>();
+public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
+
 	
 	// Variablen Initialisieren
 	
+<<<<<<< HEAD
 /*
 	public void test(){
 		karte.btnSwitch_P.addActionListener(new ActionListener(){
@@ -38,17 +53,26 @@ Spiel spiel = new Spiel();
 	}
 	
 	*/
+=======
+
+
+public Controll(){ // Konstruktor 
+		
+		
+		
+	}
+>>>>>>> 4d5dc7113c9471c553a37040f6054bd59e37860e
 	 // Klasse Start Startet die Karte und Die Start einstellungen
 	void Start(){
 		
 		// Spielkarte öffnen
 		karte.Start_SpielKarte();
 		
-		
+
 		// Starteinstellungen Laden
 		if(spiel.selected == true){
-		gss.ZuteilenSelber();
-		}else{gss.Autozuteilen();}
+		karte.ZuteilenSelber();
+		}else{karte.Autozuteilen();}
 		
 		// Den Spielablauf starten
 		

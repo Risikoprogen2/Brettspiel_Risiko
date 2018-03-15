@@ -2,7 +2,6 @@
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
-import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
@@ -20,12 +19,19 @@ import java.awt.SystemColor;
 
 public class SpielKarte1 extends JFrame {
 	
-	public static JButton button_1 = new JButton("Feld 1");
-	public  JButton button_2 = new JButton("Feld 2");
+	/**
+	 * 
+	 */
+	Controll controll = new Controll();
+	Nachbarn nachbarn = new Nachbarn();
 	public JButton btnSwitch_P;
-	
 	static SpielKarte1 frame = new SpielKarte1();
 	public int phase = 0;
+	
+	
+	public JButton button_1 = new JButton("Feld 1");
+	public JButton button_2 = new JButton("Feld 2");
+	
 	
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -40,9 +46,6 @@ public class SpielKarte1 extends JFrame {
 				}
 			}
 		});
-		
-		
-		
 	}
 
 	// Frame aufrufen
@@ -108,7 +111,7 @@ public class SpielKarte1 extends JFrame {
 		 * Jedes Feld/Button braucht noch eine Liste mit Nachbarn (arraylist)
 		 * */
 		
-		JButton button_1 = new JButton("Feld 1");
+		//JButton button_1 = new JButton("Feld 1");
 		button_1.setBackground(SystemColor.controlHighlight);  //Verwendet als: Spieler Farbe
 		button_1.setBounds(152, 53, 70, 70);  //Platzierung des Button auf dem Spielfeld
 		button_1.setForeground(Color.BLACK);  //Beschriftungsfarbe
@@ -462,10 +465,40 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
 		
-		
+		ZuteilenSelber();
 	}
 	
 	public void SpielkarteSchliessen() {
 		frame.dispose();
 	}
+	
+	
+	//Zuteilen der Felder am Anfang des Spiels
+	public void Autozuteilen(){
+		nachbarn.FelderP1.add(1);
+		nachbarn.FelderP1.add(2);
+		nachbarn.FelderP1.add(3);
+		nachbarn.FelderP1.add(4);
+		nachbarn.FelderP1.add(5);
+		nachbarn.FelderP1.add(6);
+		nachbarn.FelderP1.add(7);
+		nachbarn.FelderP1.add(8);
+		nachbarn.FelderP1.add(9);
+		nachbarn.FelderP1.add(10);
+		nachbarn.FelderP1.add(11);
+		nachbarn.FelderP1.add(12);
+		
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				button_1.setBackground(Color.RED);	
+			}
+		});
+	}
+	
+	public void ZuteilenSelber(){
+
+		
+	}
+	
 }
+
