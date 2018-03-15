@@ -629,7 +629,7 @@ public class SpielKarte1 extends JFrame {
 	}
 	
 	
-	//Bis jetzt ab hier nichts genutzt
+	//Bis jetzt ab hier nichts genutzt.
 	
 	//Zuteilen der Felder am Anfang des Spiels
 	public void Autozuteilen(){
