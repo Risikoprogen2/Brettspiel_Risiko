@@ -33,12 +33,6 @@ Spiel spiel = new Spiel();
 	Player player3 = new Player();
 	Player player4 = new Player();
 
-
-public ArrayList<Integer> FelderP1 = new ArrayList<Integer>();
-public ArrayList<Integer> FelderP2 = new ArrayList<Integer>();
-public ArrayList<Integer> FelderP3 = new ArrayList<Integer>();
-public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
-
 	
 	// Variablen Initialisieren
 
@@ -67,7 +61,7 @@ public Controll(){ // Konstruktor
 		
 
 		// Starteinstellungen Laden
-		if(spiel.selected == true){
+		if(spiel.selected = true){
 		karte.ZuteilenSelber();
 		}else{karte.Autozuteilen();}
 		
