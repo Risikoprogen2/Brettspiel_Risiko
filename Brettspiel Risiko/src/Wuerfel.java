@@ -1,6 +1,6 @@
 
 
-public class Wuerfel extends Controll {
+public class Wuerfel {
 	
 
 
