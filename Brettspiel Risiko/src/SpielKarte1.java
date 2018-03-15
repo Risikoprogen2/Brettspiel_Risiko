@@ -658,7 +658,7 @@ public class SpielKarte1 extends JFrame {
 			
 	//	}while(wechsel == false);
 	}
-	 
+	  
 	
 	public void ZuteilenSelber(){
 
