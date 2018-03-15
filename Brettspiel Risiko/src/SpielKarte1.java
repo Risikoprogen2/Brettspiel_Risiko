@@ -28,6 +28,7 @@ public class SpielKarte1 extends JFrame {
 	static SpielKarte1 frame = new SpielKarte1();
 	public int phase = 0;
 	
+	
 	public JButton button_1 = new JButton("Feld 1");
 	public JButton button_2 = new JButton("Feld 2");
 	
@@ -358,7 +359,7 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(btnSwitch_P);
 		btnSwitch_P.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				phase++; // Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
+				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
 				System.out.println("In Spielkarte ist phase= "+ phase);
 			}
 		});

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 // Hier steht der Spiel ablauf drin
 public class Controll {
 	
+	
 // Klassen Instanzen
 Kontienet_Bonus kBonus =new Kontienet_Bonus();
 Wuerfel wuerfel = new Wuerfel();
@@ -16,7 +17,7 @@ GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
 Spiel spiel = new Spiel();
 int phase = 0;
-
+  
 //Instanz für jeden Spieler
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -32,16 +33,13 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 	
 	// Variablen Initialisieren
 	
-/*
-	
+
+
 public Controll(){ // Konstruktor 
 		
 		
 		
 	}
-	*/
-
-	
 	 // Klasse Start Startet die Karte und Die Start einstellungen
 	void Start(){
 		
@@ -57,7 +55,8 @@ public Controll(){ // Konstruktor
 		// Den Spielablauf starten
 		
 		
-		Run();
+		
+		//Run();
 	}
 	
 	
@@ -66,19 +65,12 @@ public Controll(){ // Konstruktor
 		System.out.println("Bin in run");
 		
 		
-		karte.btnSwitch_P.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				karte.phase++; // Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
-				System.out.println("In Spielkarte ist phase= "+ karte.phase);
-			}
-		});;
-		
-		
 	switch(phase){
 	
 	case 0: // Phase Verstärken
 		P_Verstaerken(); // Ausfuehren der Phase
 		System.out.println("war ich hier überhaup0t?	" +karte.phase);
+		
 	break;
 	
 	case 1:// Phase Angreifen
