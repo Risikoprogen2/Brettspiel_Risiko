@@ -30,7 +30,7 @@ public class SpielKarte1 extends JFrame {
 	public int phase = 0;
 	public boolean wechsel;
 	
-	public static Controll controll; 
+	Controll controll; 
 	Laender laender = new Laender();
 	Player player = new Player();
 
@@ -47,13 +47,27 @@ public class SpielKarte1 extends JFrame {
 	public JLabel lblAktuellePhase;
 	
 	
-	/*
+	// In der Phase Verstaerken sollen diese optionen nicht zu verfügung stehen
 	public void VerstaerkenMenu(){
 		btnTruppenBewegen.setEnabled(false);
 		btnZugBeenden.setEnabled(false);
-		lblAktuellePhase.setText("Verstaerken");
+		lblAktuellePhase.setText("Verstaerken");// Anzeigen der Aktuellen Phase
 	}
-	*/
+	// Phase Angriff
+	public void AngriffMenu(){
+		lblAktuellePhase.setText("Angreiffen");
+		btnAngriff.setEnabled(false);
+	}
+	// Phase Truppen Bewegen
+	public void BewegenMenu(){
+		lblAktuellePhase.setText("Bewegen");
+		btnAngriff.setEnabled(false);
+		btnTruppenBewegen.setEnabled(false);
+	}
+	
+	
+	
+	
 
 	public JButton button_3 = new JButton("Feld 3");
 	public JButton button_4 = new JButton("Feld 4");
@@ -472,7 +486,7 @@ public class SpielKarte1 extends JFrame {
 		lbl_PName.setBounds(126, 475, 135, 35);
 		lbl_PName.setIcon(null);
 		getContentPane().add(lbl_PName);
-//		lbl_PName.setText(controll.player.Name);
+		lbl_PName.setText("");
 		
 		//Label als Beschriftung des Spilernamens
 		JLabel lblAktuellerSpieler = new JLabel("Aktueller Spieler :");
