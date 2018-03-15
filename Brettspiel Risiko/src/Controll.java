@@ -1,4 +1,7 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 // Autor Konrad Musiol
 // Hier steht der Spiel ablauf drin
@@ -12,7 +15,10 @@ GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
 Spiel spiel = new Spiel();
 
-
+public ArrayList<Integer> FelderP1 = new ArrayList<Integer>();
+public ArrayList<Integer> FelderP2 = new ArrayList<Integer>();
+public ArrayList<Integer> FelderP3 = new ArrayList<Integer>();
+public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 
 	
 	 // Klasse Start Startet die Karte und Die Start einstellungen
@@ -21,7 +27,7 @@ Spiel spiel = new Spiel();
 		// Spielkarte öffnen
 		karte.Start_SpielKarte();
 		
-		
+
 		// Starteinstellungen Laden
 		gss.ZuteilenSelber(); 
 		

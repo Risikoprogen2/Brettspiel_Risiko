@@ -455,7 +455,6 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
 		
-		
 	}
 	
 	public void SpielkarteSchliessen() {
