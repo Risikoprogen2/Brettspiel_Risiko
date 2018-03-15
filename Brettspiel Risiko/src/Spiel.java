@@ -242,7 +242,7 @@ public class Spiel {
 			
 
 			// test ob String gespeichert wird
-		//	System.out.println(i + Name1 + Name2 + Name3 + Name4);
+		System.out.println(i + Name1 + Name2 + Name3 + Name4);
 
 				
 // Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen

@@ -82,11 +82,13 @@ Spiel spiel = new Spiel();
 	
 	void P_Angrifen(){ // Angreifen. Angreifer braucht mindestens 3 Einheit. 1 muss mindestens stehen bleiben.(Optionaler Schritt)
 		
-	int a;
+	int a = 0;
 	int d;
+	int Truppen = 0;
 	
-	d = wuerfel.RollsDefend();
-	a = wuerfel.RollsDefend();
+	
+	d = wuerfel.RollsDefend(Truppen, a);
+	a = wuerfel.RollsFight(d, d);
 	
 	if (a>d){
 		System.out.println("Win");
