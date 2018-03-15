@@ -12,7 +12,11 @@ GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
 Spiel spiel = new Spiel();
 
-
+//Instanz für jeden Spieler
+	Player player1 = new Player();
+	Player player2 = new Player();
+	Player player3 = new Player();
+	Player player4 = new Player();
 
 	
 	 // Klasse Start Startet die Karte und Die Start einstellungen
