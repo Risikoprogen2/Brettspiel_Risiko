@@ -34,6 +34,7 @@ public class Spiel {
 	static String Name3;
 	static String Name4;
 	public int i = 0;
+	public boolean selected;
 	// Die Instanzen in Controll verschieben 
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -251,9 +252,11 @@ public class Spiel {
 			
 			// Wahl der Methode um die Felder zu zuteilen
 						if(chckbx_Feldzuteilung.isSelected()){
-							System.out.println("Selected"); 			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							System.out.println("Selected"); //!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							boolean selected = true;
 						}else{
 							System.out.println("not Selected");			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							boolean selected = false;
 							};
 				
 				

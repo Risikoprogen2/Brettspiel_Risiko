@@ -24,7 +24,7 @@ public class Wuerfel {
 
 	}
 	// Verteidiger w�rfelt 
-	public int RollsDefend(int Truppen, int Wuerfel){
+	public int RollsDefend(int Truppen){
 		
 		
 		int Anz_Wuerfel = 0;
@@ -52,7 +52,7 @@ public class Wuerfel {
 	}
 	
 	// Angreifer W�rfelt
-	public int RollsFight(int Truppen, int Wuerfel){
+	public int RollsFight(int Truppen){
 		
 		// diese Klasse soll die Methode Roll() so oft aufrufen wie es Truppen gibt
 		

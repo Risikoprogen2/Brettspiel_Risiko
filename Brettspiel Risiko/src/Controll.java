@@ -23,7 +23,9 @@ Spiel spiel = new Spiel();
 		
 		
 		// Starteinstellungen Laden
-		gss.ZuteilenSelber(); 
+		if(spiel.selected == true){
+		gss.ZuteilenSelber();
+		}else{gss.Autozuteilen();}
 		
 		// Den Spielablauf starten
 		
@@ -55,6 +57,7 @@ Spiel spiel = new Spiel();
 		}
 		
 		Run();
+		
 	}
 	
 /*
@@ -87,8 +90,8 @@ Spiel spiel = new Spiel();
 	int Truppen = 0;
 	
 	
-	d = wuerfel.RollsDefend(Truppen, a);
-	a = wuerfel.RollsFight(d, d);
+	d = wuerfel.RollsDefend(Truppen);
+	a = wuerfel.RollsFight(Truppen);
 	
 	if (a>d){
 		System.out.println("Win");
