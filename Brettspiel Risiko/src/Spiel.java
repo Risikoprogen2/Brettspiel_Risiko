@@ -23,6 +23,7 @@ import javax.swing.JRadioButton;
 public class Spiel {
 
 	private JFrame frame;
+	
 	private JTextField PName1;
 	private JTextField PName2;
 	private JTextField PName3;
@@ -32,9 +33,15 @@ public class Spiel {
 	static String Name2;
 	static String Name3;
 	static String Name4;
-	private static int i = 0;
-	
-	
+	public int i = 0;
+	// Die Instanzen in Controll verschieben 
+	Player player1 = new Player();
+	Player player2 = new Player();
+	Player player3 = new Player();
+	Player player4 = new Player();
+ 	
+ 	
+ 		
 	/**
 	 * Klasse ist da um die Menge der Spieler zu waehlen und um die Namen der in das Spiel zu uebergeben 
 	 * @Autor Konrad Musiol
@@ -58,9 +65,38 @@ public class Spiel {
 	}
 
 	
-	public void Setzen(){
+
+	// Die Folgenden 4 Fuktionen sind für das Switchcase weiter untem im Actionlistener vom Startbutton. Diese Klassen sind dazu da um, Namen einzutragen fals die Spieler es nicht tun
+	void ZweiP(){
+		Name1 = PName1.getText();
+		Name2 = PName2.getText();
 		
+		if (Name1 != null){
+			Name1 = "Player1";
+		}else{}
+		
+		if (Name2 != null){
+			Name2 = "Player2";
+		}else{}
+	Name1 = player1.Name;
+	Name2 = player2.Name;
 	
+	}
+	void DreiP(){
+		Name3 = PName3.getText();
+		
+		if (Name3 != null){
+		Name3 = "Player3";
+		}else{}
+		Name3 = player3.Name;
+	}
+	void VierP(){
+		Name4 = PName4.getText();
+		
+		if (Name4 != null){
+			Name4 = "Player4";
+		}else{}	
+		Name4 = player4.Name;
 	}
 	
 	/**
@@ -111,7 +147,6 @@ public class Spiel {
 		frame.getContentPane().add(lblName1);
 		
 		JLabel lblPlayer2 = new JLabel("Player 2:");
-		lblPlayer2.setVisible(false);
 		lblPlayer2.setBounds(10, 188, 53, 16);
 		frame.getContentPane().add(lblPlayer2);
 		
@@ -135,7 +170,6 @@ public class Spiel {
 		
 		PName2 = new JTextField();
 		PName2.setBackground(Color.BLUE);
-		PName2.setVisible(false);
 		PName2.setBounds(65, 183, 130, 26);
 		PName2.setColumns(10);
 		frame.getContentPane().add(PName2);
@@ -165,14 +199,10 @@ public class Spiel {
 		lblBitteTragenSie.setBounds(2, 132, 251, 16);
 		frame.getContentPane().add(lblBitteTragenSie);
 		
-		JRadioButton rdbtnFelderSelberWhlen = new JRadioButton("Felder Selber Wählen");
-		rdbtnFelderSelberWhlen.setSelected(true);
-		rdbtnFelderSelberWhlen.setBounds(10, 291, 185, 23);
-		frame.getContentPane().add(rdbtnFelderSelberWhlen);
-		
-		JRadioButton rdbtnFelderGenerierenLassen = new JRadioButton("Felder Generieren lassen");
-		rdbtnFelderGenerierenLassen.setBounds(10, 311, 185, 23);
-		frame.getContentPane().add(rdbtnFelderGenerierenLassen);
+		// Checkbox um auszusuchen ob man Felder generieren lassen will oder selber zu teilen will
+		JCheckBox chckbx_Feldzuteilung = new JCheckBox("Felder selber zuteilen");
+		chckbx_Feldzuteilung.setBounds(10, 300, 166, 23);
+		frame.getContentPane().add(chckbx_Feldzuteilung);
 		
 		
 		// Aktionlistener vom Button Start
@@ -181,46 +211,57 @@ public class Spiel {
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				
+			
 			// Speicher von Namen im String
 			Name1 = PName1.getText();
 			Name2 = PName2.getText();
 			Name3 = PName3.getText();
 			Name4 = PName4.getText();
 		
-			
-			/*
-			if (Name1 != null){
-				Name1 = "Player1"; 	
-			};
-			
-			if (Name2 != null){
-				Name2 = "Player2";	
-			};
-			
-			if (Name3 != null){
-				Name3 = "Player3";
-			};
-			
-			if (Name4 != null){
-				Name4 = "Player4";
-			};
-			
+			/*Das Folgende Switchcase ruft die Funktionen von weiter oben auf um nicht eingetragene Namen einzutagen. 
+			 *Um Code verdoplung zu vermeiden wurden die Einzelnen IF Schleifen in Funktionen gepackt um diese dann hier mehrfach aufzurufen
+			 *
 			*/
+			switch(i){
+			
+			case 0:
+			ZweiP(); 
+			break;
+			
+			case 1:
+			ZweiP();
+			DreiP();
+			break;
+			
+			case 2:
+			ZweiP();
+			DreiP();
+			VierP();	
+			break;
+			}
+			
 
 			// test ob String gespeichert wird
-			System.out.println(Name1 + Name2 + Name3 + Name4);
-
+		//	System.out.println(i + Name1 + Name2 + Name3 + Name4);
 
 				
 // Starten von Klasse Controll. Die Klasse Controll öffnet dann die Spiel Karte und die Starteinstellungen
 			this.controll = new Controll();
 			controll.Start();
+			
+			// Wahl der Methode um die Felder zu zuteilen
+						if(chckbx_Feldzuteilung.isSelected()){
+							System.out.println("Selected"); 			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+						}else{
+							System.out.println("not Selected");			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							};
 				
 				
 				frame.dispose();	
 			}
 		});
+		
+		
 	
 		// Aktionlistener vom Button Zurueck
 		btnZurck.addActionListener(new ActionListener() {
@@ -243,20 +284,15 @@ public class Spiel {
 			switch(i++){
 			
 			case 0:
-				PName2.setVisible(true);
-				lblPlayer2.setVisible(true);
-				break;
-			case 1:
 				PName3.setVisible(true);
 				lblPlayer3.setVisible(true);
 				break;
-			case 2:
+			case 1:
 				PName4.setVisible(true);
 				lblPlayer4.setVisible(true);
 				break;
-			
-			case 3: // Case damit i nicht höher wird als 3 
-				i = 3;
+			case 2: // Case damit i nicht höher wird als 2
+				i = 2;
 				}
 			
 			}
@@ -268,17 +304,13 @@ public class Spiel {
 				// Switch case Anweisung
 				switch(i--){
 					
-				case 3: 
-					PName4.setVisible(false);
+				case 2:
+					PName4.setVisible(false);		
 					lblPlayer4.setVisible(false);
 					break;
-				case 2:
-					PName3.setVisible(false);		
-					lblPlayer3.setVisible(false);
-					break;
 				case 1:
-					PName2.setVisible(false);
-					lblPlayer2.setVisible(false);
+					PName3.setVisible(false);
+					lblPlayer3.setVisible(false);
 					break;
 				case 0:// Case damit i nicht kleiner 0 wird
 					i = 0;

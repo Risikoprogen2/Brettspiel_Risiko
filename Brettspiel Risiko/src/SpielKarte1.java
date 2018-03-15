@@ -15,17 +15,17 @@ import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 
 
-
+//Autor: Jonas Behler
 
 
 public class SpielKarte1 extends JFrame {
-	public static  JButton button_2 = new JButton("Feld 2");
+	
+	public static JButton button_1 = new JButton("Feld 1");
+	public  JButton button_2 = new JButton("Feld 2");
 
 	static SpielKarte1 frame = new SpielKarte1();
 	
-	public static Button button_1 = new Button("Feld 1");
-
-
+	
 	/**
 	 * Methode zum starten des Spielbrett's
 	 */
@@ -47,14 +47,8 @@ public class SpielKarte1 extends JFrame {
 
 	// Frame aufrufen
 	public SpielKarte1() {
-		initialize();
-	}
 		
-	/**
-	 * Create the frame.
-	 */
-	void initialize() {
-			
+		//Erstellen des Grafik Panels
 		getContentPane().setBackground(UIManager.getColor("Button.highlight"));
 		getContentPane().setForeground(UIManager.getColor("Button.focus"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,7 +58,7 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		
-		/*Schleife zum Felder generieren, funktioniert Leider nicht.
+		/*Schleife zum Felder/Länder generieren, funktioniert Leider nicht.
 		 *Problem: Button können nicht über die Schleife erstellt werden.
 		 *
 		int kordx = 130;
@@ -121,7 +115,7 @@ public class SpielKarte1 extends JFrame {
 		button_1.setBorder(new LineBorder(new Color(255, 255, 0), 10));  //Verwendet als: Kontienent Farbe 
 		getContentPane().add(button_1);
 		
-		JButton button_2 = new JButton("Feld 2");
+		//JButton button_2 = new JButton("Feld 2");
 		button_2.setBackground(SystemColor.controlHighlight);
 		button_2.setBounds(242, 53, 70, 70);
 		button_2.setForeground(new Color(0, 0, 0));
@@ -384,7 +378,7 @@ public class SpielKarte1 extends JFrame {
 			}
 		});
 		
-		
+
 		//Soll die Aktive Phase anzeigen
 		JLabel lblAktuellePhase = new JLabel("Aktuelle Phase");
 		lblAktuellePhase.setBounds(549, 610, 135, 40);

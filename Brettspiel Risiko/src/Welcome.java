@@ -92,6 +92,7 @@ public class Welcome extends JFrame {
 		// Der Button Oeffnet das Frame von der Klasse Ueber.java
 		
 		JButton btnNewButton_2 = new JButton("\u00DCber");
+		btnNewButton_2.setEnabled(false);
 		btnNewButton_2.setBounds(0, 142, 300, 43);
 		btnNewButton_2.setBackground(SystemColor.text);
 		btnNewButton_2.setFont(new Font("Dialog", Font.BOLD, 16));

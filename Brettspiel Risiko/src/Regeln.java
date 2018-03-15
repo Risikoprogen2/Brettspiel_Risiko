@@ -44,7 +44,7 @@ public class Regeln extends JFrame {
 	 */
 	public Regeln() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 332);
+		setBounds(100, 100, 612, 579);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.text);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,13 +59,13 @@ public class Regeln extends JFrame {
 				dispose();
 			}
 		});
-		btnSchlieen.setBounds(158, 253, 117, 29);
+		btnSchlieen.setBounds(230, 503, 117, 29);
 		contentPane.add(btnSchlieen);
 		// Das ist das nicht editirbares Textfeld für den Regel Text.
 		JTextPane txtpnHierStehenSpter = new JTextPane();
-		txtpnHierStehenSpter.setText("Hier Stehen Später die Regeln von Risiko\n\n\n");
+		txtpnHierStehenSpter.setText("Regeln:\r\n\r\nDas Spiel findet Rundenbasierend statt.\r\nJeder Spieler ist nacheinander am Zug.\r\nEin Zug besteht aus 3 verschiedenen Phasen.\r\n\r\nPhase 1: Truppen Platzieren\r\n--> Der aktive Spieler kann Truppen die ihm bereitgestellt (Grund Kapital + Bonus von Kontienten) werden jede Runde auf seinen eigenen Feldern frei Platzierren.\r\n\r\nPhase 2: Angreifen\r\n--> Es kann mit jedem Land, das mehr als 1 Truppen besitzt und ein feindliches Nachbarland hat, ein feindliches Land angegriffen werden. Man kann mit einem Land so oft angreifen bis das feindliche Land keine Truppen mehr besitzt oder bis die eigenen Truppen nicht mehr ausreichen.\r\nMan kann so oft man m\u00F6chte, solange L\u00E4nder vorhanden sind die die Bedingungen des Angriffs erf\u00FCllen angreifen. \r\nWenn ein Land erfolgreich Angegriffen wurde muss man es einnehmen und mindestens 1 Einheit auf das neue Land verschieben darf aber beliebig viele dort hin verschieben, wobei beide L\u00E4nder mindestens 1 Einheit behalten m\u00FCssen.\r\n\r\nPhase 3: Truppen bewegen\r\n--> Zum Schluss des Zuges k\u00F6nnen nun Einheiten von den eigenen L\u00E4ndern auf benachtbarte eigene L\u00E4nder bewegt werden. Wie beim Angriff muss jedes Land jedoch mindestens 1 Einheit behalten. In dieser Phase k\u00F6nnen die Einheiten jedoch nur ein mal von einem zum anderem Land bewegt werden.\r\n\r\nNach diesen 3 Phasen beginnt der n\u00E4chste Spieler mit seinem Zug.\r\n\r\nSieg: Gewinnen tut der Spieler der als letzter \u00FCberlebender Spieler die gesamte Karte eingenommen hat.\r\nNiederlage: Verloren hat man sobald alle Einheiten vernichtet wurden und man keine L\u00E4nder mehr besitzt.");
 		txtpnHierStehenSpter.setEditable(false);
-		txtpnHierStehenSpter.setBounds(0, 0, 434, 263);
+		txtpnHierStehenSpter.setBounds(0, 0, 594, 507);
 		contentPane.add(txtpnHierStehenSpter);
 	}
 }
