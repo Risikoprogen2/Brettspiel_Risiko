@@ -22,7 +22,7 @@ Spiel spiel = new Spiel();
 
 
   
-public int phase = 0;
+//public int phase = 0;
 
 
 public ArrayList<Integer> FelderP1 = new ArrayList<Integer>();
@@ -33,7 +33,7 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 	
 	// Variablen Initialisieren
 
-//Um nicht unnoetig Instanzen zu erstellen habe ich diese in Methoden gepackt die weiter unten in einem entsprechenden switch case abfrage ausgeführt werden
+// Instanzen werden Erzeugt und werden mit Daten von Spielern gefuellt
 void ZweiIni(){
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -45,7 +45,7 @@ void ZweiIni(){
 void DreiIni(){
 	Player player3 = new Player();
 	player3.Name = Spiel.Name3;
-	player3.PlayerID = 4;
+	player3.PlayerID = 3;
 }
 void VierIni(){
 	Player player4 = new Player();
@@ -136,6 +136,11 @@ void Anz_Player(){
 	// Die Methode führt den Spieler wechsel durch und danach führt sie wieder die Methode Run() aus.
 	void Playerswitch(){
 		int k = spiel.anz_Player;// Die Anzahl der Spiler aus der Variable anz_Player in Variable k speichern
+		
+		
+		
+		
+		
 		
 		if(player.PlayerID == k){
 			player.PlayerID = 1;
