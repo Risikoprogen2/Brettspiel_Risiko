@@ -19,6 +19,13 @@ import java.awt.SystemColor;
 
 public class SpielKarte1 extends JFrame {
 	
+	/**
+	 * 
+	 */
+	Nachbarn nachbarn = new Nachbarn();
+	static SpielKarte1 frame = new SpielKarte1();
+	public static Controll controll = new Controll();
+
 
 	//public JButton btnSwitch_P;
 	static SpielKarte1 frame = new SpielKarte1();
@@ -28,11 +35,28 @@ public class SpielKarte1 extends JFrame {
 	public static Controll controll = new Controll(); //Produziert Fehler
 	Laender laender = new Laender();
 	Player player = new Player();
+
 	
 	
 	//Button initalisieren um public nutzbar zu machen
 	public JButton button_1 = new JButton("Feld 1");
 	public JButton button_2 = new JButton("Feld 2");
+
+	
+	public JButton btnTruppenBewegen;
+	public JButton btnAngriff;
+	public JButton btnZugBeenden;	
+	public JLabel lblAktuellePhase;
+	
+	
+	/*
+	public void VerstaerkenMenu(){
+		btnTruppenBewegen.setEnabled(false);
+		btnZugBeenden.setEnabled(false);
+		lblAktuellePhase.setText("Verstaerken");
+	}
+	*/
+
 	public JButton button_3 = new JButton("Feld 3");
 	public JButton button_4 = new JButton("Feld 4");
 	public JButton button_5 = new JButton("Feld 5");
@@ -56,6 +80,7 @@ public class SpielKarte1 extends JFrame {
 	public JButton button_23 = new JButton("Feld 23");
 	public JButton button_24 = new JButton("Feld 24");
 	public JButton btnSwitch_P = new JButton("Phase Wechseln");
+
 	
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -71,7 +96,9 @@ public class SpielKarte1 extends JFrame {
 			}
 		});
 	}
-
+	
+	
+	
 	// Frame aufrufen
 	public SpielKarte1() {
 		
@@ -347,10 +374,22 @@ public class SpielKarte1 extends JFrame {
 		//Phase3 TruppenBewegen
 		//Zugbeenden
 		JButton btnTruppenBewegen = new JButton("Truppenbewegen");
+		btnTruppenBewegen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controll.P_Bewegen();
+			}
+		});
 		btnTruppenBewegen.setBounds(549, 570, 135, 40);
 		btnTruppenBewegen.setBackground(SystemColor.menu);
 		getContentPane().add(btnTruppenBewegen);
 		
+
+		JButton btnZugBeenden = new JButton("Zug Beenden");
+		btnZugBeenden.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controll.Playerswitch();
+			}
+
 		//JButton btnSwitch_P = new JButton("Phase Wechseln");
 		btnSwitch_P.setBounds(425, 610, 125, 40);
 		btnSwitch_P.setBackground(SystemColor.menu);
@@ -358,15 +397,21 @@ public class SpielKarte1 extends JFrame {
 		btnSwitch_P.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nÃ¤chste Spielphase
-				wechsel = true; //Variable Wechsel für While Schleife im Zuteilen der Truppen
+				wechsel = true; //Variable Wechsel fï¿½r While Schleife im Zuteilen der Truppen
 				System.out.println("In Spielkarte ist phase= "+ phase);
 			}
+
 		});
+		btnZugBeenden.setBounds(425, 610, 125, 40);
+		btnZugBeenden.setBackground(SystemColor.menu);
+		getContentPane().add(btnZugBeenden);
+		
 		
 		
 		JButton btnAngriff = new JButton("Angriffsphase");
 		btnAngriff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controll.P_Angrifen();
 			}
 		});
 		btnAngriff.setBounds(425, 570, 125, 40);
@@ -589,7 +634,7 @@ public class SpielKarte1 extends JFrame {
 	//	do{
 			//if(Playeranzahl < 3)
 		
-				//Spieler 1 Länder
+				//Spieler 1 Lï¿½nder
 				laender.FelderP1.add(1);
 				laender.FelderP1.add(2);
 				laender.FelderP1.add(3);
@@ -603,7 +648,7 @@ public class SpielKarte1 extends JFrame {
 				laender.FelderP1.add(11);
 				laender.FelderP1.add(12);
 			
-				//Spieler 2 Länder
+				//Spieler 2 Lï¿½nder
 				laender.FelderP2.add(13);
 				button_13.setBackground(Color.BLUE);	
 				laender.FelderP2.add(14);
