@@ -5,14 +5,42 @@ import java.util.List;
 
 
 //Soll Listen von Feldern und deren Nachbarn enthalten 
-public class Nachbarn {
+public class Laender {
 
+	//Truppen - Laender zugehoerigkeit
+	int TruppenF1;
+	int TruppenF2;
+	int TruppenF3;
+	int TruppenF4;
+	int TruppenF5;
+	int TruppenF6;
+	int TruppenF7;
+	int TruppenF8;
+	int TruppenF9;
+	int TruppenF10;
+	int TruppenF11;
+	int TruppenF12;
+	int TruppenF13;
+	int TruppenF14;
+	int TruppenF15;
+	int TruppenF16;
+	int TruppenF17;
+	int TruppenF18;
+	int TruppenF19;
+	int TruppenF20;
+	int TruppenF21;
+	int TruppenF22;
+	int TruppenF23;
+	int TruppenF24;
+	
+	//Felder - Spieler zugehoerigkeit
 	public ArrayList<Integer> FelderP1 = new ArrayList<Integer>();
 	public ArrayList<Integer> FelderP2 = new ArrayList<Integer>();
 	public ArrayList<Integer> FelderP3 = new ArrayList<Integer>();
 	public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 	
-	Nachbarn(){
+	
+	Laender(){		
 		
 		//Arrayliste mit den Nachbern jedes Felds 
 		ArrayList<Integer> NachbarnFeld1 = new ArrayList<>();

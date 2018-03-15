@@ -25,9 +25,23 @@ public class SpielKarte1 extends JFrame {
 	Nachbarn nachbarn = new Nachbarn();
 	static SpielKarte1 frame = new SpielKarte1();
 	public static Controll controll = new Controll();
+
+
+	//public JButton btnSwitch_P;
+	static SpielKarte1 frame = new SpielKarte1();
+	public int phase = 0;
+	public boolean wechsel;
 	
+	public static Controll controll = new Controll(); //Produziert Fehler
+	Laender laender = new Laender();
+	Player player = new Player();
+
+	
+	
+	//Button initalisieren um public nutzbar zu machen
 	public JButton button_1 = new JButton("Feld 1");
 	public JButton button_2 = new JButton("Feld 2");
+
 	
 	public JButton btnTruppenBewegen;
 	public JButton btnAngriff;
@@ -42,6 +56,31 @@ public class SpielKarte1 extends JFrame {
 		lblAktuellePhase.setText("Verstaerken");
 	}
 	*/
+
+	public JButton button_3 = new JButton("Feld 3");
+	public JButton button_4 = new JButton("Feld 4");
+	public JButton button_5 = new JButton("Feld 5");
+	public JButton button_6 = new JButton("Feld 6");
+	public JButton button_7 = new JButton("Feld 7");
+	public JButton button_8 = new JButton("Feld 8");
+	public JButton button_9 = new JButton("Feld 9");
+	public JButton button_10 = new JButton("Feld 10");
+	public JButton button_11 = new JButton("Feld 11");
+	public JButton button_12 = new JButton("Feld 12");
+	public JButton button_13 = new JButton("Feld 13");
+	public JButton button_14 = new JButton("Feld 14");
+	public JButton button_15 = new JButton("Feld 15");
+	public JButton button_16 = new JButton("Feld 16");
+	public JButton button_17 = new JButton("Feld 17");
+	public JButton button_18 = new JButton("Feld 18");
+	public JButton button_19 = new JButton("Feld 19");
+	public JButton button_20 = new JButton("Feld 20");
+	public JButton button_21 = new JButton("Feld 21");
+	public JButton button_22 = new JButton("Feld 22");
+	public JButton button_23 = new JButton("Feld 23");
+	public JButton button_24 = new JButton("Feld 24");
+	public JButton btnSwitch_P = new JButton("Phase Wechseln");
+
 	
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -123,186 +162,161 @@ public class SpielKarte1 extends JFrame {
 		 * Jedes Feld/Button braucht noch eine Liste mit Nachbarn (arraylist)
 		 * */
 		
-		//JButton button_1 = new JButton("Feld 1");
+		//JButton button_1 = new JButton("Feld 1"); //Weiter oben um public zu sein
 		button_1.setBackground(SystemColor.controlHighlight);  //Verwendet als: Spieler Farbe
 		button_1.setBounds(152, 53, 70, 70);  //Platzierung des Button auf dem Spielfeld
 		button_1.setForeground(Color.BLACK);  //Beschriftungsfarbe
 		button_1.setBorder(new LineBorder(new Color(255, 255, 0), 10));  //Verwendet als: Kontienent Farbe 
 		getContentPane().add(button_1);
 		
-		//JButton button_2 = new JButton("Feld 2");
 		button_2.setBackground(SystemColor.controlHighlight);
 		button_2.setBounds(242, 53, 70, 70);
 		button_2.setForeground(new Color(0, 0, 0));
 		button_2.setBorder(new LineBorder(new Color(255, 255, 0), 10));
 		getContentPane().add(button_2);
 		
-		JButton button_3 = new JButton("Feld 3");
+		
 		button_3.setBackground(SystemColor.controlHighlight);
 		button_3.setBounds(332, 53, 70, 70);
 		button_3.setForeground(new Color(0, 0, 0));
 		button_3.setBorder(new LineBorder(new Color(0, 178, 238), 10));
 		getContentPane().add(button_3);
-		
-		JButton button_4 = new JButton("Feld 4");
+	
 		button_4.setBackground(SystemColor.controlHighlight);
 		button_4.setBounds(422, 53, 70, 70);
 		button_4.setForeground(new Color(0, 0, 0));
 		button_4.setBorder(new LineBorder(new Color(0, 178, 238), 10));
 		getContentPane().add(button_4);
 		
-		JButton button_5 = new JButton("Feld 5");
 		button_5.setBackground(SystemColor.controlHighlight);
 		button_5.setBounds(512, 53, 70, 70);
 		button_5.setForeground(new Color(0, 0, 0));
 		button_5.setBorder(new LineBorder(new Color(0, 255, 0), 10));
 		getContentPane().add(button_5);
 		
-		JButton button_6 = new JButton("Feld 6");
 		button_6.setBackground(SystemColor.controlHighlight);
 		button_6.setBounds(602, 53, 70, 70);
 		button_6.setForeground(new Color(0, 0, 0));
 		button_6.setBorder(new LineBorder(new Color(0, 255, 0), 10));
 		getContentPane().add(button_6);
 		
-		JButton button_7 = new JButton("Feld 7");
 		button_7.setBackground(SystemColor.controlHighlight);
 		button_7.setBounds(152, 143, 70, 70);
 		button_7.setForeground(new Color(0, 0, 0));
 		button_7.setBorder(new LineBorder(new Color(255, 255, 0), 10));
 		getContentPane().add(button_7);
 		
-		JButton button_8 = new JButton("Feld 8");
 		button_8.setBackground(SystemColor.controlHighlight);
 		button_8.setBounds(242, 143, 70, 70);
 		button_8.setForeground(new Color(0, 0, 0));
 		button_8.setBorder(new LineBorder(new Color(255, 255, 0), 10));
 		getContentPane().add(button_8);
 		
-		JButton button_9 = new JButton("Feld 9");
 		button_9.setBackground(SystemColor.controlHighlight);
 		button_9.setBounds(332, 143, 70, 70);
 		button_9.setForeground(new Color(0, 0, 0));
 		button_9.setBorder(new LineBorder(new Color(0, 178, 238), 10));
 		getContentPane().add(button_9);
 		
-		JButton button_10 = new JButton("Feld 10");
 		button_10.setBackground(SystemColor.controlHighlight);
 		button_10.setBounds(422, 143, 70, 70);
 		button_10.setForeground(new Color(0, 0, 0));
 		button_10.setBorder(new LineBorder(new Color(0, 178, 238), 10));
 		getContentPane().add(button_10);
 		
-		JButton button_11 = new JButton("Feld 11");
 		button_11.setBackground(SystemColor.controlHighlight);
 		button_11.setBounds(512, 143, 70, 70);
 		button_11.setForeground(new Color(0, 0, 0));
 		button_11.setBorder(new LineBorder(new Color(0, 255, 0), 10));
 		getContentPane().add(button_11);
 		
-		JButton button_12 = new JButton("Feld 12");
 		button_12.setBackground(SystemColor.controlHighlight);
 		button_12.setBounds(602, 143, 70, 70);
 		button_12.setForeground(new Color(0, 0, 0));
 		button_12.setBorder(new LineBorder(new Color(0, 255, 0), 10));
 		getContentPane().add(button_12);
 		
-		JButton button_13 = new JButton("Feld 13");
 		button_13.setBackground(SystemColor.controlHighlight);
 		button_13.setBounds(152, 233, 70, 70);
 		button_13.setForeground(new Color(0, 0, 0));
 		button_13.setBorder(new LineBorder(new Color(255, 69, 0), 10));
 		getContentPane().add(button_13);
 		
-		JButton button_14 = new JButton("Feld 14");
 		button_14.setBackground(SystemColor.controlHighlight);
 		button_14.setBounds(242, 233, 70, 70);
 		button_14.setForeground(new Color(0, 0, 0));
 		button_14.setBorder(new LineBorder(new Color(255, 69, 0), 10));
 		getContentPane().add(button_14);
 		
-		JButton button_15 = new JButton("Feld 15");
 		button_15.setBackground(SystemColor.controlHighlight);
 		button_15.setBounds(332, 233, 70, 70);
 		button_15.setForeground(new Color(0, 0, 0));
 		button_15.setBorder(new LineBorder(new Color(205, 133, 63), 10));
 		getContentPane().add(button_15);
 		
-		JButton button_16 = new JButton("Feld 16");
 		button_16.setBackground(SystemColor.controlHighlight);
 		button_16.setBounds(422, 233, 70, 70);
 		button_16.setForeground(new Color(0, 0, 0));
 		button_16.setBorder(new LineBorder(new Color(205, 133, 63), 10));
 		getContentPane().add(button_16);
 		
-		JButton button_17 = new JButton("Feld 17");
 		button_17.setBackground(SystemColor.controlHighlight);
 		button_17.setBounds(512, 233, 70, 70);
 		button_17.setForeground(new Color(0, 0, 0));
 		button_17.setBorder(new LineBorder(new Color(0, 255, 0), 10));
 		getContentPane().add(button_17);
 		
-		JButton button_18 = new JButton("Feld 18");
 		button_18.setBackground(SystemColor.controlHighlight);
 		button_18.setBounds(602, 233, 70, 70);
 		button_18.setForeground(new Color(0, 0, 0));
 		button_18.setBorder(new LineBorder(new Color(0, 255, 0), 10));
 		getContentPane().add(button_18);
 		
-		JButton button_19 = new JButton("Feld 19");
 		button_19.setBackground(SystemColor.controlHighlight);
 		button_19.setBounds(152, 323, 70, 70);
 		button_19.setForeground(new Color(0, 0, 0));
 		button_19.setBorder(new LineBorder(new Color(255, 69, 0), 10));
 		getContentPane().add(button_19);
 		
-		JButton button_20 = new JButton("Feld 20");
 		button_20.setBackground(SystemColor.controlHighlight);
 		button_20.setBounds(242, 323, 70, 70);
 		button_20.setForeground(new Color(0, 0, 0));
 		button_20.setBorder(new LineBorder(new Color(255, 69, 0), 10));
 		getContentPane().add(button_20);
 		
-		JButton button_21 = new JButton("Feld 21");
 		button_21.setBackground(SystemColor.controlHighlight);
 		button_21.setBounds(332, 323, 70, 70);
 		button_21.setForeground(new Color(0, 0, 0));
 		button_21.setBorder(new LineBorder(new Color(205, 133, 63), 10));;
 		getContentPane().add(button_21);
 		
-		JButton button_22 = new JButton("Feld 22");
 		button_22.setBackground(SystemColor.controlHighlight);
 		button_22.setBounds(422, 323, 70, 70);
 		button_22.setForeground(new Color(0, 0, 0));
 		button_22.setBorder(new LineBorder(new Color(205, 133, 63), 10));
 		getContentPane().add(button_22);
 		
-		JButton button_23 = new JButton("Feld 23");
 		button_23.setBackground(SystemColor.controlHighlight);
 		button_23.setBounds(512, 323, 70, 70);
 		button_23.setForeground(new Color(0, 0, 0));
 		button_23.setBorder(new LineBorder(new Color(148, 0, 211), 10));
 		getContentPane().add(button_23);
 		
-		JButton button_24 = new JButton("Feld 24");
 		button_24.setBackground(SystemColor.controlHighlight);
 		button_24.setBounds(602, 323, 70, 70);
 		button_24.setForeground(new Color(0, 0, 0));
 		button_24.setBorder(new LineBorder(new Color(148, 0, 211), 10));
 		getContentPane().add(button_24);
 		
-		//Farben der Felder auf Spieler anpassen
-		//button_10.setBackground(UIManager.getColor("Button.background"));
 
-		
+
 		
 		//Hintergrund
 		JLabel lbl_background = new JLabel("");
 		lbl_background.setIcon(new ImageIcon(getClass().getResource("Risiko.jpg")));  //Einbinden des Hintergrundbildes
-		lbl_background.setBounds(2, 0, 800, 474);
+		lbl_background.setBounds(0, 0, 800, 474);
 		lbl_background.setBounds(-10, 0, 794, 470);
 		getContentPane().add(lbl_background);
-		
 		
 		
 		//Statistik Felder
@@ -353,7 +367,6 @@ public class SpielKarte1 extends JFrame {
 		lblLaenderZahl.setBackground(SystemColor.menu);
 		getContentPane().add(lblLaenderZahl);
 		
-
 		
 		//Spielphasenwechsel Button
 		//Phase1 Truppenplatzieren
@@ -370,11 +383,24 @@ public class SpielKarte1 extends JFrame {
 		btnTruppenBewegen.setBackground(SystemColor.menu);
 		getContentPane().add(btnTruppenBewegen);
 		
+
 		JButton btnZugBeenden = new JButton("Zug Beenden");
 		btnZugBeenden.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controll.Playerswitch();
 			}
+
+		//JButton btnSwitch_P = new JButton("Phase Wechseln");
+		btnSwitch_P.setBounds(425, 610, 125, 40);
+		btnSwitch_P.setBackground(SystemColor.menu);
+		getContentPane().add(btnSwitch_P);
+		btnSwitch_P.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
+				wechsel = true; //Variable Wechsel f�r While Schleife im Zuteilen der Truppen
+				System.out.println("In Spielkarte ist phase= "+ phase);
+			}
+
 		});
 		btnZugBeenden.setBounds(425, 610, 125, 40);
 		btnZugBeenden.setBackground(SystemColor.menu);
@@ -454,7 +480,7 @@ public class SpielKarte1 extends JFrame {
 		//Von Klasse Spiel die Spieler Namen hier ausgeben
 		//Angabe des Namen des Spielers der aktuell am Zug ist
 		JLabel lbl_PName = new JLabel("");
-		lbl_PName.setBounds(121, 482, 135, 22);
+		lbl_PName.setBounds(126, 475, 135, 35);
 		lbl_PName.setIcon(null);
 		getContentPane().add(lbl_PName);
 		lbl_PName.setText(Spiel.Name1);
@@ -483,7 +509,6 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
 		
-		ZuteilenSelber();
 	}
 	
 	public void SpielkarteSchliessen() {
@@ -493,29 +518,98 @@ public class SpielKarte1 extends JFrame {
 	
 	//Zuteilen der Felder am Anfang des Spiels
 	public void Autozuteilen(){
-		nachbarn.FelderP1.add(1);
-		nachbarn.FelderP1.add(2);
-		nachbarn.FelderP1.add(3);
-		nachbarn.FelderP1.add(4);
-		nachbarn.FelderP1.add(5);
-		nachbarn.FelderP1.add(6);
-		nachbarn.FelderP1.add(7);
-		nachbarn.FelderP1.add(8);
-		nachbarn.FelderP1.add(9);
-		nachbarn.FelderP1.add(10);
-		nachbarn.FelderP1.add(11);
-		nachbarn.FelderP1.add(12);
 		
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e){
-				button_1.setBackground(Color.RED);	
-			}
-		});
+		System.out.println("Autozuteilen");
+
+	//	do{
+			//if(Playeranzahl < 3)
+		
+				//Spieler 1 L�nder
+				laender.FelderP1.add(1);
+				laender.FelderP1.add(2);
+				laender.FelderP1.add(3);
+				laender.FelderP1.add(4);
+				laender.FelderP1.add(5);
+				laender.FelderP1.add(6);
+				laender.FelderP1.add(7);
+				laender.FelderP1.add(8);
+				laender.FelderP1.add(9);
+				laender.FelderP1.add(10);
+				laender.FelderP1.add(11);
+				laender.FelderP1.add(12);
+			
+				//Spieler 2 L�nder
+				laender.FelderP2.add(13);
+				laender.FelderP2.add(14);
+				laender.FelderP2.add(15);
+				laender.FelderP2.add(16);
+				laender.FelderP2.add(17);
+				laender.FelderP2.add(18);
+				laender.FelderP2.add(19);
+				laender.FelderP2.add(20);
+				laender.FelderP2.add(21);
+				laender.FelderP2.add(22);
+				laender.FelderP2.add(23);
+				laender.FelderP2.add(24);
+				
+				laender.TruppenF1 = 2;
+				button_1.setText("E: " + laender.TruppenF1);
+				laender.TruppenF2 = 2;
+				laender.TruppenF3 = 2;
+				laender.TruppenF4 = 2;
+				laender.TruppenF5 = 2;
+				laender.TruppenF6 = 2;
+				laender.TruppenF7 = 2;
+				laender.TruppenF8 = 2;
+				laender.TruppenF9 = 2;
+				laender.TruppenF10 = 2;
+				laender.TruppenF11 = 2;
+				laender.TruppenF12 = 2;
+				laender.TruppenF13 = 2;
+				laender.TruppenF14 = 2;
+				laender.TruppenF15 = 2;
+				laender.TruppenF16 = 2;
+				laender.TruppenF17 = 2;
+				laender.TruppenF18 = 2;
+				laender.TruppenF19 = 2;
+				laender.TruppenF20 = 2;
+				laender.TruppenF21 = 2;
+				laender.TruppenF22 = 2;
+				laender.TruppenF23 = 2;
+				laender.TruppenF24 = 2;
+				System.out.println(laender.TruppenF23);
+			
+	//	}while(wechsel == false);
 	}
+	
 	
 	public void ZuteilenSelber(){
 
+	System.out.println("Selberzuteilen");
+	System.out.println(player.PlayerID + "playerid");
+		//do{
+			if (player.PlayerID == 0){
+				
+				button_1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_1.setBackground(Color.RED);	
+						wechsel = true;
+						
+					}
+				});			
+			}
+		//}while(wechsel = false);
 		
+			if (player.PlayerID == 1){
+				
+				button_1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_1.setBackground(Color.BLUE);	
+					}
+				});
+			
+			}	
+			
 	}
 	
 }

@@ -37,6 +37,7 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 void ZweiIni(){
 	Player player1 = new Player();
 	Player player2 = new Player();
+	
 }
 void DreiIni(){
 	Player player3 = new Player();
