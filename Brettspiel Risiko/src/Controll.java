@@ -43,6 +43,7 @@ Spiel spiel = new Spiel();
 	P_Bewegen();
 	
 	Playerswitch();
+	Run();
 	
 	}
 	
@@ -56,7 +57,6 @@ Spiel spiel = new Spiel();
 			player.PlayerID++;
 		}
 		
-		Run();
 		
 	}
 	
