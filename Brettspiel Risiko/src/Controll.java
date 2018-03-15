@@ -172,12 +172,7 @@ public Controll(){ // Konstruktor
 	
 	
 	
-		
-		
-	
-	
-	
-	
+
 	
 
 	void Win(){

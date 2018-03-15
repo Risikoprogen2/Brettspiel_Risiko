@@ -464,6 +464,116 @@ public class SpielKarte1 extends JFrame {
 		lblVerstaerkungZahl.setBounds(300, 615, 125, 35);
 		getContentPane().add(lblVerstaerkungZahl);
 		
+		
+		
+		/*Zuteilen der Felder an Spieler
+		 * Färben der Button funktioniert an keiner anderen Stelle als hier
+		 * deshalb lässt sich nur eine Variante der Zuteilung realisieren
+		 */
+		
+		//Spieler 1 Länder
+		laender.FelderP1.add(1);
+		button_1.setBackground(Color.RED);	
+		laender.FelderP1.add(2);
+		button_2.setBackground(Color.RED);
+		laender.FelderP1.add(3);
+		button_3.setBackground(Color.RED);
+		laender.FelderP1.add(4);
+		button_4.setBackground(Color.RED);
+		laender.FelderP1.add(5);
+		button_5.setBackground(Color.RED);
+		laender.FelderP1.add(6);
+		button_6.setBackground(Color.RED);
+		laender.FelderP1.add(7);
+		button_7.setBackground(Color.RED);
+		laender.FelderP1.add(8);
+		button_8.setBackground(Color.RED);
+		laender.FelderP1.add(9);
+		button_9.setBackground(Color.RED);
+		laender.FelderP1.add(10);
+		button_10.setBackground(Color.RED);
+		laender.FelderP1.add(11);
+		button_11.setBackground(Color.RED);
+		laender.FelderP1.add(12);
+		button_12.setBackground(Color.RED);
+	
+		//Spieler 2 Länder
+		laender.FelderP2.add(13);
+		button_13.setBackground(Color.BLUE);	
+		laender.FelderP2.add(14);
+		button_14.setBackground(Color.BLUE);
+		laender.FelderP2.add(15);
+		button_15.setBackground(Color.BLUE);
+		laender.FelderP2.add(16);
+		button_16.setBackground(Color.BLUE);
+		laender.FelderP2.add(17);
+		button_17.setBackground(Color.BLUE);
+		laender.FelderP2.add(18);
+		button_18.setBackground(Color.BLUE);
+		laender.FelderP2.add(19);
+		button_19.setBackground(Color.BLUE);
+		laender.FelderP2.add(20);
+		button_20.setBackground(Color.BLUE);
+		laender.FelderP2.add(21);
+		button_21.setBackground(Color.BLUE);
+		laender.FelderP2.add(22);
+		button_22.setBackground(Color.BLUE);
+		laender.FelderP2.add(23);
+		button_23.setBackground(Color.BLUE);
+		laender.FelderP2.add(24);
+		button_24.setBackground(Color.BLUE);
+		
+		laender.TruppenF1 = 2;
+		button_1.setText("E: " + laender.TruppenF1);
+		laender.TruppenF2 = 2;
+		button_2.setText("E: " + laender.TruppenF2);
+		laender.TruppenF3 = 2;
+		button_3.setText("E: " + laender.TruppenF3);
+		laender.TruppenF4 = 2;
+		button_4.setText("E: " + laender.TruppenF4);
+		laender.TruppenF5 = 2;
+		button_5.setText("E: " + laender.TruppenF5);
+		laender.TruppenF6 = 2;
+		button_6.setText("E: " + laender.TruppenF6);
+		laender.TruppenF7 = 2;
+		button_7.setText("E: " + laender.TruppenF7);
+		laender.TruppenF8 = 2;
+		button_8.setText("E: " + laender.TruppenF8);
+		laender.TruppenF9 = 2;
+		button_9.setText("E: " + laender.TruppenF9);
+		laender.TruppenF10 = 2;
+		button_10.setText("E: " + laender.TruppenF10);
+		laender.TruppenF11 = 2;
+		button_11.setText("E: " + laender.TruppenF11);
+		laender.TruppenF12 = 2;
+		button_12.setText("E: " + laender.TruppenF12);
+		laender.TruppenF13 = 2;
+		button_13.setText("E: " + laender.TruppenF13);
+		laender.TruppenF14 = 2;
+		button_14.setText("E: " + laender.TruppenF14);
+		laender.TruppenF15 = 2;
+		button_15.setText("E: " + laender.TruppenF15);
+		laender.TruppenF16 = 2;
+		button_16.setText("E: " + laender.TruppenF16);
+		laender.TruppenF17 = 2;
+		button_17.setText("E: " + laender.TruppenF17);
+		laender.TruppenF18 = 2;
+		button_18.setText("E: " + laender.TruppenF18);
+		laender.TruppenF19 = 2;
+		button_19.setText("E: " + laender.TruppenF19);
+		laender.TruppenF20 = 2;
+		button_20.setText("E: " + laender.TruppenF20);
+		laender.TruppenF21 = 2;
+		button_21.setText("E: " + laender.TruppenF21);
+		laender.TruppenF22 = 2;
+		button_22.setText("E: " + laender.TruppenF22);
+		laender.TruppenF23 = 2;
+		button_23.setText("E: " + laender.TruppenF23);
+		laender.TruppenF24 = 2;
+		button_24.setText("E: " + laender.TruppenF24);
+					
+					
+		
 	}
 	
 	public void SpielkarteSchliessen() {
@@ -495,17 +605,29 @@ public class SpielKarte1 extends JFrame {
 			
 				//Spieler 2 Länder
 				laender.FelderP2.add(13);
+				button_13.setBackground(Color.BLUE);	
 				laender.FelderP2.add(14);
+				button_14.setBackground(Color.BLUE);
 				laender.FelderP2.add(15);
+				button_15.setBackground(Color.BLUE);
 				laender.FelderP2.add(16);
+				button_16.setBackground(Color.BLUE);
 				laender.FelderP2.add(17);
+				button_17.setBackground(Color.BLUE);
 				laender.FelderP2.add(18);
+				button_18.setBackground(Color.BLUE);
 				laender.FelderP2.add(19);
+				button_19.setBackground(Color.BLUE);
 				laender.FelderP2.add(20);
+				button_20.setBackground(Color.BLUE);
 				laender.FelderP2.add(21);
+				button_21.setBackground(Color.BLUE);
 				laender.FelderP2.add(22);
+				button_22.setBackground(Color.BLUE);
 				laender.FelderP2.add(23);
+				button_23.setBackground(Color.BLUE);
 				laender.FelderP2.add(24);
+				button_24.setBackground(Color.BLUE);
 				
 				laender.TruppenF1 = 2;
 				button_1.setText("E: " + laender.TruppenF1);
@@ -543,16 +665,17 @@ public class SpielKarte1 extends JFrame {
 	System.out.println("Selberzuteilen");
 	System.out.println(player.PlayerID + "playerid");
 		//do{
-			if (player.PlayerID == 0){
+			//if (player.PlayerID == 0){
 				
 				button_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e){
 						button_1.setBackground(Color.RED);	
 						wechsel = true;
+						System.out.println("Klick button 1");
 						
 					}
 				});			
-			}
+			//}
 		//}while(wechsel = false);
 		
 			if (player.PlayerID == 1){
