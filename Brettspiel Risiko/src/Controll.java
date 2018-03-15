@@ -38,7 +38,7 @@ Spiel spiel = new Spiel();
 	void Run(){
 		
 		
-	P_Verstärken();
+	P_Verstaerken();
 	P_Angrifen();
 	P_Bewegen();
 	
@@ -65,7 +65,7 @@ Spiel spiel = new Spiel();
  *
  */
 	
-	void P_Verstärken(){ // Zum Anfang der Runde bekommt man Einheiten. AnzTruppen = Gebiete/3 oder mindestens 3 Einheiten! 
+	void P_Verstaerken(){ // Zum Anfang der Runde bekommt man Einheiten. AnzTruppen = Gebiete/3 oder mindestens 3 Einheiten! 
 		
 		// vorläufige berechnung wie man Truppen bekommt 
 		
