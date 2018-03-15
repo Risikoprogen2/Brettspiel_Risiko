@@ -37,13 +37,20 @@ public ArrayList<Integer> FelderP4 = new ArrayList<Integer>();
 void ZweiIni(){
 	Player player1 = new Player();
 	Player player2 = new Player();
-	
+	player1.Name = Spiel.Name1;
+	player1.PlayerID = 1;
+	player2.Name = Spiel.Name2;
+	player2.PlayerID = 2;
 }
 void DreiIni(){
 	Player player3 = new Player();
+	player3.Name = Spiel.Name3;
+	player3.PlayerID = 4;
 }
 void VierIni(){
 	Player player4 = new Player();
+	player4.Name = Spiel.Name4;
+	player4.PlayerID = 4;
 }
 
 void Anz_Player(){
@@ -74,7 +81,7 @@ void Anz_Player(){
 		
 		// Spielkarte öffnen
 		karte.Start_SpielKarte();
-		
+	
 
 		// Starteinstellungen Laden
 		if(spiel.selected == true){
