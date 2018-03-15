@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+
 // Autor Konrad Musiol
 // Hier steht der Spiel ablauf drin
 public class Controll {
@@ -13,7 +15,7 @@ SpielKarte1 karte = new SpielKarte1();
 GameStartSettings gss = new GameStartSettings();
 Player player = new Player();
 Spiel spiel = new Spiel();
-int phase = 0;
+ public int phase = 0;
 //Instanz für jeden Spieler
 	Player player1 = new Player();
 	Player player2 = new Player();
@@ -23,10 +25,19 @@ int phase = 0;
 	
 	// Variablen Initialisieren
 	
-
+/*
+	public void test(){
+		karte.btnSwitch_P.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
+				System.out.println("In Spielkarte ist phase= "+ phase);
+			}
+		});
+		
+		
+	}
 	
-	
-	
+	*/
 	 // Klasse Start Startet die Karte und Die Start einstellungen
 	void Start(){
 		
@@ -43,7 +54,7 @@ int phase = 0;
 		
 		
 		
-		//Run();
+		Run();
 	}
 	
 	
