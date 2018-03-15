@@ -23,14 +23,25 @@ public class SpielKarte1 extends JFrame {
 	 * 
 	 */
 	Nachbarn nachbarn = new Nachbarn();
-	public JButton btnSwitch_P;
 	static SpielKarte1 frame = new SpielKarte1();
-	public int phase = 0;
-	
+	public static Controll controll = new Controll();
 	
 	public JButton button_1 = new JButton("Feld 1");
 	public JButton button_2 = new JButton("Feld 2");
 	
+	public JButton btnTruppenBewegen;
+	public JButton btnAngriff;
+	public JButton btnZugBeenden;	
+	public JLabel lblAktuellePhase;
+	
+	
+	/*
+	public void VerstaerkenMenu(){
+		btnTruppenBewegen.setEnabled(false);
+		btnZugBeenden.setEnabled(false);
+		lblAktuellePhase.setText("Verstaerken");
+	}
+	*/
 	
 	/**
 	 * Methode zum starten des Spielbrett's
@@ -46,7 +57,9 @@ public class SpielKarte1 extends JFrame {
 			}
 		});
 	}
-
+	
+	
+	
 	// Frame aufrufen
 	public SpielKarte1() {
 		
@@ -348,25 +361,31 @@ public class SpielKarte1 extends JFrame {
 		//Phase3 TruppenBewegen
 		//Zugbeenden
 		JButton btnTruppenBewegen = new JButton("Truppenbewegen");
+		btnTruppenBewegen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controll.P_Bewegen();
+			}
+		});
 		btnTruppenBewegen.setBounds(549, 570, 135, 40);
 		btnTruppenBewegen.setBackground(SystemColor.menu);
 		getContentPane().add(btnTruppenBewegen);
 		
-		JButton btnSwitch_P = new JButton("Phase Wechseln");
-		btnSwitch_P.setBounds(425, 610, 125, 40);
-		btnSwitch_P.setBackground(SystemColor.menu);
-		getContentPane().add(btnSwitch_P);
-		btnSwitch_P.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e){
-				phase++;// Variable Phase hochzaehlen um das case zu switchen -> nächste Spielphase
-				System.out.println("In Spielkarte ist phase= "+ phase);
+		JButton btnZugBeenden = new JButton("Zug Beenden");
+		btnZugBeenden.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controll.Playerswitch();
 			}
 		});
+		btnZugBeenden.setBounds(425, 610, 125, 40);
+		btnZugBeenden.setBackground(SystemColor.menu);
+		getContentPane().add(btnZugBeenden);
+		
 		
 		
 		JButton btnAngriff = new JButton("Angriffsphase");
 		btnAngriff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				controll.P_Angrifen();
 			}
 		});
 		btnAngriff.setBounds(425, 570, 125, 40);
