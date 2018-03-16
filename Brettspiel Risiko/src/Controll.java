@@ -143,11 +143,17 @@ void Anz_Player(){
 	d = wuerfel.RollsDefend(d);
 	a = wuerfel.RollsFight(a);
 	
+	
+	
 	if (a>d){
 		System.out.println("Win");// Hier muss eine methode hin zum übernehmen von dem angegriffenen Feld
+		d = d - wuerfel.Anz_DWuerfel; // Anzahl der Truppen verringern um die Anzahl der benutzen Wuerfel
 	}else{
-		System.out.println("Lose");// 
+		System.out.println("Lose");
+		a = a - wuerfel.Anz_AWuerfel;
 	}
+	
+	
 		Win(); // Nach jedem Angriff pruefen ob es einen Gewinner gibt	
 		Lose(); // Nach jedem Angriff pruefen ob es einen Verlierer gibt	
 	}

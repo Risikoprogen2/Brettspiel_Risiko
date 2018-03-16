@@ -2,7 +2,8 @@
 
 public class Wuerfel {
 	
-
+	public int Anz_DWuerfel;// Anzahl der Wuerfel
+	public int Anz_AWuerfel;
 
 	/**
 	 * Diese Klasse ist fuer das wuerfeln zustaendig;
@@ -12,26 +13,29 @@ public class Wuerfel {
 	 */
 	
 	public Wuerfel(){
+	
+		
 		
 	}
 	// Verteidiger wuerfelt 
 	public int RollsDefend(int Truppen){// Aus Controll wird die anzahl der Truppen übergeben
 	
-		int Anz_Wuerfel = 0; // Anzahl der Wuerfel
+		int Anz_DWuerfel=0;
+		
 		int ergD = 0;	// Ergebnis welches die Klasse ausgibt
 		
 		if (Truppen > 2) {
 			
-			  Anz_Wuerfel = 2;
+			  Anz_DWuerfel = 2;
 		} else{
 			
-			 Anz_Wuerfel =  Truppen; 
+			 Anz_DWuerfel =  Truppen; 
 		}
 		
 		// For Schliefe fuer das wuerfeln
 		
 		
-		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
+		for(Anz_DWuerfel++ ; Anz_DWuerfel <= 0; Anz_DWuerfel--)
 		{
 			ergD = ergD + Roll();
 			
@@ -46,21 +50,21 @@ public class Wuerfel {
 		
 		// diese Klasse soll die Methode Roll() so oft aufrufen wie es Truppen gibt
 		
-		int Anz_Wuerfel = 0;
+		int Anz_AWuerfel = 0;
 		int ergF = 0;
 
 		if (Truppen >= 3) {
 			
-			  Anz_Wuerfel = 3;
+			  Anz_AWuerfel = 3;
 		} else{
 			
-			 Anz_Wuerfel =  Truppen; 
+			 Anz_AWuerfel =  Truppen; 
 		}
 		
 		// For Schliefe f�r das W�rfeln
 		
 		
-		for(Anz_Wuerfel++ ; Anz_Wuerfel <= 0; Anz_Wuerfel--)
+		for(Anz_AWuerfel++ ; Anz_AWuerfel <= 0; Anz_AWuerfel--)
 		{
 			ergF = ergF + Roll();
 			
