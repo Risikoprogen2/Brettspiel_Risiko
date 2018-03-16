@@ -78,11 +78,6 @@ public class SpielKarte1 extends JFrame {
 		btnTruppenBewegen.setEnabled(false);
 	}
 	
-	
-	
-	
-
-
 
 	
 	/**
@@ -115,9 +110,10 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		
-		/*Schleife zum Felder/Lï¿½nder generieren, funktioniert Leider nicht.
-		 *Problem: Button kï¿½nnen nicht ï¿½ber die Schleife erstellt werden.
-		 *
+		/*Schleife zum Felder/Laender generieren, funktioniert Leider nicht.
+		 *Problem: Button koennen nicht ueber die Schleife erstellt werden.
+		 *Deshalb wurden alle Button ohne Schleife erstellt.
+		 
 		int kordx = 130;
 		int kordy = 70;
 		int zaehler = 0;
@@ -371,11 +367,8 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblLaenderZahl);
 		
 		
-		//Spielphasenwechsel Button
-		//Phase1 Truppenplatzieren
-		//Phase2 Angriff
+		//Spielphasenwechsel Button im Folgenden
 		//Phase3 TruppenBewegen
-		//Zugbeenden
 		JButton btnTruppenBewegen = new JButton("Truppenbewegen");
 		btnTruppenBewegen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -386,22 +379,19 @@ public class SpielKarte1 extends JFrame {
 		btnTruppenBewegen.setBackground(SystemColor.menu);
 		getContentPane().add(btnTruppenBewegen);
 		
-
+		//Zugbeenden
 		JButton btnZugBeenden = new JButton("Zug Beenden");
 		btnZugBeenden.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controll.Playerswitch();
 			}
-
-		
-
 		});
 		btnZugBeenden.setBounds(425, 610, 125, 40);
 		btnZugBeenden.setBackground(SystemColor.menu);
 		getContentPane().add(btnZugBeenden);
 		
 		
-		
+		//Phase2 Angriff
 		JButton btnAngriff = new JButton("Angriffsphase");
 		btnAngriff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -470,7 +460,6 @@ public class SpielKarte1 extends JFrame {
 		getContentPane().add(lblWrfelErgebnissOffensive);
 		
 		
-		
 		//Von Klasse Spiel die Spieler Namen hier ausgeben
 		//Angabe des Namen des Spielers der aktuell am Zug ist
 		JLabel lbl_PName = new JLabel("");
@@ -506,11 +495,11 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		/*Zuteilen der Felder an Spieler
-		 * Fï¿½rben der Button funktioniert an keiner anderen Stelle als hier
-		 * deshalb lï¿½sst sich nur eine Variante der Zuteilung realisieren
+		 * Faerben der Button funktioniert an keiner anderen Stelle als hier
+		 * deshalb laesst sich nur eine Variante der Zuteilung realisieren
 		 */
 		
-		//Spieler 1 Lï¿½nder
+		//Spieler 1 Laender
 		laender.FelderP1.add(1);
 		button_1.setBackground(Color.RED);	
 		laender.FelderP1.add(2);
@@ -536,7 +525,7 @@ public class SpielKarte1 extends JFrame {
 		laender.FelderP1.add(12);
 		button_12.setBackground(Color.RED);
 	
-		//Spieler 2 Lï¿½nder
+		//Spieler 2 Laender
 		laender.FelderP2.add(13);
 		button_13.setBackground(Color.BLUE);	
 		laender.FelderP2.add(14);
@@ -610,8 +599,7 @@ public class SpielKarte1 extends JFrame {
 		button_23.setText("E: " + laender.TruppenF23);
 		laender.TruppenF24 = 2;
 		button_24.setText("E: " + laender.TruppenF24);
-					
-
+		
 		
 	}
 	
@@ -620,113 +608,206 @@ public class SpielKarte1 extends JFrame {
 	}
 	
 	
-	//Bis jetzt ab hier nichts genutzt.
 	
 	//Zuteilen der Felder am Anfang des Spiels
+	//Autozuteilen und Selbstzuteilen Funktioniert aktuell nicht.
+	//Es ist uns nicht möglich die Button von außerhalb der Funktion zu färben in denen wir sie erstellt haben.
 	public void Autozuteilen(){
 		
-		System.out.println("Autozuteilen");
-
-	//	do{
-			//if(Playeranzahl < 3)
+		//System.out.println("Autozuteilen"); //Zum Testen ob diese Methode aufgerufen wird
 		
-				//Spieler 1 Lï¿½nder
-				laender.FelderP1.add(1);
-				laender.FelderP1.add(2);
-				laender.FelderP1.add(3);
-				laender.FelderP1.add(4);
-				laender.FelderP1.add(5);
-				laender.FelderP1.add(6);
-				laender.FelderP1.add(7);
-				laender.FelderP1.add(8);
-				laender.FelderP1.add(9);
-				laender.FelderP1.add(10);
-				laender.FelderP1.add(11);
-				laender.FelderP1.add(12);
-			
-				//Spieler 2 Lï¿½nder
-				laender.FelderP2.add(13);
-				button_13.setBackground(Color.BLUE);	
-				laender.FelderP2.add(14);
-				button_14.setBackground(Color.BLUE);
-				laender.FelderP2.add(15);
-				button_15.setBackground(Color.BLUE);
-				laender.FelderP2.add(16);
-				button_16.setBackground(Color.BLUE);
-				laender.FelderP2.add(17);
-				button_17.setBackground(Color.BLUE);
-				laender.FelderP2.add(18);
-				button_18.setBackground(Color.BLUE);
-				laender.FelderP2.add(19);
-				button_19.setBackground(Color.BLUE);
-				laender.FelderP2.add(20);
-				button_20.setBackground(Color.BLUE);
-				laender.FelderP2.add(21);
-				button_21.setBackground(Color.BLUE);
-				laender.FelderP2.add(22);
-				button_22.setBackground(Color.BLUE);
-				laender.FelderP2.add(23);
-				button_23.setBackground(Color.BLUE);
-				laender.FelderP2.add(24);
-				button_24.setBackground(Color.BLUE);
-				
-				laender.TruppenF1 = 2;
-				button_1.setText("E: " + laender.TruppenF1);
-				laender.TruppenF2 = 2;
-				laender.TruppenF3 = 2;
-				laender.TruppenF4 = 2;
-				laender.TruppenF5 = 2;
-				laender.TruppenF6 = 2;
-				laender.TruppenF7 = 2;
-				laender.TruppenF8 = 2;
-				laender.TruppenF9 = 2;
-				laender.TruppenF10 = 2;
-				laender.TruppenF11 = 2;
-				laender.TruppenF12 = 2;
-				laender.TruppenF13 = 2;
-				laender.TruppenF14 = 2;
-				laender.TruppenF15 = 2;
-				laender.TruppenF16 = 2;
-				laender.TruppenF17 = 2;
-				laender.TruppenF18 = 2;
-				laender.TruppenF19 = 2;
-				laender.TruppenF20 = 2;
-				laender.TruppenF21 = 2;
-				laender.TruppenF22 = 2;
-				laender.TruppenF23 = 2;
-				laender.TruppenF24 = 2;
-				System.out.println(laender.TruppenF23);
-			
-	//	}while(wechsel == false);
+		//Spieler 1 Laender
+		laender.FelderP1.add(1);
+		button_1.setBackground(Color.RED);	
+		laender.FelderP1.add(2);
+		button_2.setBackground(Color.RED);
+		laender.FelderP1.add(3);
+		button_3.setBackground(Color.RED);
+		laender.FelderP1.add(4);
+		button_4.setBackground(Color.RED);
+		laender.FelderP1.add(5);
+		button_5.setBackground(Color.RED);
+		laender.FelderP1.add(6);
+		button_6.setBackground(Color.RED);
+		laender.FelderP1.add(7);
+		button_7.setBackground(Color.RED);
+		laender.FelderP1.add(8);
+		button_8.setBackground(Color.RED);
+		laender.FelderP1.add(9);
+		button_9.setBackground(Color.RED);
+		laender.FelderP1.add(10);
+		button_10.setBackground(Color.RED);
+		laender.FelderP1.add(11);
+		button_11.setBackground(Color.RED);
+		laender.FelderP1.add(12);
+		button_12.setBackground(Color.RED);
+	
+		//Spieler 2 Laender
+		laender.FelderP2.add(13);
+		button_13.setBackground(Color.BLUE);	
+		laender.FelderP2.add(14);
+		button_14.setBackground(Color.BLUE);
+		laender.FelderP2.add(15);
+		button_15.setBackground(Color.BLUE);
+		laender.FelderP2.add(16);
+		button_16.setBackground(Color.BLUE);
+		laender.FelderP2.add(17);
+		button_17.setBackground(Color.BLUE);
+		laender.FelderP2.add(18);
+		button_18.setBackground(Color.BLUE);
+		laender.FelderP2.add(19);
+		button_19.setBackground(Color.BLUE);
+		laender.FelderP2.add(20);
+		button_20.setBackground(Color.BLUE);
+		laender.FelderP2.add(21);
+		button_21.setBackground(Color.BLUE);
+		laender.FelderP2.add(22);
+		button_22.setBackground(Color.BLUE);
+		laender.FelderP2.add(23);
+		button_23.setBackground(Color.BLUE);
+		laender.FelderP2.add(24);
+		button_24.setBackground(Color.BLUE);
+		
+		//Laender mit Truppen besetzen. E für Einheit damit nicht bloß wenig sagende Zahlen in den Buttons stehen.
+		laender.TruppenF1 = 2;
+		button_1.setText("E: " + laender.TruppenF1);
+		laender.TruppenF2 = 2;
+		button_2.setText("E: " + laender.TruppenF2);
+		laender.TruppenF3 = 2;
+		button_3.setText("E: " + laender.TruppenF3);
+		laender.TruppenF4 = 2;
+		button_4.setText("E: " + laender.TruppenF4);
+		laender.TruppenF5 = 2;
+		button_5.setText("E: " + laender.TruppenF5);
+		laender.TruppenF6 = 2;
+		button_6.setText("E: " + laender.TruppenF6);
+		laender.TruppenF7 = 2;
+		button_7.setText("E: " + laender.TruppenF7);
+		laender.TruppenF8 = 2;
+		button_8.setText("E: " + laender.TruppenF8);
+		laender.TruppenF9 = 2;
+		button_9.setText("E: " + laender.TruppenF9);
+		laender.TruppenF10 = 2;
+		button_10.setText("E: " + laender.TruppenF10);
+		laender.TruppenF11 = 2;
+		button_11.setText("E: " + laender.TruppenF11);
+		laender.TruppenF12 = 2;
+		button_12.setText("E: " + laender.TruppenF12);
+		laender.TruppenF13 = 2;
+		button_13.setText("E: " + laender.TruppenF13);
+		laender.TruppenF14 = 2;
+		button_14.setText("E: " + laender.TruppenF14);
+		laender.TruppenF15 = 2;
+		button_15.setText("E: " + laender.TruppenF15);
+		laender.TruppenF16 = 2;
+		button_16.setText("E: " + laender.TruppenF16);
+		laender.TruppenF17 = 2;
+		button_17.setText("E: " + laender.TruppenF17);
+		laender.TruppenF18 = 2;
+		button_18.setText("E: " + laender.TruppenF18);
+		laender.TruppenF19 = 2;
+		button_19.setText("E: " + laender.TruppenF19);
+		laender.TruppenF20 = 2;
+		button_20.setText("E: " + laender.TruppenF20);
+		laender.TruppenF21 = 2;
+		button_21.setText("E: " + laender.TruppenF21);
+		laender.TruppenF22 = 2;
+		button_22.setText("E: " + laender.TruppenF22);
+		laender.TruppenF23 = 2;
+		button_23.setText("E: " + laender.TruppenF23);
+		laender.TruppenF24 = 2;
+		button_24.setText("E: " + laender.TruppenF24);
+					
 	}
-	  
+
+	
 	
 	public void ZuteilenSelber(){
 
-	System.out.println("Selberzuteilen");
-	System.out.println(player.PlayerID + "playerid");
-	button_1.setBackground(Color.BLUE);	
+	System.out.println("Selberzuteilen");  //Überprüfen ob die Methode erreicht wird
+	System.out.println(player.PlayerID + " PlayerID"); //Überprüfen der PlayerID
+
 		//do{
-			//if (player.PlayerID == 0){
-				
+	
+			/* Muss anders gelöst werden als im Folgendem ansonsten werden sehr viele Zeilen benötigt
+			 * da 24 Button * 4 Spieler. Jeder Button muss an jeden Spieler zugeteilt werden können
+			 * Muss mit einer schleife und einer extra Funktion zum Faerben realisiert werden.
+			 */
+	
+			if (player.PlayerID == 0){
 				button_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e){
-						button_1.setBackground(Color.BLUE);	
-						wechsel = true;
-						System.out.println("Klick button 1");
-						
-					}
+						button_1.setBackground(Color.RED);	
+						controll.Playerswitch();}
 				});			
-			//}
+				button_2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_2.setBackground(Color.RED);	
+						controll.Playerswitch();}
+				});			
+				button_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_3.setBackground(Color.RED);	
+						controll.Playerswitch();}
+				});			
+			}
+			
+			
 		//}while(wechsel = false);
 		
-			if (player.PlayerID == 1){
-				
+			if (player.PlayerID == 1){				
 				button_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e){
 						button_1.setBackground(Color.BLUE);	
-					}
-				});
+						controll.Playerswitch();}
+				});			
+				button_2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_2.setBackground(Color.BLUE);	
+						controll.Playerswitch();}
+				});			
+				button_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_3.setBackground(Color.BLUE);	
+						controll.Playerswitch();}
+				});			
+			}	
+			
+			if (player.PlayerID == 2){
+				button_1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_1.setBackground(Color.GREEN);	
+						controll.Playerswitch();}
+				});			
+				button_2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_2.setBackground(Color.GREEN);	
+						controll.Playerswitch();}
+				});			
+				button_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_3.setBackground(Color.GREEN);	
+						controll.Playerswitch();}
+				});			
+			}	
+			
+			if (player.PlayerID == 3){
+				
+				button_1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_1.setBackground(Color.YELLOW);	
+						controll.Playerswitch();}
+				});			
+				button_2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_2.setBackground(Color.YELLOW);	
+						controll.Playerswitch();}
+				});			
+				button_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e){
+						button_3.setBackground(Color.YELLOW);	
+						controll.Playerswitch();}
+				});			
 			
 			}	
 			
