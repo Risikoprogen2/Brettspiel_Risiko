@@ -84,7 +84,7 @@ void Anz_Player(){
 	
 
 		// Starteinstellungen Laden
-		if(spiel.selected == true){
+		if(spiel.selected = true){
 		karte.ZuteilenSelber();
 		}else{karte.Autozuteilen();}
 		

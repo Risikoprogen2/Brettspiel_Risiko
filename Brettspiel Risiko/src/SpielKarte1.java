@@ -14,8 +14,6 @@ import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 
 
-//Autor: Jonas Behler
-
 
 public class SpielKarte1 extends JFrame {
 	
@@ -39,7 +37,29 @@ public class SpielKarte1 extends JFrame {
 	//Button initalisieren um public nutzbar zu machen
 	public JButton button_1 = new JButton("Feld 1");
 	public JButton button_2 = new JButton("Feld 2");
-
+	public JButton button_3 = new JButton("Feld 3");
+	public JButton button_4 = new JButton("Feld 4");
+	public JButton button_5 = new JButton("Feld 5");
+	public JButton button_6 = new JButton("Feld 6");
+	public JButton button_7 = new JButton("Feld 7");
+	public JButton button_8 = new JButton("Feld 8");
+	public JButton button_9 = new JButton("Feld 9");
+	public JButton button_10 = new JButton("Feld 10");
+	public JButton button_11 = new JButton("Feld 11");
+	public JButton button_12 = new JButton("Feld 12");
+	public JButton button_13 = new JButton("Feld 13");
+	public JButton button_14 = new JButton("Feld 14");
+	public JButton button_15 = new JButton("Feld 15");
+	public JButton button_16 = new JButton("Feld 16");
+	public JButton button_17 = new JButton("Feld 17");
+	public JButton button_18 = new JButton("Feld 18");
+	public JButton button_19 = new JButton("Feld 19");
+	public JButton button_20 = new JButton("Feld 20");
+	public JButton button_21 = new JButton("Feld 21");
+	public JButton button_22 = new JButton("Feld 22");
+	public JButton button_23 = new JButton("Feld 23");
+	public JButton button_24 = new JButton("Feld 24");
+	public JButton btnSwitch_P = new JButton("Phase Wechseln");
 	
 	public JButton btnTruppenBewegen;
 	public JButton btnAngriff;
@@ -69,29 +89,7 @@ public class SpielKarte1 extends JFrame {
 	
 	
 
-	public JButton button_3 = new JButton("Feld 3");
-	public JButton button_4 = new JButton("Feld 4");
-	public JButton button_5 = new JButton("Feld 5");
-	public JButton button_6 = new JButton("Feld 6");
-	public JButton button_7 = new JButton("Feld 7");
-	public JButton button_8 = new JButton("Feld 8");
-	public JButton button_9 = new JButton("Feld 9");
-	public JButton button_10 = new JButton("Feld 10");
-	public JButton button_11 = new JButton("Feld 11");
-	public JButton button_12 = new JButton("Feld 12");
-	public JButton button_13 = new JButton("Feld 13");
-	public JButton button_14 = new JButton("Feld 14");
-	public JButton button_15 = new JButton("Feld 15");
-	public JButton button_16 = new JButton("Feld 16");
-	public JButton button_17 = new JButton("Feld 17");
-	public JButton button_18 = new JButton("Feld 18");
-	public JButton button_19 = new JButton("Feld 19");
-	public JButton button_20 = new JButton("Feld 20");
-	public JButton button_21 = new JButton("Feld 21");
-	public JButton button_22 = new JButton("Feld 22");
-	public JButton button_23 = new JButton("Feld 23");
-	public JButton button_24 = new JButton("Feld 24");
-	public JButton btnSwitch_P = new JButton("Phase Wechseln");
+
 
 	
 	/**
@@ -620,7 +618,7 @@ public class SpielKarte1 extends JFrame {
 		laender.TruppenF24 = 2;
 		button_24.setText("E: " + laender.TruppenF24);
 					
-					
+
 		
 	}
 	
@@ -714,12 +712,13 @@ public class SpielKarte1 extends JFrame {
 
 	System.out.println("Selberzuteilen");
 	System.out.println(player.PlayerID + "playerid");
+	button_1.setBackground(Color.BLUE);	
 		//do{
 			//if (player.PlayerID == 0){
 				
 				button_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e){
-						button_1.setBackground(Color.RED);	
+						button_1.setBackground(Color.BLUE);	
 						wechsel = true;
 						System.out.println("Klick button 1");
 						
