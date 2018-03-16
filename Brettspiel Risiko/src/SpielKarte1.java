@@ -17,13 +17,6 @@ import java.awt.SystemColor;
 
 public class SpielKarte1 extends JFrame {
 	
-	/**
-	 * 
-	 */
-	
-
-
-
 	static SpielKarte1 frame = new SpielKarte1();
 	public int phase = 0;
 	public boolean wechsel;
@@ -513,11 +506,11 @@ public class SpielKarte1 extends JFrame {
 		
 		
 		/*Zuteilen der Felder an Spieler
-		 * Färben der Button funktioniert an keiner anderen Stelle als hier
-		 * deshalb lässt sich nur eine Variante der Zuteilung realisieren
+		 * Fï¿½rben der Button funktioniert an keiner anderen Stelle als hier
+		 * deshalb lï¿½sst sich nur eine Variante der Zuteilung realisieren
 		 */
 		
-		//Spieler 1 Länder
+		//Spieler 1 Lï¿½nder
 		laender.FelderP1.add(1);
 		button_1.setBackground(Color.RED);	
 		laender.FelderP1.add(2);
@@ -543,7 +536,7 @@ public class SpielKarte1 extends JFrame {
 		laender.FelderP1.add(12);
 		button_12.setBackground(Color.RED);
 	
-		//Spieler 2 Länder
+		//Spieler 2 Lï¿½nder
 		laender.FelderP2.add(13);
 		button_13.setBackground(Color.BLUE);	
 		laender.FelderP2.add(14);

@@ -28,7 +28,7 @@ public class Spiel {
 	private JTextField PName2;
 	private JTextField PName3;
 	private JTextField PName4;
-	
+	// Strings in den die Namen der Spieler Gespeichert wird
 	static String Name1;
 	static String Name2;
 	static String Name3;
@@ -84,8 +84,6 @@ public class Spiel {
 			Name4 = "Player4";
 		}else{Name4 = PName4.getText();}	
 	}
-	
-	
 	
 	/**
 	 * Erstellen der Anwendung.
@@ -200,7 +198,7 @@ public class Spiel {
 			public void actionPerformed(ActionEvent e) {
 				
 			/*Das Folgende Switchcase ruft die Funktionen von weiter oben auf um nicht eingetragene Namen einzutagen. 
-			 *Um Code verdoplung zu vermeiden wurden die Einzelnen IF Schleifen in Funktionen gepackt um diese dann hier mehrfach aufzurufen
+			 *Um Code verdoplung zu vermeiden wurden die Einzelnen IF Schleifen in Funktionen gepackt um diese dann hier aufzurufen
 			 *
 			*/
 				
@@ -231,10 +229,10 @@ public class Spiel {
 			
 			// Wahl der Methode um die Felder zu zuteilen
 						if(chckbx_Feldzuteilung.isSelected()){
-							System.out.println("Selected"); //!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							System.out.println("Selected"); 
 							boolean selected = true;
 						}else{
-							System.out.println("not Selected");			//!!!!!!! Hier noch die entsprechenden methoden aufrufen lassen 
+							System.out.println("not Selected");
 							boolean selected = false;
 							};
 							
